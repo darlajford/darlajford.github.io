@@ -43,3 +43,14 @@ footer {
     font-family: sans-serif;
     margin-top: 25px;
 }
+
+@media screen and (max-width: 475px) {
+    #container {
+        width: 400px;
+}
+}
+@media screen and (max-width: 375px) {
+    #container {
+        width: 325px;
+}
+}
