@@ -30,6 +30,6 @@ let fulldate = dayname + ", " + monthname + " " + d.getDate() +", " + year;
 document.getElementById("currentdate").textContent = fulldate;
 console.log(fulldate);
 
-
+document.getElementById("year").textContent = year;
 
  
