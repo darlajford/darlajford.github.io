@@ -44,6 +44,8 @@ footer {
     margin-top: 25px;
 }
 
+p a {color: rgb(80, 235, 106)}
+
 @media screen and (max-width: 475px) {
     #container {
         width: 400px;
