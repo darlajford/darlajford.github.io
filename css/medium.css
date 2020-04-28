@@ -1,0 +1,26 @@
+@media only screen and (min-width: 32.5em) {
+    h1 {
+        font-size: 3rem;
+        text-indent:px;        
+    }
+    h2 {
+        font-size: 1.75rem;
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+    header, footer {
+        border-radius: 10px;
+        max-width: 75%;
+    }
+    header img {
+    float: right;
+    margin-right: 15px;
+    margin-top: 15px;
+    border-radius: 6px;
+    box-shadow: 5px 10px 8px #888888;
+    }
+    ul {
+        margin-left: 150px;
+    }
+      
+}
