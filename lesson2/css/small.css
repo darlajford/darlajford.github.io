@@ -1,41 +1,61 @@
- header, footer {
+ header,
+ footer {
      background-color: rgb(107, 172, 150);
      color: rgb(2, 58, 39);
      padding: 20px;
  }
- 
- 
- h1, h2, h3 {
-    text-align: center;
+
+ section {
+     text-align: center;
  }
+ p {
+    width: 325px;
+    font-family: hind, sans-serif;
+    text-align: justify;
+    margin-left: 45px;
+}
+ h1,
+ h2,
+ h3 {
+     text-align: center;
+ }
+ h1 {
+     font-family: Aclonica, sans-serif;
+ }
+ h2 {
+     font-family: hind, sans-serif;
+ }
+
  img {
      max-width: 350px;
-     margin-left: 20px;
      border-radius: 10px;
  }
 
- #cupcakes, #soap {
-border: 2px solid black;
+ #cupcakes,
+ #soap {
+     border: 2px solid black;
  }
+
  #sunscreen {
      border-top: 2px solid black;
      border-right: 1px solid black;
      border-bottom: 2px solid black;
  }
- .cupcakes, .soap, .sunscreen {
-     
-     margin: 25px 0 0 10px;
-    
- }
 
  main h2 {
-     
+font-family: Hind, sans-serif;
      color: rgb(17, 59, 17);
      background-color: rgb(187, 125, 125);
      padding: 10px;
  }
- 
+h3 {
+    font-family: hind, sans-serif;
+}
 
  main {
      background-color: rgb(226, 226, 204);
  }
+ footer {
+     text-align: center;
+ }
+ 
