@@ -1,0 +1,28 @@
+ header, footer {
+     background-color: rgb(107, 172, 150);
+     color: rgb(2, 58, 39);
+     padding: 20px;
+ }
+ 
+ 
+ h1, h2, p {
+    text-align: center;
+ }
+
+ #cupcakes, #soap {
+border: 2px solid black;
+ }
+ #sunscreen {
+     border-top: 2px solid black;
+     border-right: 1px solid black;
+     border-bottom: 2px solid black;
+ }
+ .cupcakes, .soap, .sunscreen {
+     text-align: center;
+     margin: 10px;
+ }
+ 
+
+ main {
+     background-color: rgb(226, 226, 204);
+ }
