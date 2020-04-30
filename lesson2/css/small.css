@@ -1,69 +1,73 @@
-  
- body {
-     font-family: Hind, sans-serif;
- } 
- 
- header,
- footer {
-     background-color: rgb(107, 172, 150);
-     color: rgb(2, 58, 39);
-     
- }
- header {
-    text-align: center;
-     padding: 20px;
- }
+  body {
+      font-family: Hind, sans-serif;
+  }
 
- section {
-     text-align: center;
- }
- section p {
-    width: 325px;    
-    text-align: justify;
-    margin: 0 auto;
-    padding: 0 0 50px;    ;     
- }
- h1 {
-     font-family: Aclonica, sans-serif;
-     font-size: 3em;
- }
- h3 {
-     font-size: 1.75em;
-     font-style: italic;
-     margin-bottom: -10px;
- }
+  header,
+  footer {
+      background-color: rgb(107, 172, 150);
+      color: rgb(2, 58, 39);
 
- img {
-     max-width: 350px;
-     border-radius: 10px;
- }
+  }
 
- #cupcakes,
- #soap, #sunscreen {
-     border: 2px solid black;
- }
+  header {
+      text-align: center;
+      padding: 20px;
+  }
 
- .sunscreen, .cupcakes, .soap {
-     font-size: 1.1em;
- }
- main h2 {
-     color: rgb(17, 59, 17);
-     background-color: rgb(187, 125, 125);
-     padding: 20px;
-     margin-top: 60px;
- }
+  section {
+      text-align: center;
+  }
 
- main {
-     background-color: rgb(226, 226, 204);
- }
- 
- footer{
-     
-     text-align: center;
-     font-size: 1.5em;
-     padding: 5px;
- }
- 
- 
+  section p {
+      width: 325px;
+      text-align: justify;
+      margin: 0 auto;
+      padding: 0 0 50px;
+      ;
+  }
 
- 
+  h1 {
+      font-family: Aclonica, sans-serif;
+      font-size: 3em;
+  }
+
+  h3 {
+      font-size: 1.75em;
+      font-style: italic;
+      margin-bottom: -10px;
+  }
+
+  img {
+      max-width: 350px;
+      border-radius: 10px;
+  }
+
+  #cupcakes,
+  #soap,
+  #sunscreen {
+      border: 2px solid black;
+  }
+
+  .sunscreen,
+  .cupcakes,
+  .soap {
+      font-size: 1.1em;
+  }
+
+  main h2 {
+      color: rgb(17, 59, 17);
+      background-color: rgb(187, 125, 125);
+      padding: 20px;
+      margin-top: 60px;
+  }
+
+  main {
+      background-color: rgb(226, 226, 204);
+  }
+
+  footer {
+
+      text-align: center;
+      font-size: 1.5em;
+      padding: 5px;
+  }
