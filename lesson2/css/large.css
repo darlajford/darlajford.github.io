@@ -4,5 +4,7 @@
          display: grid;
          grid-template-columns: 1fr 1fr 1fr;
      }
-
+section:nth-child(3){
+    display: block;
+}
  }
