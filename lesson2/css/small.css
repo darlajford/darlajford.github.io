@@ -20,13 +20,14 @@
       max-width: 400px;
       margin: 0 auto;
       margin-top: 25px;
+      margin-bottom: 25px;
   }
 
   section p {
       width: 325px;
       text-align: justify;
       margin: 0 auto;
-      padding: 0 0 50px;
+      padding: 0 0 30px;
       ;
   }
   section:nth-child(1) {
