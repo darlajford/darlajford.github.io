@@ -1,9 +1,8 @@
 header, footer {
     background-color: darkolivegreen;
-    color: #fff;
-    
+    color: #fff;    
     max-width: 100%;
-
+    margin-left: 150px;
     }
 
 h1 {    
@@ -21,8 +20,7 @@ h2 {
 
 header img {
     border: 5px solid rgb(78, 76, 76);
-    width: 175px;
-    
+    width: 175px;    
 }
 
 ul {
