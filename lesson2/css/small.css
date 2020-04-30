@@ -1,7 +1,13 @@
+  
+ body {
+     font-family: Hind, sans-serif;
+ } 
+ 
  header,
  footer {
      background-color: rgb(107, 172, 150);
      color: rgb(2, 58, 39);
+     text-align: center;
      padding: 20px;
  }
 
@@ -9,21 +15,12 @@
      text-align: center;
  }
  p {
-    width: 325px;
-    font-family: hind, sans-serif;
+    width: 325px;    
     text-align: justify;
-    margin-left: 45px;
-}
- h1,
- h2,
- h3 {
-     text-align: center;
+    margin-left: 45px;     
  }
  h1 {
      font-family: Aclonica, sans-serif;
- }
- h2 {
-     font-family: hind, sans-serif;
  }
 
  img {
@@ -32,30 +29,20 @@
  }
 
  #cupcakes,
- #soap {
+ #soap, #sunscreen {
      border: 2px solid black;
  }
 
- #sunscreen {
-     border-top: 2px solid black;
-     border-right: 1px solid black;
-     border-bottom: 2px solid black;
- }
-
  main h2 {
-font-family: Hind, sans-serif;
      color: rgb(17, 59, 17);
      background-color: rgb(187, 125, 125);
      padding: 10px;
  }
-h3 {
-    font-family: hind, sans-serif;
-}
 
  main {
      background-color: rgb(226, 226, 204);
  }
- footer {
-     text-align: center;
- }
+ 
+ 
+
  
