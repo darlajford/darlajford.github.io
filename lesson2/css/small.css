@@ -6,7 +6,6 @@
   footer {
       background-color: rgb(107, 172, 150);
       color: rgb(2, 58, 39);
-
   }
 
   header {
@@ -17,20 +16,19 @@
   section {
       text-align: center;
       border: solid 2px black;
-      max-width: 400px;
-      margin: 0 auto;
-      margin-top: 25px;
-      margin-bottom: 25px;
+      border-radius: 10px;
+      max-width: ;
+      margin: 25px 10px;
+      overflow: hidden;
   }
 
   section p {
-      width: 325px;
+      width: ;
       text-align: justify;
       margin: 0 auto;
-      padding: 0 0 30px;
-      ;
+      padding: 15px 15px 30px;
   }
-  
+
 
   h1 {
       font-family: Aclonica, sans-serif;
@@ -45,7 +43,6 @@
 
   img {
       max-width: 350px;
-      border-radius: 10px;
       margin-top: 25px;
   }
 
@@ -70,10 +67,11 @@
 
   main {
       background-color: rgb(226, 226, 204);
+      display: grid;
+      grid-template-columns: auto;
   }
 
   footer {
-
       text-align: center;
       font-size: 1.5em;
       padding: 5px;
