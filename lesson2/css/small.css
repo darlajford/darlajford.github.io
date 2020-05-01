@@ -17,13 +17,11 @@
       text-align: center;
       border: solid 2px black;
       border-radius: 10px;
-      max-width: ;
       margin: 25px 10px;
       overflow: hidden;
   }
 
   section p {
-      width: ;
       text-align: justify;
       margin: 0 auto;
       padding: 15px 15px 30px;
@@ -68,7 +66,7 @@
   main {
       background-color: rgb(226, 226, 204);
       display: grid;
-      grid-template-columns: auto;
+      
   }
 
   footer {
