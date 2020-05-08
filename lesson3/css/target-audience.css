@@ -1,0 +1,17 @@
+
+h1,
+h2,
+h3,
+p {
+    text-align: center;
+    color: #0343A2;
+}
+
+div {
+    text-align: center;
+}
+
+ul {
+    display: inline-block;
+    text-align: left;
+    max-width: 550px;
