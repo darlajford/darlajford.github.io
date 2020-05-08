@@ -49,3 +49,6 @@ table {
     font-family: "Open Sans", sans-serif;
     color: #0343A2;
 }
+main#color {
+    margin-bottom: 75px;
+}

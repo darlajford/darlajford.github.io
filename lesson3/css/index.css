@@ -14,7 +14,16 @@
         header,
         footer {
             background-color: #10BBCC;
+            
+        }
+        header {
             padding: 25px;
+
+        }
+        footer {
+                text-align: center;
+                font-size: 1em;
+                padding: 5px;
         }
 
         nav {
@@ -74,6 +83,9 @@
             font-size: 1.2em;
             line-height: 1.5em;
             margin: 0 25px 50px 25px;
+        }
+        #logo {
+            margin-bottom: 50px;;
         }
         @media only screen and (min-width: 37.5em) {
             nav ul {

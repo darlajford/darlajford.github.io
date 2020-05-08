@@ -12,6 +12,12 @@
       text-align: center;
       padding: 20px;
   }
+  
+  footer {
+    text-align: center;
+    font-size: 1.5em;
+    padding: 5px;
+}
 
   section {
       text-align: center;
@@ -72,8 +78,4 @@
       
   }
 
-  footer {
-      text-align: center;
-      font-size: 1.5em;
-      padding: 5px;
-  }
+ 
