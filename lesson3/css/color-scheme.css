@@ -38,6 +38,11 @@ h2 {
     color: #0343A2;
     text-align: center;
 }
+ul#colorplan {
+    list-style-type: none;
+    font-size: 1.2em;
+    line-height: 1.75em;
+}
 
 ul,
 table {
