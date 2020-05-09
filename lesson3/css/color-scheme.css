@@ -9,9 +9,11 @@ td {
     border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
     padding: 15px;
 }
+
 th {
     background-color: lightgrey;
 }
@@ -38,6 +40,7 @@ h2 {
     color: #0343A2;
     text-align: center;
 }
+
 ul#colorplan {
     list-style-type: none;
     font-size: 1.2em;
@@ -49,6 +52,7 @@ table {
     font-family: "Open Sans", sans-serif;
     color: #0343A2;
 }
+
 main#color {
     margin-bottom: 75px;
 }
