@@ -25,6 +25,10 @@
                 font-size: 1em;
                 padding: 5px;
         }
+        footer p {
+            margin: 0;
+            padding: 10px;
+        }
 
         nav {
             background-color: #0343A2;
