@@ -1,0 +1,35 @@
+/* Media Query for medium + screens */
+@media only screen and (min-width: 32.5em) {
+  .navigation {
+    display: flex;
+  }
+
+  .navigation li {
+    display: block;
+    /* needed because of state in small view */
+    flex: 1 1 100%;
+  }
+
+  .navigation li a {
+    color: #F7E449;
+    text-align: center;
+  }
+
+  .navigation li:first-child {
+    display: none;
+  }
+
+  header img {
+    width: 100%;
+  }
+
+  .headings h1 {
+    font-size: 3rem;
+  }
+
+  .m {
+    letter-spacing: 1.5pt;
+    font-size: 2em;
+    margin-left: 120px;
+  }
+}
