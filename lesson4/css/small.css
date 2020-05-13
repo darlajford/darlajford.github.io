@@ -1,29 +1,31 @@
 body {
-	background-color: #CFEFF6;
-	padding: 0;
-	margin: 0;
+  background-color: #CFEFF6;
+  padding: 0;
+  margin: 0;
 }
+
 header {
-	background-color: #10BBCC;
-	padding: 5px;
-	display: flex;
-	align-items:center;
-	justify-content:center;
+  background-color: #10BBCC;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 header img {
-	width: 125px;
+  width: 125px;
   height: auto;
   border: 2px solid #0343A2;
   border-radius: 50%;
 }
 
 .headings {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .headings h1 {
-	font-size: 2.5rem;
+  font-size: 2.5rem;
   margin: 0 0 0 17px;
   font-family: Roboto, sans-serif;
   font-weight: bolder;
@@ -31,55 +33,64 @@ header img {
 }
 
 .m {
-	font-style: italic;
-	letter-spacing: 1pt;
-	color: navy;
-	margin-left: 12px;
-	font-size: 1.5rem;
+  font-style: italic;
+  letter-spacing: 1pt;
+  color: navy;
+  margin-left: 12px;
+  font-size: 1.5rem;
 }
-
 
 
 nav {
-	margin: 0 auto;	
-	background-color: #0343A2;
-}
-.navigation {
-	list-style: none;
-  padding: 0;
+  margin: 0 auto;
+  background-color: #0343A2;
   
 }
+
+
+.navigation {
+  list-style: none;
+  padding: 0;
+  
+
+}
+
 .navigation li:first-child {
-	display: block;
+  display: block;
 }
+
 .navigation li {
-	display: none;
+  display: none;
 }
+
 .navigation a {
-	display: block;
-	color: #F7E449;
-	padding: 0.75rem;
-	text-align: left;
-	text-decoration: none;
+  display: block;
+  color: #F7E449;
+  padding: 0.75rem;
+  text-align: center;
+  text-decoration: none;
 }
+
 .navigation a:hover {
-	color: #0343A2;
-	background-color: #CFEFF6;
-	font-weight: 700;
+  color: #0343A2;
+  background-color: paleturquoise;
+  font-weight: 700;
 }
 
 /* the onclick JS toggles the .repsonsive class from display none (.navigation li) to display block because the repsonsive class is added to the end of the class list like this in HTML Line #6.
   <ul class="navigation responsive">
   */
 .responsive li {
-	display: block;
+  display: block;
 }
+
 h2 {
-	color: #0343A2;
+  color: #0343A2;
   font-family: Roboto, sans-serif;
   text-align: center;
 }
-.contentbox{
+
+.contentbox {
   display: block;
   margin: 10px auto;
   border: 1px dashed gray;
@@ -90,9 +101,10 @@ h2 {
   font-style: italic;
   max-width: 760px;
 }
+
 footer {
   background-color: #10BBCC;
-  color:navy;
+  color: navy;
   margin: 15px auto;
   padding: 5px;
   max-width: 860px;
@@ -103,33 +115,36 @@ footer {
 
 /* Media Query for medium + screens */
 @media only screen and (min-width: 32.5em) {
-	.navigation {
-		display: flex;
-	}
-	.navigation li {
-		display: block; /* needed because of state in small view */
-		flex: 1 1 100%;
-	}
-	.navigation li a {
-		color: #F7E449;
-		text-align: center;
-	}
-	
-	.navigation li:first-child {
-		display: none;
+  .navigation {
+    display: flex;
   }
 
-	header img {
-		width: 100%;
-	}
+  .navigation li {
+    display: block;
+    /* needed because of state in small view */
+    flex: 1 1 100%;
+  }
 
-	.headings h1 {
-		font-size: 3rem;
-	}
+  .navigation li a {
+    color: #F7E449;
+    text-align: center;
+  }
 
-	.m {
-		letter-spacing: 1.5pt;
-		font-size: 2em;
-		margin-left: 120px;
-	}
+  .navigation li:first-child {
+    display: none;
+  }
+
+  header img {
+    width: 100%;
+  }
+
+  .headings h1 {
+    font-size: 3rem;
+  }
+
+  .m {
+    letter-spacing: 1.5pt;
+    font-size: 2em;
+    margin-left: 120px;
+  }
 }

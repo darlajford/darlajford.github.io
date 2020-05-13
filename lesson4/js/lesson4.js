@@ -4,7 +4,7 @@ hambutton.addEventListener("click", toggleMenu, false);
 function toggleMenu() {
   document.querySelector(".navigation").classList.toggle("responsive");
 }
-
+//The following is for date display in footer
 let daynames = [
   "Sunday",
   "Monday",
