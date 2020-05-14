@@ -32,7 +32,7 @@ header img {
   color: #0343A2;
 }
 
-.m {
+.motto {
   font-style: italic;
   letter-spacing: 1pt;
   color: navy;
@@ -41,7 +41,7 @@ header img {
 }
 
 nav {
-  margin: 0 auto;
+  margin: -15px auto;
   background-color: #0343A2;
 }
 
