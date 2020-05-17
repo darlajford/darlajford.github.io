@@ -40,7 +40,7 @@ let year = d.getFullYear();
 //let fulldate = dayname + ", " + monthname + " " + d.getDate() +", " + year;  (shows day month date year format)
 let fulldate = dayname + ", " + d.getDate() + " " + monthname + " " + year;
 
-document.getElementById("lastupdated").textContent = fulldate;
+document.getElementById("currentdate").textContent = fulldate;
 console.log(fulldate);
 
 document.getElementById("year").textContent = year;
