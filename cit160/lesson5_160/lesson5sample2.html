@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quart to Liter Conversion</title>
+  <script>
+    "use strict";
+    /* Defining Table
+     * Input: Distance in kilometers.
+     * Processing: Convert number of kilometers to miles.
+     * Output: Distance in miles.
+     */
+    function convert() {
+      // Get the user's input of nmber of kilometers from the text field that has
+      // the id of "distanceInputBox" and store it in a variable named kms.
+      let kms = parseFloat(document.getElementById('distanceInputBox').value);
+
+      // Convert distance from kilometers to miles.
+      let distance = kms * .75;
+
+
+      // Display distance in miles in the div that has the id "output".
+      document.getElementById('output').innerHTML = distance;
+    }
+  </script>
+</head>
+
+<body>
+  Enter distance in kilometers: <input type="text" id="distanceInputBox">
+  <button type="button" onclick="convert()">Convert to Miles</button>
+  <div id="output"></div>
+</body>
+</html>
