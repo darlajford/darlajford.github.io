@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number of Boxes in Stack</title>
+  <script>
+    "use strict";
+    /* Defining Table
+     * Input: Number of boxes.
+     *Input: Number of boxes in each stack.
+     * Processing: Calculate number of stacks.
+     * Output: Number of stacks.
+     */
+    function calculate() {
+      // Get the user's input of total number of boxes from the text field that has
+      // the id of "totalBoxesInputBox" and store it in a variable named boxes.
+      // Get the user's input of number of boxes in each stack from the text field that has
+      // the id of "stackQtyInputBox" and store it in a variable named stacks.
+      let boxes =  parseInt(document.getElementById('totalBoxesInputBox').value);
+      let stackQty = parseInt(document.getElementById('stackQtyInputBox').value);
+      
+      // Convert distance from kilometers to miles.
+      let stacks = boxes / stackQty;
+
+    let digits = 0;
+    let multiplier = Math.pow(10, digits);
+
+
+
+
+      // Display number of stacks in the div that has the id "output".
+      document.getElementById('output').innerHTML = stacks;
+    }
+  </script>
+</head>
+
+<body>
+  Enter total number of boxes: <input type="text" id="totalBoxesInputBox"><br>
+  Enter number of boxes in each stack: <input type="text" id="stackQtyInputBox">
+  <button type="button" onclick="calculate()">Number of stacks</button>
+  <div id="output"></div>
+</body>
+</html>

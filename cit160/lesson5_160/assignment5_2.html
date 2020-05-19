@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MPG</title>
+  <script>
+    /*Input: beginning and ending odometer readings, and gallons of gasoline used.
+    *Processing: Calculate the number of miles per gallon of gasoline.
+    *Output: Mileage in miles per gallon.
+    */
+   function miles() {
+     //Get the beginning and ending odometer readings, and gallons of gas from user.
+     let b = parseFloat(document.getElementById('begOdInput').value);
+     let e = parseFloat(document.getElementById('endOdInput').value);
+     let g = parseFloat(document.getElementById('galInput').value);
+
+     //Compute the number of miles driven per gallon of gasoline.
+     let m = (e - b) / g;
+
+     //Display MPG to user.
+     document.getElementById('outputDiv').innerHTML = m;
+   }   
+  </script>
+  </head>
+<body>
+  Beginning odometer <input type="text" id="begOdInput" size ="10"><br>
+  Ending odometer <input type="text" id="endOdInput" size ="10"><br>
+  Number of gallons of gas used <input type="text" id="galInput" size ="5"><br>
+  <button type="button" onclick="miles()">MPG</button>
+  <div id="outputDiv"></div>
+  
+</body>
+</html>
