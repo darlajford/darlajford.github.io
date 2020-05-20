@@ -7,4 +7,10 @@
     font-size: 2rem;
     margin-left: 120px;
 }
+.herocontainer {
+  width: 900px;
+  }
+  .article {
+    width: 900px;  
+    }
 }

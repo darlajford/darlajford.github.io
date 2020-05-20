@@ -15,10 +15,16 @@
     function convert() {
       // Get the user's input of nmber of quarts from the text field that has
       // the id of "volumeInputBox" and store it in a variable named quarts.
-      let quarts = parseFloat(document.getElementById('volumeInputBox').value);
+      let q = parseFloat(document.getElementById('volumeInputBox').value);
 
       // Convert volume from quarts to liters.
-      let volume = quarts * .945;
+      let volume = q * .946;
+
+      let digits = 2;
+      let multiplier = Math.pow(10, digits);
+      volume = Math.round(volume * multiplier) /multiplier;    
+
+
 
 
       // Display volume in liters in the div that has the id "output".

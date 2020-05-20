@@ -25,7 +25,7 @@ header img {
 }
 
 .headings h1 {
-  font-size: 1.75rem;
+  font-size: 1.65rem;
   margin: 0 0 0 17px;
   font-family: Roboto, sans-serif;
   font-weight: bolder;
@@ -69,6 +69,7 @@ nav {
   font-size: 1.2rem;
 }
 
+
 .navigation a:hover {
   color: #0343A2;
   background-color: paleturquoise;
@@ -88,6 +89,81 @@ h2 {
   text-align: center;
   font-size: 1.75rem;
   margin: 50px 0 0 0;
+}
+
+.herocontainer {
+  position: relative;
+  width: 450px;
+  margin: 10px auto;
+}
+.herocontainer img {
+  width: 100%;
+  height: auto;
+}
+
+.weathersum {
+  color: navy;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  font-family: "Open Sans", sans-serif;
+  background: #CFEFF6;
+  box-shadow: 0 0 30px;
+  padding: .5rem;
+  opacity: 85%;
+}
+h3 {
+  border-bottom: 2px solid navy;
+}
+table {
+  margin: auto;
+}
+
+table,
+th,
+td {
+  border: 1px solid navy;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  font-family: "Open Sans", sans-serif;
+  color: navy;
+}
+
+th {
+  background-color: paleturquoise;
+}
+td {
+  background-color: whitesmoke;
+}
+td img {
+  border-radius: 30px;
+}
+.forecast {
+  display: none;
+}
+.article {
+  width: 450px;
+  margin: 0 auto;
+  font-family: "Open Sans", sans-serif;
+  color: navy;
+
+  }
+
+p img {
+  float: right;
+  width: 200px;
+  height: 200px;
+  margin: 0 25px;
+  border: 1px solid navy;
+  border-radius: 10px;
+  box-shadow: 0 0 20px gray;
+}
+h4 {
+  margin: 40px 0 0 25px;
 }
 
 .contentbox {
