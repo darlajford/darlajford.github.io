@@ -20,12 +20,10 @@
       // Convert volume from quarts to liters.
       let volume = q * .946;
 
+      //Round volume to 2 digits after conversion.
       let digits = 2;
       let multiplier = Math.pow(10, digits);
-      volume = Math.round(volume * multiplier) /multiplier;    
-
-
-
+      volume = Math.round(volume * multiplier) / multiplier;
 
       // Display volume in liters in the div that has the id "output".
       document.getElementById('output').innerHTML = volume;
@@ -34,8 +32,9 @@
 </head>
 
 <body>
-  Enter volume in quarts: <input type="text" id="volumeInputBox">
+  Enter volume in quarts: <input type="text" id="volumeInputBox" size="10">
   <button type="button" onclick="convert()">Convert to Liters</button>
   <div id="output"></div>
 </body>
+
 </html>

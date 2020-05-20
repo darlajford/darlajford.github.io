@@ -45,6 +45,11 @@
     .article {
       width: 600px;
      }
+     p img {
+      float: right;
+      width: 200px;
+      height: 200px;      
+    }
 
  
 }

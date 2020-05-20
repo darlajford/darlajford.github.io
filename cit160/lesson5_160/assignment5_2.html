@@ -18,6 +18,11 @@
      //Compute the number of miles driven per gallon of gasoline.
      let m = (e - b) / g;
 
+//Round miles to two decimal points after computing.
+     let digits = 2;
+     let multiplier = Math.pow(10, digits);
+     m = Math.round(m * multiplier) / multiplier;
+
      //Display MPG to user.
      document.getElementById('outputDiv').innerHTML = m;
    }   
@@ -26,7 +31,7 @@
 <body>
   Beginning odometer <input type="text" id="begOdInput" size ="10"><br>
   Ending odometer <input type="text" id="endOdInput" size ="10"><br>
-  Number of gallons of gas used <input type="text" id="galInput" size ="5"><br>
+  Number of gallons of gas used <input type="text" id="galInput" size ="8"><br>
   <button type="button" onclick="miles()">MPG</button>
   <div id="outputDiv"></div>
   

@@ -146,36 +146,44 @@ td img {
   display: none;
 }
 .article {
-  width: 450px;
-  margin: 0 auto;
+  width: 400px;
+  height: ;
+  margin: 50px auto;
   font-family: "Open Sans", sans-serif;
   color: navy;
-
+  background-color: paleturquoise;
+  border: 1px solid navy;
+  padding:  0 20px;
+  
   }
 
 p img {
-  float: right;
-  width: 200px;
-  height: 200px;
-  margin: 0 25px;
+  display: block;
+  margin: 10px auto;
+
+  width: 350px;
+  height: 350px;
   border: 1px solid navy;
   border-radius: 10px;
   box-shadow: 0 0 20px gray;
 }
-h4 {
-  margin: 40px 0 0 25px;
-}
 
-.contentbox {
+
+.map {
   display: block;
   margin: 10px auto;
-  border: 1px dashed gray;
+  border: 1px solid navy;
   padding: 15px;
-  background-color: paleturquoise;
+  background-color: rgb(129, 220, 236);
   color: #0343A2;
   font-family: "Open Sans", sans-serif;
-  font-style: italic;
   max-width: 80%;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  margin-top: 15px;
 }
 
 footer {
