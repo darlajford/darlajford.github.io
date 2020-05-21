@@ -7,16 +7,25 @@
     font-size: 2rem;
     margin-left: 120px;
 }
-.herocontainer {
-  width: 900px;
-  }
-  .article {
-    width: 900px;  
-    }
+.forecast {
+  max-width: 550px;
+}
     p img {
       float: right;
       width: 250px;
       height: 250px; 
       margin: -35px 10px 10px;     
+    }
+    .map {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .map img {      
+      width: 400px;
+      height: 350px;     
+    }
+    a .icon {
+      width: 40px;
+      height: 40px;    
     }
 }

@@ -35,21 +35,34 @@
   .navigation li:first-child {
     display: none;
   }
-  .herocontainer {
-    width: 600px;
-    }
     .forecast {
       display: block;
+      margin: auto;
       margin-top: 50px;
+      max-width: 400px;
     }
-    .article {
-      width: 600px;
-     }
      p img {
       float: right;
       width: 200px;
       height: 200px;      
     }
-
- 
+    .map img {
+      display: grid;
+      width: 250px;
+      height: 200px;
+      margin: 10px;
+      grid-column: 1;
+    }
+    section.contact {
+      grid-column: 2;
+      text-align: center;
+      align-self: center;
+    }
+    a .icon {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border-radius: 4px;
+      margin-top: 15px;
+    }
 }
