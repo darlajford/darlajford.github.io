@@ -3,7 +3,7 @@ body {
   padding: 0;
   margin: 0;
 }
-#eventmessage {
+#eventMessage {
   background-color: rgb(248, 243, 193);
   color: navy;
   font-family: "Open Sans", sans-serif;
@@ -12,6 +12,8 @@ body {
   text-align: center;
   font-style: bolder;
   line-height: 1.6;
+  
+  
 }
 
 header {
@@ -119,7 +121,7 @@ h2 {
   top: 2rem;
   left: 2rem;
   font-family: "Open Sans", sans-serif;
-  background: #CFEFF6;
+  background: radial-gradient(#CFEFF6, #10BBCC);
   box-shadow: 0 0 30px;
   padding: .5rem;
   opacity: .8;
@@ -185,8 +187,6 @@ p img {
 
 /*map and contact info*/
 .map {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   margin: 10px auto;
   border: 1px solid navy;
   padding: 15px;
@@ -194,6 +194,7 @@ p img {
   color: #0343A2;
   font-family: "Open Sans", sans-serif;
   width: 80%;
+  text-align: center;
 }
 
 .map img {

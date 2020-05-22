@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rate of Change</title>
+  <script>
+    /*Input: Previous price and current price.
+    *Processing: Difference in prices and percentage of rate change.
+    *Output: Rate of change.
+    */
+   function rate() {
+     //Get the current price, previous pice and rate of change from user.
+     let cp = parseFloat(document.getElementById('currPrice').value);
+     let pp = parseFloat(document.getElementById('prevPrice').value);
+   
+
+     //Compute the rate of change between current price and previous price.
+     let roc = (cp - pp) / pp;
+
+//Round miles to four decimal points after computing.
+     let digits = 4;
+     let multiplier = Math.pow(10, digits);
+     roc = Math.round(roc * multiplier) / multiplier;
+
+     //Display Rate of Change to user.
+     document.getElementById('outputDiv').innerHTML = roc;
+   }   
+  </script>
+  </head>
+  
+<body>
+  <h1>Rate of Change</h1>
+  Enter previous price <input type="text" id="prevPrice" size ="10"><br>
+  Enter current price <input type="text" id="currPrice" size ="10"><br>
+  
+  
+  <button type="button" onclick="rate()">Rate of Change</button><br>
+  Rate of change percentage<div id="outputDiv"></div>
+  
+</body>
+</html>

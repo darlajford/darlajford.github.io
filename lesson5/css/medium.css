@@ -46,6 +46,12 @@
       width: 200px;
       height: 200px;      
     }
+    .map {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+
     .map img {
       display: grid;
       width: 250px;

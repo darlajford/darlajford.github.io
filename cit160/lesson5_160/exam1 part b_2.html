@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Volume of a Torus</title>
+<script>
+  /*Input: Get inner and outer radii of a torus.
+   *Process: The volume of said torus.
+   *Output: The volume.
+   */
+  function computeVolume() {
+    //Get inner radius and outer radius from user.
+    let a = parseFloat(document.getElementById('inner').value);
+    let b = parseFloat(document.getElementById('outer').value);
+
+    //Compute the volume of the torus.
+    let v = Math.pow(Math.PI, 2) * (a + b) * Math.pow((a - b), 2) / 4;
+
+//Round miles to four decimal points after computing.
+    let digits = 2;
+     let multiplier = Math.pow(10, digits);
+     v = Math.round(v * multiplier) / multiplier;
+
+    //Display the volume to the user.
+    document.getElementById('volume').innerHTML = v;
+  }
+ 
+</script>
+</head>
+
+<body>
+    <h1>Volume of a Torus</h1>
+    Inner radius <input type="text" id="inner"><br>
+    Outer radius <input type="text" id="outer"><br>
+    <button type="button" onclick="computeVolume()">Volume</button><br>
+    Volume <div id="volume"></div>
+</body>
+</html>
