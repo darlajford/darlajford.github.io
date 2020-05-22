@@ -43,36 +43,17 @@ let fulldate = dayname + ", " + d.getDate() + " " + monthname + " " + year;
 document.getElementById("currentdate").textContent = fulldate;
 console.log(fulldate);
 
+//to display current year by copyright (although copyright year should remain the same)
 document.getElementById("year").textContent = year;
 
+//to display pancake message on fridays
 
+const banner = document.getElementById("eventMessage");
+let d = new Date();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+if (d.getDay() == Friday) {
+banner.style.display = "block";
+}
+else {  
+banner.style.display = "none";
+}
