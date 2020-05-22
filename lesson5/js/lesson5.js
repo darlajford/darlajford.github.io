@@ -48,7 +48,7 @@ document.getElementById("year").textContent = year;
 
 //to display pancake message on fridays
 
-const banner = document.getElementById("eventMessage");
+/*const banner = document.getElementById("eventMessage");
 let d = new Date();
 
 if (d.getDay() == Friday) {
@@ -56,4 +56,4 @@ banner.style.display = "block";
 }
 else {  
 banner.style.display = "none";
-}
+}*/
