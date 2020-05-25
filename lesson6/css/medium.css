@@ -1,0 +1,74 @@
+/* Media Query for medium + screens */
+@media only screen and (min-width: 35em) {
+
+  header img {
+    width: 100%;
+  }
+
+   .headings h1 {
+    font-size: 2rem;
+  }
+
+  .motto {
+    letter-spacing: 1.5pt;
+    font-size: 1.5rem;
+    margin-left: 50px;    
+  }
+
+
+
+  .navigation {
+    display: flex;
+  }
+
+  .navigation li {
+    display: block;
+    /* needed because of state in small view */
+    flex: 1 1 100%;
+  }
+
+  .navigation li a {
+    color: #F7E449;
+    text-align: center;
+  }
+
+  .navigation li:first-child {
+    display: none;
+  }
+    .forecast {
+      display: block;
+      margin: auto;
+      margin-top: 50px;
+      max-width: 400px;
+    }
+     p img {
+      float: right;
+      width: 200px;
+      height: 200px;      
+    }
+    .map {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+
+    .map img {
+      display: grid;
+      width: 250px;
+      height: 200px;
+      margin: 10px;
+      grid-column: 1;
+    }
+    section.contact {
+      grid-column: 2;
+      text-align: center;
+      align-self: center;
+    }
+    a .icon {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border-radius: 4px;
+      margin-top: 15px;
+    }
+}
