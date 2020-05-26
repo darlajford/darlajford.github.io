@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    /*Input: A simple math operation with two numbers, an operator, and a resut.
+     *Processing: Calculate function and determine if is is correct.
+     *Output: A message to tell if the answer is correct or not.
+     */
+    function checkMath() {
+      //gather input
+      let firstNumber = parseFloat(document.getElementById('firstNumber').value);
+      let operator = document.getElementById('operator').value;
+      let secondNumber = parseFloat(document.getElementById('secondNumber').value);
+      let userAnswer = parseFloat(document.getElementById('userAnswer').value);
+
+      let message;
+      let correctAnswer;
+
+      if (operator == '+') {
+        correctAnswer = firstNumber + secondNumber;
+      } else if (operator == '-') {
+        correctAnswer = firstNumber - secondNumber;
+      } else if (operator == '*') {
+        correctAnswer = firstNumber * secondNumber;
+      } else if (operator == '/') {
+        correctAnswer = firstNumber / secondNumber;
+      }
+
+      if (correctAnswer == userAnswer) {
+        document.getElementById("message").innerHTML = "Correct! Good job.";
+      } else {
+        document.getElementById("message").innerHTML = "Incorrect.Try again!";
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Test Your Math Skills!</h1>
+  <input type="text" id="firstNumber" size="5">
+  <input type="text" id="operator" size="3">
+  <input type="text" id="secondNumber" size="5"><span>=</span>
+  <input type="text" id="userAnswer" size="5">
+
+  <button type="button" onclick="checkMath()">Check Math</button>
+  <div id="message"></div>
+
+</body>
+
+</html>

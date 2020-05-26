@@ -45,11 +45,18 @@
     <h2>Preston Idaho</h2>
 
     <div class="herocontainer">
-      <img src="images/prestonhero.jpg" alt="sunrise in SE Idaho">
+      <picture>
+        <img src="images/franklinOriginal600_LI.jpg" alt="franklin">
+        <source srcset="images/franklinOriginal250.jpg" media="(min-width: 500px)" and "(max-width: 799px)">
+          <source srcset="images/franklinOriginal400.jpg" media="(min-width: 800px)">
+        
+      </picture>
+      <!--<img src="images/prestonhero.jpg" alt="sunrise in SE Idaho">-->
       <section class="weathersum">
         <h3>Weather Summary</h3>
         <p>Currently: Sunny</p>
-        <p>Temperature: 63°</p>
+        <p>Temperature: 50°</p>
+        <p>Wind Chill: 48°</p>
         <p>Humidity: 43%</p>
         <p>Precipitation: 2%</p>
         <p>Wind Speed: 5MPH</p>
@@ -88,32 +95,30 @@
         Est, labore voluptatum suscipit laborum corrupti architecto esse, quod impedit, odio cupiditate quaerat
         molestias dicta. Voluptatem fuga architecto distinctio ab inventore quam! Est, labore voluptatum suscipit
         laborum corrupti architecto esse, quod impedit, odio cupiditate quaerat
-        molestias dicta. Voluptatem fuga architecto distinctio ab inventore quam! this is a test this is another test</p>
+        molestias dicta. Voluptatem fuga architecto distinctio ab inventore quam! this is a test this is another test
+      </p>
     </div>
 
     <div class="map">
       <p><img src="images/prestonmap2.png" alt="Preston map"></p>
 
       <section class="contact">
-      <h5>My Weather Report Today<br>
-        30 North 1st East<br>
-        Preston, ID 83263</h5>
-      <p>&#9742; 555.555.5555<br>
-        &#9993; myweatherreport@gmail.com
-      </p>
-   
-      <a class="socialmedia" target="_blank" href="https://www.facebook.com"> <img class="icon"
-          src="images/facebook.png"
-          alt="FB logo"></a>
+        <h5>My Weather Report Today<br>
+          30 North 1st East<br>
+          Preston, ID 83263</h5>
+        <p>&#9742; 555.555.5555<br>
+          &#9993; myweatherreport@gmail.com
+        </p>
 
-      <a class="socialmedia" target="_blank" href="https://www.twitter.com"> <img class="icon"
-          src="images/twitter.png"
-          alt="Twitter logo"></a>
+        <a class="socialmedia" target="_blank" href="https://www.facebook.com"> <img class="icon"
+            src="images/facebook.png" alt="FB logo"></a>
 
-      <a class="socialmedia" target="_blank" href="https://www.youtube.com"> <img class="icon"
-          src="images/youtube.png"
-          alt="YouTube logo"></a>
-        </section>
+        <a class="socialmedia" target="_blank" href="https://www.twitter.com"> <img class="icon"
+            src="images/twitter.png" alt="Twitter logo"></a>
+
+        <a class="socialmedia" target="_blank" href="https://www.youtube.com"> <img class="icon"
+            src="images/youtube.png" alt="YouTube logo"></a>
+      </section>
 
 
     </div>
@@ -131,7 +136,7 @@
 
   </footer>
 
-  <script src="js/lesson5.js"></script>
+  <script src="js/lesson6.js"></script>
 </body>
 
 </html>
