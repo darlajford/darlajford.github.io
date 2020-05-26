@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    //Input: Type of weather (hot, rain, or snow)
+    //Processing: Determine type of shoe to wear depending on the weather
+    //Output: Type of shoe best suited for weather type
+
+    function myFunction() {
+    var text;
+    var shoes = document.getElementById("myInput").value;
+  
+    switch(shoes) {
+      case "hot":
+        text = "Sandals";
+      break;
+      case "rain":
+      text = "Galoshes";
+      break;
+      case "snow":
+      text = "Boots";
+      break;
+      default:
+      text = "Shoes";
+    }
+    document.getElementById("footwear").innerHTML = text;
+  }
+  </script>
+</head> 
+</html>
+
+<body>
+
+  <p>Write type of weather (hot, rain, snow, humid, windy, etc.) in the input field and click the button.</p>  
+  
+  <input id="myInput" type="text">
+  
+  <button onclick="myFunction()">Try it</button>
+  
+  <div id="footwear"></div> 
+  
+  </body>
+  </html>

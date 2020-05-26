@@ -17,6 +17,7 @@
       let secondNumber = parseFloat(document.getElementById('secondNumber').value);
       let userAnswer = parseFloat(document.getElementById('userAnswer').value);
 
+      //Check operation result
       let message;
       let correctAnswer;
 
@@ -29,7 +30,7 @@
       } else if (operator == '/') {
         correctAnswer = firstNumber / secondNumber;
       }
-
+      //Display appropriate message.
       if (correctAnswer == userAnswer) {
         document.getElementById("message").innerHTML = "Correct! Good job.";
       } else {
