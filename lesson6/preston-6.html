@@ -46,20 +46,22 @@
 
     <div class="herocontainer">
       <picture>
+        <source srcset="images/franklinOriginal250.jpg" media="(max-width: 550px)" >
+        <source srcset="images/franklinOriginal400.jpg" media="(max-width: 950px)" > 
         <img src="images/franklinOriginal600_LI.jpg" alt="franklin">
-        <source srcset="images/franklinOriginal250.jpg" media="(min-width: 500px)" and "(max-width: 799px)">
+        <!--<source srcset="images/franklinOriginal250.jpg" media="(min-width: 500px)" and "(max-width: 799px)">
           <source srcset="images/franklinOriginal400.jpg" media="(min-width: 800px)">
-        
+            <img src="images/franklinOriginal600_LI.jpg" alt="franklin">-->
       </picture>
       <!--<img src="images/prestonhero.jpg" alt="sunrise in SE Idaho">-->
       <section class="weathersum">
         <h3>Weather Summary</h3>
-        <p>Currently: Sunny</p>
-        <p>Temperature: 50°</p>
-        <p>Wind Chill: 48°</p>
-        <p>Humidity: 43%</p>
-        <p>Precipitation: 2%</p>
-        <p>Wind Speed: 5MPH</p>
+        <p>Currently: <span class="info">Sunny</span></p>
+        <p>Temperature: <span class="info" id="temp">50</span>&#176;F</p>
+        <p>Wind Chill: <span class="info" id="chill"></span>&#176;F</p>
+        <p>Humidity: <span class="info">43</span>&#37;</p>
+        <p>Precipitation: <span class="info" id="humidity">52</span>&#37;</p>
+        <p>Wind Speed: <span class="info" id="wind">5</span>MPH</p>
       </section>
     </div>
 
