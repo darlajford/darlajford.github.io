@@ -178,8 +178,7 @@ td img {
 p img {
   display: block;
   margin: 10px auto;
-  width: 350px;
-  height: 350px;
+  width: 275px;
   border: 1px solid navy;
   border-radius: 10px;
   box-shadow: 0 0 20px gray;

@@ -8,7 +8,7 @@
   <meta name="description" content="preston weather assignment">
   <link rel="icon" href="favicon2.ico">
   <link rel="stylesheet" href="css/normalize.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans&7CRoboto&display=swap" rel="stylesheet">
+  <!--<link href="https://fonts.googleapis.com/css?family=Open+Sans&7CRoboto&display=swap" rel="stylesheet">-->
   <link rel="stylesheet" href="css/small.css">
   <link rel="stylesheet" href="css/medium.css">
   <link rel="stylesheet" href="css/large.css">
@@ -46,12 +46,9 @@
 
     <div class="herocontainer">
       <picture>
-        <source srcset="images/franklinOriginal250.jpg" media="(max-width: 550px)" >
+        <source srcset="images/franklinOriginal350_2.jpeg" media="(max-width: 550px)" >
         <source srcset="images/franklinOriginal400.jpg" media="(max-width: 950px)" > 
-        <img src="images/franklinOriginal600_LI.jpg" alt="franklin">
-        <!--<source srcset="images/franklinOriginal250.jpg" media="(min-width: 500px)" and "(max-width: 799px)">
-          <source srcset="images/franklinOriginal400.jpg" media="(min-width: 800px)">
-            <img src="images/franklinOriginal600_LI.jpg" alt="franklin">-->
+        <img src="images/franklinOriginal600_LI.jpg" alt="franklin">        
       </picture>
       <!--<img src="images/prestonhero.jpg" alt="sunrise in SE Idaho">-->
       <section class="weathersum">
@@ -64,7 +61,7 @@
         <p>Wind Speed: <span class="info" id="wind">5</span>MPH</p>
       </section>
     </div>
-
+}
     <div class="forecast">
       <table id="fc">
         <tr>
@@ -75,18 +72,18 @@
           <th>Tue</th>
         </tr>
         <tr>
-          <td id="fri"><img src="images/sun.jpg" alt="sun" width="60" height="60">76°F</td>
-          <td id="sat"><img src="images/sun.jpg" alt="sun" width="60" height="60">79°F</td>
-          <td id="sun"><img src="images/sun.jpg" alt="sun" width="60" height="60">80°F</td>
-          <td id="mon"><img src="images/partlycloudy.jpg" alt="sun with cloud" width="60" height="60">72°F</td>
-          <td id="tue"><img src="images/partlycloudy.jpg" alt="sun with cloud" width="60" height="60">71°F</td>
+          <td id="fri"><img src="images/sun2.jpg" alt="sun">76°F</td>
+          <td id="sat"><img src="images/sun2.jpg" alt="sun">79°F</td>
+          <td id="sun"><img src="images/sun2.jpg" alt="sun">80°F</td>
+          <td id="mon"><img src="images/partlycloudy2.jpg" alt="sun with cloud">72°F</td>
+          <td id="tue"><img src="images/partlycloudy2.jpg" alt="sun with cloud">71°F</td>
         </tr>
       </table>
     </div>
 
     <div class="article">
       <h4>Cooling Off</h4>
-      <p><img src="images/coolingoff.jpg" alt="boys in sprinklers">Lorem ipsum dolor sit amet consectetur adipisicing
+      <p><img src="images/coolingoff250.jpg" alt="boys in sprinklers">Lorem ipsum dolor sit amet consectetur adipisicing
         elit. Hic, perspiciatis. Placeat veniam quo, dolore optio autem doloribus distinctio et dicta totam fugit
         perferendis sit numquam vel qui alias quas debitis repellendus accusantium provident ex. Autem deserunt animi
         nesciunt obcaecati odio doloribus! Deserunt impedit nulla et laborum rem, ea earum fugit nisi sed quod atque
@@ -139,6 +136,14 @@
   </footer>
 
   <script src="js/lesson6.js"></script>
+  <script src="js/windChill.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script>
+   WebFont.load({
+    google: {
+      families: [
+         'Open Sans', 'Roboto' ] }});
+        </script>
 </body>
 
 </html>
