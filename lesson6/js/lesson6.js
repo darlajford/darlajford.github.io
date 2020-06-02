@@ -57,3 +57,8 @@ banner.style.display = "block";
 else {  
 banner.style.display = "none";
 }
+
+WebFont.load({
+  google: {
+    families: [
+       'Open Sans', 'Roboto' ] }});

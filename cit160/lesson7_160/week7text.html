@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function numberOfDays() {
+  let month= (document.getElementById('daysInMonth').value);
+  let days;
+  if (month == 'February') { 
+    days = '28 or 29';
+  }
+  else if (month == 'April') {
+  
+    days = '30';
+  }
+  else if (month == 'June') { 
+    days = '30';
+  }else if (month == 
+           'September') {
+    days = '30';
+  }
+  else if (month == 'November') {
+    days = '30';
+  }
+  else {
+    days = '31';
+  }
+  document.getElementById('output').innerHTML = days;
+  
+}
+  </script>
+  Enter name of month: <input type='text' id='daysInMonth'><br><button type='button' onClick='numberOfDays()'>Click</button>
+<div id='output'></div>
+  
+</body>
+</html>
