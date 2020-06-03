@@ -1,5 +1,4 @@
-.container {
-  
+.container {  
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
@@ -12,3 +11,13 @@ picture img {
   filter: blur(0em);
   transition: filter 0.5s;
 }
+
+img {
+  width: 350px;
+  height: 300px;
+  margin: 0 0 0 30px; 
+}
+ p {
+  text-align: center;
+}
+

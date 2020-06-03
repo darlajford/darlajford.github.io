@@ -15,8 +15,6 @@
     margin-left: 50px;    
   }
 
-
-
   .navigation {
     display: flex;
   }
@@ -50,7 +48,6 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
-
 
     .map img {
       display: grid;

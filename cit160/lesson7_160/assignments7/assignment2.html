@@ -3,10 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Can I Sleep In?</title>
+  <script>
+    /*Input: Date, day, and month from computer's clock.
+    Processing: If weekday, weekend, or holiday.
+    Output: Get Up! if not a weekend or holiday.
+  */
+ function sleepIn() {
+    let now = new Date();
+    let month = now.getMonth();
+    let dayOfMonth = now.getDate();
+    let dayOfWeek = now.getDay();
+
+    
+    if ((month == 0 && dayOfMonth == 1) || (month == 6 && dayOfMonth == 4) || (month == 11 && dayOfMonth == 25) || (dayOfWeek == 6 || dayOfWeek == 0)); {
+    
+      document.getElementById("output").innerHTML = "Sleep in.";
+    } 
+    else {         
+      document.getElementById("output").innerHTML = "Get up!";
+    }
+  }
+ 
+  </script>
 </head>
 <body>
-  
+  Can I sleep in?
+  <button onclick="sleepIn()">Click</button>
+  <div id="output"></div>   
   
 </body>
 </html>

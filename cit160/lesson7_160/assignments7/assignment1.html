@@ -1,46 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Retail Sales</title>
   <script>
-    //Input: Customer's subtotal on a Tuesday or a Wednesday
-    //Processing: Determine if subtotal is greater than $50, then compute 10% and subtract from subtotal
-    //Output: Total amount due with sales tax added
-
+    /*Input: Customer's subtotal on a Tuesday or a Wednesday
+    Processing: Determine if subtotal is greater than $50, then compute 10% and subtract from subtotal
+    Output: Total amount due with sales tax added
+    */
     function checkSale() {
 
-            let subtotal = parseFloat(document.getElementById('subtotal').value);
+      let subtotal = parseFloat(document.getElementById('subtotal').value);
 
-            let dayOfWeek = new Date().getDay();
+      let dayOfWeek = new Date().getDay();
 
-            // put your boolean logic code here.
-            if ((dayOfWeek == '2' || dayOfWeek == '3') && subtotal > 50) { 
-              let output = (subtotal - subtotal * .10) * 1.06;
-              document.getElementById("output").innerHTML = parseFloat(output.toFixed(2)); }
-              else{
-                let output = subtotal * 1.06;
+      // put your boolean logic code here.
+      if ((dayOfWeek == '2' || dayOfWeek == '3') && subtotal > 50) {
+        let output = (subtotal - subtotal * .10) * 1.06;
+        document.getElementById("output").innerHTML = parseFloat(output.toFixed(2));
+      } else {
+        let output = subtotal * 1.06;
 
-                document.getElementById("output").innerHTML = parseFloat(output.toFixed(2));
-
-              }
-            // dont forget to add 6% tax to subtotal, after the discount is or is not applied.
-
-        }
-    
+        document.getElementById("output").innerHTML = parseFloat(output.toFixed(2));
+      }
+      // dont forget to add 6% tax to subtotal, after the discount is or is not applied.
+    }
   </script>
 </head>
+
 <body>
   <label>Enter subtotal</label>
 
-    <input type="text" id="subtotal">
+  <input type="text" id="subtotal">
 
-    <button onclick="checkSale()">Checkout</button>
+  <button onclick="checkSale()">Checkout</button>
 
-    <div id="output"></div>
+  <div id="output"></div>
 
-  
 </body>
+
 </html>
