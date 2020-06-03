@@ -1,6 +1,7 @@
 .container {  
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  max-width: 400px;
 }
 
 picture img[data-src] {
@@ -19,5 +20,6 @@ img {
 }
  p {
   text-align: center;
+  display: none;
 }
 
