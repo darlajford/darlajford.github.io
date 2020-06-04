@@ -19,11 +19,11 @@
       // put your boolean logic code here.
       if ((dayOfWeek == '2' || dayOfWeek == '3') && subtotal > 50) {
         let output = (subtotal - subtotal * .10) * 1.06;
-        document.getElementById("output").innerHTML = parseFloat(output.toFixed(2));
+        document.getElementById("output").innerHTML = output.toFixed(2);
       } else {
         let output = subtotal * 1.06;
 
-        document.getElementById("output").innerHTML = parseFloat(output.toFixed(2));
+        document.getElementById("output").innerHTML = output.toFixed(2);
       }
       // dont forget to add 6% tax to subtotal, after the discount is or is not applied.
     }

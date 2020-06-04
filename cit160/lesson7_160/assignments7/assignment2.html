@@ -16,23 +16,22 @@
     let dayOfWeek = now.getDay();
 
     let message;
-    if ((month == 0 && dayOfMonth == 1) || (month == 6 && dayOfMonth == 4) || (month == 11 && dayOfMonth == 25) || (dayOfWeek > 0 && dayOfWeek < 6)); {
+    if ((month == 0 && dayOfMonth == 1) || (month == 6 && dayOfMonth == 4) || (month == 11 && dayOfMonth == 25) || (dayOfWeek == 0 || dayOfWeek == 6)) {
     
       message = "Sleep in";
     }
 
-
     else   {        
-      message = "Get up!"
+      message = "Get up!";
     }
-    document.getElementById("output").innerHTML = postMessage;
+    document.getElementById("output").innerHTML = message;
   }
  
   </script>
 </head>
 <body>
   Can I sleep in?
-  <button onclick="sleepIn()">Click</button>
+  <button type="button" onclick="sleepIn()">Click</button>
   <div id="output"></div>   
   
 </body>

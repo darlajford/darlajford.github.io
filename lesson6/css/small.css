@@ -11,9 +11,7 @@ body {
   padding: 10px;
   text-align: center;
   font-weight: bolder;
-  line-height: 1.6;
-  
-  
+  line-height: 1.6;  
 }
 
 header {
@@ -69,7 +67,6 @@ nav {
 
 .navigation li {
   display: none;
-
 }
 
 .navigation a {
@@ -81,7 +78,6 @@ nav {
   font-family: "Open Sans", sans-serif;
   font-size: 1.2rem;
 }
-
 
 .navigation a:hover {
   color: #0343A2;
