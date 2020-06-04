@@ -1,12 +1,20 @@
 @media only screen and (min-width: 60em) 
 {
+  .headings h1 {
+    font-size: 3rem;
+  }
+  .motto {
+    font-size: 2rem;
+    margin-left: 120px;
+}
 
 .container {  
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+}  
 
-  }
-  
+picture:hover {
+  box-shadow: 0 0 30px navy;
+}
 
-picture:hover {box-shadow: 0 0 50px blue;}
 }
