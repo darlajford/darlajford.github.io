@@ -1,3 +1,4 @@
+//lazy loading of images
 let imagesToLoad = document.querySelectorAll('img[data-src]');
 
 const imgOptions = {
@@ -12,7 +13,6 @@ const loadImages = (image) => {
   };
 };
 
-
 if ('IntersectionObserver' in window) {
   const imgObserver = new IntersectionObserver((items, observer) => {
     items.forEach((item) => {
@@ -23,7 +23,6 @@ if ('IntersectionObserver' in window) {
     });
   });
 
-
   imagesToLoad.forEach((img) => {
     imgObserver.observe(img);
   });
@@ -33,9 +32,7 @@ if ('IntersectionObserver' in window) {
   });
 }
 
-
-
-
+//hamburger menu button
 const hambutton = document.querySelector(".ham");
 hambutton.addEventListener("click", toggleMenu, false);
 
@@ -45,7 +42,6 @@ function toggleMenu() {
 
 
 //The following is for date display in footer
-
 let daynames = [
   "Sunday",
   "Monday",
@@ -81,24 +77,23 @@ let fulldate = dayname + ", " + d.getDate() + " " + monthname + " " + year;
 document.getElementById("currentdate").textContent = fulldate;
 console.log(fulldate);
 
-//to display current year by copyright (although copyright year should remain the same)
+//to display current year next to copyright (although copyright year should remain the same)
 document.getElementById("year").textContent = year;
 
 //to display pancake message on fridays
-
 const banner = document.getElementById("eventMessage");
 
-
 if (daynames[d.getDay()] == "Friday") {
-banner.style.display = "block";
-}
-else {  
-banner.style.display = "none";
+  banner.style.display = "block";
+} else {
+  banner.style.display = "none";
 }
 
+//to control font loading
 WebFont.load({
   google: {
     families: [
-       'Open Sans', 'Roboto' ] }});
-
-
+      'Open Sans', 'Roboto'
+    ]
+  }
+});
