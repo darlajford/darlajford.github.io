@@ -8,11 +8,11 @@ h1 {
   grid-template-columns: auto;
  
 }
-picture img[data-src] {
+img[data-src] {
   filter: blur(0.2em);
 }
 
-picture img {
+img {
   filter: blur(0em);
   transition: filter 0.8s;
 }

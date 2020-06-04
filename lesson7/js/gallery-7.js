@@ -93,7 +93,4 @@ if (daynames[d.getDay()] == "Friday") {
 WebFont.load({
   google: {
     families: [
-      'Open Sans', 'Roboto'
-    ]
-  }
-});
+      'Open Sans', 'Roboto' ] }});

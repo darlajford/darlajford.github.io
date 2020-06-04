@@ -16,5 +16,9 @@
 picture:hover {
   box-shadow: 0 0 30px navy;
 }
+.gallery img {
+  margin: 25px 25px 0 25px;
+
+}
 
 }

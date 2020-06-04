@@ -1,8 +1,4 @@
 
-
-
-
-
 body {
   background-color: #CFEFF6;
   padding: 0;
@@ -28,7 +24,7 @@ header {
   width: 100%;
 }
 
- header img {
+ .logo img {
   width: 125px;
   height: auto;
   border: 2px solid #0343A2;
@@ -96,6 +92,7 @@ nav {
 .responsive li {
   display: block;
 }
+
 h2 {
   color: #0343A2;
   font-family: Roboto, sans-serif;
@@ -104,27 +101,26 @@ h2 {
   margin: 50px 0 0 0;
 }
 
-
 .container {  
   display: grid;
   gap: 25px;
-  align-self: center;
+  align-content: center;
 }
 
-picture img[data-src] {
+.gallery img[data-src] {
   filter: blur(0.2em);
 }
 
-picture img {
+.gallery img {
   filter: blur(0em);
   transition: filter 0.5s;
 }
 
-img {
+.gallery img {
+  display: block;
   max-width: 350px;
   height: 300px;
-  margin: 25px 25px 0 25px;
-
+  margin: auto;
 }
 
  p {
