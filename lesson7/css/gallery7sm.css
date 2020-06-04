@@ -108,6 +108,7 @@ h2 {
 .container {  
   display: grid;
   gap: 25px;
+  align-self: center;
 }
 
 picture img[data-src] {
@@ -122,7 +123,8 @@ picture img {
 img {
   max-width: 350px;
   height: 300px;
-  margin: 25px 25px 0 25px; 
+  margin: 25px 25px 0 25px;
+
 }
 
  p {
