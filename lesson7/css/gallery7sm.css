@@ -3,6 +3,7 @@ body {
   padding: 0;
   margin: 0;
 }
+
 #eventMessage {
   background-color: rgb(248, 243, 193);
   color: navy;
@@ -11,7 +12,7 @@ body {
   padding: 10px;
   text-align: center;
   font-weight: bolder;
-  line-height: 1.6;  
+  line-height: 1.6;
 }
 
 header {
@@ -23,7 +24,7 @@ header {
   width: 100%;
 }
 
- .logo img {
+.logo img {
   width: 125px;
   height: auto;
   border: 2px solid #0343A2;
@@ -85,7 +86,7 @@ nav {
   font-weight: 700;
 }
 
-/* the onclick JS toggles the .responsive class from display none (.navigation li) to display block because the repsonsive class is added to the end of the class list like this in HTML Line #26.
+/* the onclick JS toggles the .responsive class from display none (.navigation li) to display block because the repsonsive class is added to the end of the class list like this in HTML.
   <ul class="navigation responsive">
   */
 .responsive li {
@@ -97,13 +98,14 @@ h2 {
   font-family: Roboto, sans-serif;
   text-align: center;
   font-size: 1.75rem;
-  margin: 50px 0 0 0;
+  margin: 50px 0 30px 0;
 }
 
-.container {  
+.container {
   display: grid;
-  
+  grid-template-columns: minmax(300px auto);
   align-self: auto;
+  
 }
 
 img[data-src] {
@@ -117,7 +119,7 @@ img {
 
 .gallery img {
   display: block;
-  max-width: 350px;
+  max-width: 320px;
   height: 300px;
   margin: auto;
 }
@@ -125,9 +127,9 @@ img {
 figcaption {
   text-align: center;
   font-family: "Open Sans", sans-serif;
-  color: navy; 
+  color: navy;
   font-size: 1.25rem;
-  padding: 10px; 
+  padding: 10px;
 }
 
 footer {
@@ -135,12 +137,7 @@ footer {
   color: navy;
   margin: 15px auto;
   padding: 5px;
-  max-width: 860px;
   font-family: "Open Sans", sans-serif;
   text-align: center;
   max-width: 90%;
 }
-
-
-
-

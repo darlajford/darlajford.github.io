@@ -12,10 +12,15 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin: -10px;
-}  
+}
+.gallery img {
+  display: block;
+  max-width: 350px;
+  height: 300px;
+  margin: auto;
+}
 
 figure:hover {
   box-shadow: 0 0 30px navy;
 }
-
 }
