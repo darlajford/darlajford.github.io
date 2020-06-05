@@ -103,7 +103,6 @@ h2 {
 
 .container {
   display: grid;
-  grid-template-columns: minmax(300px auto);
   align-self: auto;
   
 }
