@@ -90,6 +90,7 @@ if (daynames[d.getDay()] == "Friday") {
 }
 
 //to control font loading
+var WebFont = require('webfontloader');
 WebFont.load({
   google: {
     families: [
