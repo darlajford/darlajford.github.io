@@ -83,14 +83,13 @@ document.getElementById("year").textContent = year;
 //to display pancake message on fridays
 const banner = document.getElementById("eventMessage");
 
-if (daynames[d.getDay()] == "Friday") {
+if (daynames[d.getDay()] == "Friday" || daynames[d.getDay()] == "Saturday") {
   banner.style.display = "block";
 } else {
   banner.style.display = "none";
 }
 
 //to control font loading
-var WebFont = require('webfontloader');
 WebFont.load({
   google: {
     families: [

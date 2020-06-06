@@ -51,10 +51,19 @@ document.getElementById("year").textContent = year;
 const banner = document.getElementById("eventMessage");
 
 
-if (daynames[d.getDay()] == "Friday") {
+banner.style.display = "none";
+if ((daynames[d.getDay()] == "Friday") || (daynames[d.getDay()] == "Saturday")) {
 banner.style.display = "block";
 }
 else {  
 banner.style.display = "none";
 }
 
+//to control font loading
+WebFont.load({
+  google: {
+    families: [
+      'Open Sans', 'Roboto'
+    ]
+  }
+});
