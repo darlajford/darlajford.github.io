@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Storm Center</title>
+  <meta name="description" content="storm report">
+  <link rel="icon" href="favicon2.ico">
+  <link rel="stylesheet" href="css/normalize.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <!--<link href="https://fonts.googleapis.com/css?family=Open+Sans&7CRoboto&display=swap" rel="stylesheet">-->
+  <link rel="stylesheet" href="css/storm8small.css">
+  <link rel="stylesheet" href="css/storm8med.css">
+  <link rel="stylesheet" href="css/storm8large.css">
+
+</head>
+
+<body>
+  <div id="eventMessage">Saturday = Preston Pancakes in the Park!<br>
+    9:00 a.m. Saturday at the city park.
+  </div>
+
+  <header>
+    <picture class="logo">
+      <img src="images7/weathersitelogo3.png" alt="logo">
+    </picture>
+    <section class="headings">
+      <h1>My Weather Report Today</h1>
+      <div class="motto">We've got you covered!</div>
+    </section>
+  </header>
+
+  <nav>
+    <ul class="navigation">
+      <li><a class="ham" href="#">&#9776; Menu</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Preston</a></li>
+      <li><a href="#">Soda Springs</a></li>
+      <li><a href="#">Fish Haven</a></li>
+      <li><a href="#">Storm Center</a></li>
+      <li><a href="lesson7/gallery-7.html" class="active">&#9734; Gallery</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Report a Storm</h1>
+    <form action="thanks.html" method="get"></form>
+    <fieldset>
+      <legend>Personal Information</legend>
+      <label class="top">Full Name* <input type="text" name="fullname" required></label>
+      <label class="top">Phone* <input type="tel" name="phone" placeholder="1235551234" required></label>
+      <label class="top">Zip Code* <input type="number" name="zipcode" placeholder="12345" required></label>
+      <label class="top">Email <input type="email" name="email" placeholder="someone@gmail.com"></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Storm Details</legend>
+      <label class="top">Storm Date <input type="date" name="date"></label>
+      <label class="top">Type of Storm</label>
+      <input list="stormtype" id="type">
+      <datalist id="stormtype">
+        <option value="Flash Flood"></option>
+        <option value="Hail"></option>
+        <option value="Thunderstorm"></option>
+        <option value="Tornado"></option>
+        <option value="Blizzard"></option>
+        <option value="Other"></option>
+      </datalist>
+
+      <label class="top">Storm Severity(1 to 10)&nbsp; <input type="range" min="1" max="10" step="1"
+          list="tickmarks"></label>
+      <datalist id="tickmarks">
+        <option value="1"></option>
+        <option value="2"></option>
+        <option value="3"></option>
+        <option value="4"></option>
+        <option value="5"></option>
+        <option value="6"></option>
+        <option value="7"></option>
+        <option value="8"></option>
+        <option value="9"></option>
+        <option value="10"></option>
+      </datalist>
+
+      <label class="top">Storm Region
+        <select name="region">
+          <option value="">Select Region</option>
+          <option value="preston">Preston</option>
+          <option value="ssprings">Soda Springs</option>
+          <option value="fishhav">Fish Haven</option>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Other Information</legend>
+      <div>Are you in danger?</div>
+      <label class="safety"><input type="radio" name="danger" value="yes">Yes</label>
+      <label class="safety"><input type="radio" name="danger" value="no">No</label>
+      <label class="safety"><input type="radio" name="danger" value="maybe">Maybe</label>
+
+    </fieldset>
+
+
+
+
+  </main>
+
+  <footer>
+    <!--<p>&copy; 2020 | Darla J Ford | Texas | <a href=" https://www.byui.edu/online">BYUI Online
+            Learning</a></p>*/
+    <p id="date"></p>-->
+    <p>&copy; <span id="year"></span> | Darla J Ford | Texas | <a href=" https://www.byui.edu/online">BYUI Online
+        Learning</a></p>
+    <p id="date"><span id="currentdate"></span></p>
+  </footer>
+
+
+  <script src="js/storm8.js"></script>
+
+
+</body>
+
+</html>

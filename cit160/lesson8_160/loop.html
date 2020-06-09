@@ -1,10 +1,33 @@
-<script>
-  function () {
-let i = 1;
-while (i < 3){ 
-  alert(i);
-  i++;
-}
-alert ('Done');
-}
-</script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sum of Odd Integers</title>
+  <script>
+    /* Input: an integer (n) from user
+     * Processing: add all odd intergers between 1 and n, inclusive  
+     * Output: the sum of all the odd integers 
+     */
+    function myFunction() {
+      let output = 0;
+      let n = parseInt(document.getElementById("integerBox").value);
+
+      for (let i = 1; i <= n; i += 2) {
+        output += i;
+      }
+      document.getElementById("outputDiv").innerHTML = output;
+    }
+  </script>
+</head>
+
+<body>
+  Please enter any integer to see sum of odd integers contained in your number: <input type="text" id="integerBox"><br>
+
+  <button onclick="myFunction()">Click to see sum</button>
+  <div id="outputDiv"></div>
+
+</body>
+
+</html>
