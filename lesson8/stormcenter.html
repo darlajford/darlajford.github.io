@@ -13,7 +13,6 @@
   <link rel="stylesheet" href="css/storm8small.css">
   <link rel="stylesheet" href="css/storm8med.css">
   <link rel="stylesheet" href="css/storm8large.css">
-
 </head>
 
 <body>
@@ -44,7 +43,7 @@
   </nav>
 
   <main>
-    <h1>Report a Storm</h1>
+    <h2>Report a Storm</h2>
     <form action="thanks.html" method="get">
     <fieldset>
       <legend>Personal Information</legend>
@@ -57,8 +56,8 @@
     <fieldset>
       <legend>Storm Details</legend>
       <label class="top">Storm Date <input type="date" name="date"></label>
-      <label class="top">Type of Storm</label>
-      <input list="stormtype" id="type">
+      <label class="top">Type of Storm
+      <input list="stormtype" id="storm">
       <datalist id="stormtype">
         <option value="Flash Flood"></option>
         <option value="Hail"></option>
@@ -67,6 +66,7 @@
         <option value="Blizzard"></option>
         <option value="Other"></option>
       </datalist>
+    </label>
 
       <label class="top">Storm Severity(1 to 10)&nbsp; <input type="range" min="1" max="10" step="1"
           list="tickmarks"></label>

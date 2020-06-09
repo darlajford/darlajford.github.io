@@ -60,9 +60,9 @@ main {
 }
 /* --------------FORM------------- */
 form fieldset {
-  margin: 2rem 0;
+  margin: 50px;
   border: 1px solid #445ba9;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: .5rem 2%;
 }
 form legend {
