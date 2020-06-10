@@ -2,7 +2,7 @@ body {
   background-color: #CFEFF6;
   padding: 0;
   margin: 0;
-  height: 1800px;
+  height: px;
 }
 
 #eventMessage {
@@ -95,7 +95,8 @@ nav {
 }
 
 h2 {
-  margin: 50px 0 30px 6rem;
+  text-align: center;
+  margin: 50px 0 30px 0;
   color: #0343A2;
   font-family: Roboto, sans-serif;  
   font-size: 1.75rem;  
@@ -111,14 +112,14 @@ form fieldset {
     color: #0343A2;
     margin: 0 1rem;
     padding: 0 .5rem;
-    font-family: "Open Sans", sanserif;
+    font-family: "Open Sans", sans-serif;
   }
   form label.top {
     display: block;
     padding-top: 1rem;
     color: #9c2c13;
     font-size: 1rem;
-    font-family: "Open Sans", sanserif;
+    font-family: "Open Sans", sans-serif;
   }
   form label.top input, form label.top select {
     -webkit-appearance: none;
@@ -139,17 +140,17 @@ form fieldset {
     color: #0343A2;;    
   }
   form .info {
-    font-family: "Open Sans", sanserif;    
+    font-family: "Open Sans", sans-serif;    
   }
   form textarea {
-    font-family: "Open Sans", sanserif;
+    font-family: "Open Sans", sans-serif;
     color: #0343A2;
     background-color: paleturquoise;
     border: solid 2px navy;
     border-radius: 6px;
   }
   h4 {
-    font-family: "Open Sans", sanserif;
+    font-family: "Open Sans", sans-serif;
     color: navy;
     margin-bottom: 1%;
   }
@@ -170,6 +171,18 @@ form fieldset {
     form label.top input:required:valid {
       border-left: green solid 6px;
     }
+    /*Storm thanks*/
+    h2.thanks {
+      text-align: center;
+    }
+   p#thanks {
+      font-size: 25px;
+      font-family: "Open Sans", sans-serif;
+      margin: 25px 100px;
+      color: #0343A2;
+      
+    }
+    
 
 footer {
   background-color: #10BBCC;
