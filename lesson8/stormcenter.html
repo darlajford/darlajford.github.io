@@ -37,8 +37,8 @@
       <li><a href="#">Preston</a></li>
       <li><a href="#">Soda Springs</a></li>
       <li><a href="#">Fish Haven</a></li>
-      <li><a href="lesson8/stormcenter.html"class="active" >&#9734; Storm Center</a></li>
-      <li><a href="lesson7/gallery-7.html" >Gallery</a></li>
+      <li><a href="lesson8/stormcenter.html" class="active">&#9734; Storm Center</a></li>
+      <li><a href="lesson7/gallery-7.html">Gallery</a></li>
     </ul>
   </nav>
 
@@ -68,20 +68,22 @@
           </datalist>
         </label>
 
-        <label class="top">Storm Severity(1 to 10)&nbsp; <input type="range" min="1" max="10" step="1" list="tickmarks">
-          <datalist id="tickmarks">
-            <option value="1"></option>
-            <option value="2"></option>
-            <option value="3"></option>
-            <option value="4"></option>
-            <option value="5"></option>
-            <option value="6"></option>
-            <option value="7"></option>
-            <option value="8"></option>
-            <option value="9"></option>
-            <option value="10"></option>
-          </datalist>
+        <label class="top">Storm Severity(1 to 10)&nbsp; <input type="range" id="rating value=" 10 min="1" max="10"
+            step="1" list="tickmarks" oninput="adjustRating(this.value)" onchange="adjustRating(this.value)">
         </label>
+        <datalist id="tickmarks">
+          <option value="1"></option>
+          <option value="2"></option>
+          <option value="3"></option>
+          <option value="4"></option>
+          <option value="5"></option>
+          <option value="6"></option>
+          <option value="7"></option>
+          <option value="8"></option>
+          <option value="9"></option>
+          <option value="10"></option>
+        </datalist>
+
 
         <label class="top">Storm Region
           <select name="region">

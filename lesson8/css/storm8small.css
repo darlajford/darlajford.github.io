@@ -133,6 +133,9 @@ form fieldset {
     max-width: 20rem;
     background-color: paleturquoise;
   }
+  form label.top #tickmarks {
+    color: navy;
+  }
 
   form label.info {
     display: block;
