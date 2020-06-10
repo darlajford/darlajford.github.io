@@ -69,7 +69,7 @@
     </label>
 
       <label class="top">Storm Severity(1 to 10)&nbsp; <input type="range" min="1" max="10" step="1"
-          list="tickmarks"></label>
+          list="tickmarks">
       <datalist id="tickmarks">
         <option value="1"></option>
         <option value="2"></option>
@@ -81,27 +81,35 @@
         <option value="8"></option>
         <option value="9"></option>
         <option value="10"></option>
-      </datalist>
+      </datalist> 
+    </label>  
 
       <label class="top">Storm Region
         <select name="region">
-          <option value="">Select Region</option>
+          <option value="">Select Region&#9662 </option>
           <option value="preston">Preston</option>
-          <option value="ssprings">Soda Springs</option>
+          <option value="ssprings">Soda Springs</option>          
           <option value="fishhav">Fish Haven</option>
-      </label>
+          </select>
+        </label>       
     </fieldset>
-
-    <!-- <fieldset>
-      <legend>Additional Information</legend>    
-      <label class="info"><input type="radio" name="viewer" value="yes">Yes</label>
-      <label class="info"><input type="radio" name="viewer" value="no">No</label>
-      <label class="info"><input type="radio" name="viewer" value="maybe">Maybe</label>
-    </fieldset> -->
 
     <fieldset>
       <legend>Additional Information</legend>
+      <h4>Are you in danger?</h4>
+      <label class="info"><input type="radio" name="viewer" value="yes"> Yes</label>
+      <label class="info"><input type="radio" name="viewer" value="no"> No</label>
+      <label class="info"><input type="radio" name="viewer" value="maybe"> Maybe</label>
+      <h4>Please enter any additional information:</h4>
+      <textarea name="comments" id="comments" cols="40" rows="6"></textarea>
+    
     </fieldset>
+    
+    <input type="submit" value="Report Storm" class="submitBtn">
+
+
+
+
 
   </form>
 
