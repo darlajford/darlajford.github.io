@@ -142,6 +142,12 @@ form fieldset {
   form .info {
     font-family: "Open Sans", sans-serif;    
   }
+  h4 {
+    font-family: "Open Sans", sans-serif;
+    color: #9c2c13;
+    margin-bottom: -1px;
+
+  }
   form textarea {
     font-family: "Open Sans", sans-serif;
     color: #0343A2;
@@ -149,10 +155,11 @@ form fieldset {
     border: solid 2px navy;
     border-radius: 6px;
   }
-  h4 {
+  form label {
     font-family: "Open Sans", sans-serif;
-    color: navy;
+    color: #9c2c13;
     margin-bottom: 1%;
+   
   }
   form input.submitBtn {
     border: none;
