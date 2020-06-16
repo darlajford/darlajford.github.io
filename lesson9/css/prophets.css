@@ -1,0 +1,61 @@
+h1 {
+  text-align: center;
+  color: darkred;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.cards {
+  display: grid;
+  grid-gap: 3px;
+  justify-content: center;
+  margin: 1rem auto;
+  border-radius: 1rem;
+}
+
+section {
+  background-color: khaki;
+  border: darkred 1px solid;
+}
+
+div h2,
+div p {
+  text-align: center;
+  font-family: 'Ubunto', sans-serif;
+  line-height: 10px;
+}
+
+div h2 {
+  font-size: 1.2rem;
+  margin-top: 35px;
+  color: darkred;
+}
+
+img {
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-radius: 5px;  
+  box-shadow: 0 0 15px darkgoldenrod;
+}
+
+footer {
+  text-align: center;
+  color: darkred;
+}
+
+@media only screen and (min-width: 35em) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 30em;
+  }
+}
+
+/*Lg media query*/
+@media only screen and (min-width: 60em) {
+  .cards {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 960px;
+
+  }
+}
