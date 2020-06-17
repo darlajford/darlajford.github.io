@@ -94,11 +94,12 @@ nav {
 }
 
 /* home main section */
-main h2 {
+article h2 {
   text-align: center;
   font-size: 3.5rem;
   font-family: "Roboto", sans-serif;
   color: #0343A2;
+  margin-top: 75px;
 }
 
 div h2 {
@@ -107,15 +108,14 @@ div h2 {
   text-align: center;
   font-size: 3rem;
   font-weight: bolder;
-  text-shadow: 3px 3px 1px #10BBCC;
-  
+  text-shadow: 3px 3px 1px #10BBCC;  
 }
 
 main article {
   font-family: "Roboto", sans-serif;
   font-size: 1.9rem;
   color: #0343A2;
-  margin: -25px 75px 25px 75px;
+  margin: 0 75px 50px 75px;
   text-align: center;
 }
 
@@ -125,8 +125,6 @@ div h3 {
   font-size: 1.7rem;
   text-align: center;
   margin: -35px 0 50px;
-
-
 }
 
 div p {
