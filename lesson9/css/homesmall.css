@@ -93,6 +93,12 @@ nav {
   display: block;
 }
 /* home main section */
+main h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: "Roboto", sans-serif;
+  color: #0343A2;
+}
 div h2 {
   font-family: "Roboto", sans-serif;
   color: navy;
