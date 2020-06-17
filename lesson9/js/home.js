@@ -66,27 +66,35 @@ fetch(requestURL)
     const towns = jsonObject['towns'];
 
     for (let i = 0; i < towns.length; i++) {
-      let town = document.createElement('section');
-      let h2 = document.createElement('h2');
-      let motto = document.createElement('p');
-      let year = document.createElement('p');
-      let population = document.createElement('p');
-      let rainfall = document.createElement('p');
+      if (i == 1 || i == 4 || i == 5) {
+        let town = document.createElement('section');
+        let h2 = document.createElement('h2');
+        let motto = document.createElement('p');
+        let year = document.createElement('p');
+        let population = document.createElement('p');
+        let rainfall = document.createElement('p');
+        let image = document.createElement('img');
+        let alt = document.createElement('alt');
 
-      h2.textContent = towns[i].name;
-      motto.textContent = towns[i].motto;
-      year.textContent = 'Year Founded: ' + towns[i].yearFounded;
-      population.textContent = 'Population: ' + towns[i].currentPopulation;
-      rainfall.textContent = 'Annual Rain Fall: ' + towns[i].averageRainfall;
+        // alt.setAttribute('alt', towns[i].name);
+        image.setAttribute('src', "images/" + towns[i].photo);  
+        h2.textContent = towns[i].name;
+        motto.textContent = towns[i].motto;
+        year.textContent = 'Year Founded: ' + towns[i].yearFounded;
+        population.textContent = 'Population: ' + towns[i].currentPopulation;
+        rainfall.textContent = 'Annual Rain Fall: ' + towns[i].averageRainfall;
 
-      town.appendChild(h2);      
-      town.appendChild(motto);
-      town.appendChild(year);
-      town.appendChild(population);
-      town.appendChild(rainfall);
+        town.appendChild(h2);
+        town.appendChild(motto);
+        town.appendChild(year);
+        town.appendChild(population);
+        town.appendChild(rainfall);
+        town.appendChild(image);
+        // town.appendChild(alt);
 
-      document.querySelector('div.towns').appendChild(town); 
- 
+
+        document.querySelector('div.towns').appendChild(town);
+      }
     }
   });
 
