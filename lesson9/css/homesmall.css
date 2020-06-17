@@ -92,6 +92,36 @@ nav {
 .responsive li {
   display: block;
 }
+/* home main section */
+div h2 {
+  font-family: "Roboto", sans-serif;
+  color: navy;
+  text-align: center;
+  font-size: 2rem;
+}
+div p {
+  font-family: "Open Sans", sans-serif;
+  color: navy;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 10px;
+}
+div img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: #0343A2 5px solid;
+  box-shadow: 0 0 10px 5px gray;
+  margin-bottom: 15px;
+}
+div section {
+  display: block;
+  margin: 0 auto;
+  background-color: paleturquoise;
+  border: #0343A2 5px solid;
+  max-width: 450px;
+  margin-top: 20px;
+}
 
 footer {
   background-color: #10BBCC;

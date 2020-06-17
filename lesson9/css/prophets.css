@@ -6,13 +6,12 @@ h1 {
 
 .cards {
   display: grid;
-  grid-gap: 3px;
+  grid-gap: 5px;
   justify-content: center;
-  margin: 1rem auto;
- 
+  margin: 1rem auto; 
   border: rgb(197, 194, 194) 15px solid;
   background-color: rgb(197, 194, 194);
-  box-shadow: 0 0 5px 5px rgb(182, 174, 174);
+  box-shadow: 0 0 10px 10px rgb(182, 174, 174);
 }
 
 section {
