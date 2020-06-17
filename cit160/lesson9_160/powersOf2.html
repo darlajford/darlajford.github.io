@@ -13,8 +13,14 @@
   function powersOfTwo() {
   let sum = ""; 
 for (let i = 0; i <= 31; i++) { 
-  sum += Math.pow(2, i) + ", "; 
-} 
+  // sum += Math.pow(2, i) + ", "; 
+  // the following elminates the last comma:
+  sum += Math.pow(2, i);
+  if (i != 31) {
+    sum += ", "
+  }
+
+  } 
 
   document.getElementById("outputDiv").innerHTML = sum;
 }
