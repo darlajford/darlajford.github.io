@@ -1,5 +1,5 @@
 /* Media Query for medium + screens */
-@media only screen and (min-width: 35em) {
+@media only screen and (min-width: 37.5em) {
 
   .logo img {
     width: 100%;

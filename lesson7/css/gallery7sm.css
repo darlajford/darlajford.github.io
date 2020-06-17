@@ -103,8 +103,7 @@ h2 {
 
 .container {
   display: grid;
-  align-self: auto;
-  
+  align-self: auto;  
 }
 
 img[data-src] {
@@ -118,7 +117,8 @@ img {
 
 .gallery img {
   display: block;
-  max-width: 320px;
+  margin: 0 auto;
+  max-width: 350px;
   height: 300px;
   margin: auto;
 }
