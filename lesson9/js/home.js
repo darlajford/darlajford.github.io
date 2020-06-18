@@ -55,6 +55,8 @@ if (daynames[d.getDay()] == "Friday" || daynames[d.getDay()] == "Saturday") {
   banner.style.display = "none";
 }
 
+
+// using json
 const requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
 
 fetch(requestURL)
@@ -62,8 +64,9 @@ fetch(requestURL)
     return response.json();
   })
   .then(function (jsonObject) {
+    const newLocal = jsonObject['towns'];
     // console.table(jsonObject);  // temporary checking for valid response and data parsing
-    const towns = jsonObject['towns'];
+    const towns = newLocal;
 
     for (let i = 0; i < towns.length; i++) {
       if (i == 1 || i == 4 || i == 5) {
