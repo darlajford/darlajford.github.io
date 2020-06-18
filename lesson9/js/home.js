@@ -5,7 +5,7 @@ hambutton.addEventListener("click", toggleMenu, false);
 function toggleMenu() {
   document.querySelector(".navigation").classList.toggle("responsive");
 }
-
+//----------------------------------------
 
 //The following is for date display in footer
 let daynames = [
@@ -54,9 +54,8 @@ if (daynames[d.getDay()] == "Friday" || daynames[d.getDay()] == "Saturday") {
 } else {
   banner.style.display = "none";
 }
-
-
-// using json
+// ----------------------------------------------------
+// fetching json
 const requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
 
 fetch(requestURL)
@@ -64,43 +63,52 @@ fetch(requestURL)
     return response.json();
   })
   .then(function (jsonObject) {
-    const newLocal = jsonObject['towns'];
+    const towns = jsonObject['towns'];
     // console.table(jsonObject);  // temporary checking for valid response and data parsing
-    const towns = newLocal;
 
-    for (let i = 0; i < towns.length; i++) {
-      if (i == 1 || i == 4 || i == 5) {
-        let town = document.createElement('section');
-        let h2 = document.createElement('h2');
-        let motto = document.createElement('h3');
-        let year = document.createElement('p');
-        let population = document.createElement('p');
-        let rainfall = document.createElement('p');
-        let image = document.createElement('img');
-        let alt = document.createElement('alt');
+    const special = towns.filter(town => (town.name == 'Preston') || (town.name == 'Fish Haven') || (town.name == 'Soda Springs')); //this line is in addition to const prophets line
+    // console.table(special);
+    // for (let i = 0; i < towns.length; i++) {
+    special.forEach(town => {
+      // if (towns[i].name == "Fish Haven" || i == 4 || i == 5) {    //this will work with for loop instead of using each loop 
+      let townSection = document.createElement('section');
+      let h2 = document.createElement('h2');
+      let motto = document.createElement('h3');
+      let year = document.createElement('p');
+      let population = document.createElement('p');
+      let rainfall = document.createElement('p');
+      let image = document.createElement('img');
+      let alt = document.createElement('alt');
 
-        alt.setAttribute('alt', towns[i].name);
-        image.setAttribute('src', `images/${towns[i].photo}`);  
-        h2.textContent = towns[i].name;
-        motto.textContent = towns[i].motto;
-        year.textContent = 'Year Founded: ' + towns[i].yearFounded;
-        population.textContent = 'Population: ' + towns[i].currentPopulation;
-        rainfall.textContent = 'Annual Rain Fall: ' + towns[i].averageRainfall;
+      // alt.setAttribute('alt', towns[i].name);
+      alt.setAttribute('alt', town.name);
+      // image.setAttribute('src', `images/${towns[i].photo}`);
+      image.setAttribute('src', `images/${town.photo}`);
+      // h2.textContent = towns[i].name;
+      h2.textContent = town.name;
+      // motto.textContent = towns[i].motto;
+      motto.innerHTML = town.motto;
+      if (town.name == 'Fish Haven') motto.innerHTML += "<br><br>";
+      // year.textContent = 'Year Founded: ' + towns[i].yearFounded;
+      year.textContent = 'Year Founded: ' + town.yearFounded;
+      // population.textContent = 'Population: ' + towns[i].currentPopulation;
+      population.textContent = 'Population: ' + town.currentPopulation;
+      // rainfall.textContent = 'Annual Rain Fall: ' + towns[i].averageRainfall;
+      rainfall.textContent = 'Annual Rain Fall: ' + town.averageRainfall;
 
-        town.appendChild(h2);
-        town.appendChild(motto);
-        town.appendChild(year);
-        town.appendChild(population);
-        town.appendChild(rainfall);
-        town.appendChild(image);
-        town.appendChild(alt);
+      townSection.appendChild(h2);
+      townSection.appendChild(motto);
+      townSection.appendChild(year);
+      townSection.appendChild(population);
+      townSection.appendChild(rainfall);
+      townSection.appendChild(image);
+      townSection.appendChild(alt);
 
-
-        document.querySelector('div.towns').appendChild(town);
-      }
-    }
+      document.querySelector('div.towns').appendChild(townSection);
+    });
   });
-
+  //-------------------------------------------
+  
 //to control font loading
 WebFont.load({
   google: {
