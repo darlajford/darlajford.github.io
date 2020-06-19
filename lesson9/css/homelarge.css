@@ -10,9 +10,11 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
+
 div p{
 line-height: 30px;
 }
+
 div section {
   display: block;
   margin: 0 auto;

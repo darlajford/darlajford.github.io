@@ -5,14 +5,14 @@
     width: 100%;
   }
 
-   .headings h1 {
+  .headings h1 {
     font-size: 2rem;
   }
 
   .motto {
     letter-spacing: 1.5pt;
     font-size: 1.5rem;
-    margin-left: 50px;    
+    margin-left: 50px;
   }
 
   .navigation {
@@ -33,4 +33,32 @@
   .navigation li:first-child {
     display: none;
   }
+
+  
+  .towns {
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+    max-width: 600px;
+    margin: .5rem auto;
+  }
+
+
+  section:nth-child(odd) img {
+    grid-column: 2;
+  }
+
+  section:nth-child(odd) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  section img {
+    float: left;
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
+
+
+
 }

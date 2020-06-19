@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <title>Title</title>
+  <script>
+    /* Input: three integers named start, end, and divisor
+     * Processing: determine which numbers from start to end are evenly divided by divisor
+     * Output: 
+     */
+    function divisible() {
+      let start = parseInt(document.getElementById("startInputBox").value);
+      let end = parseInt(document.getElementById("endInputBox").value);
+      let divisor = parseInt(document.getElementById("divisorInputBox").value);
+
+      let display = "";
+      let i = 0;
+      let remainder = i % divisor;
+
+      do {
+        display += i + " ";
+        i += 1;
+      }
+      while (i >= start && i <= end && remainder == 0);
+
+      document.getElementById("output").innerHTML = display;
+
+    }
+  </script>
+</head>
+
+<body>
+  Start: <input type="text" id="startInputBox" size="5"><br>
+  End: <input type="text" id="endInputBox" size="5"><br>
+  Divisor: <input type="text" id="divisorInputBox" size="5"><br>
+  <button type="button" onclick="">Click</button>
+  <div id="output"></div>
+</body>
+
+</html>
+<!-- Test Cases
+Inputs	Output
+start	end	divisor
+-4	5	3	-3 0 3
+12	24	2	12 14 16 18 20 22 24
+17	30	5	20 25 30 -->

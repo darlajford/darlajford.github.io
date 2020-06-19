@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Fives</title>
+<script>
+/* Input: two numbers
+ * Processing: reads the two numbers and determines if both are > 5 or their sum > 20
+ * Output: true or false
+ */
+function fives() {
+ let a = parseFloat(document.getElementById("one").value);
+ let b = parseFloat(document.getElementById("two").value);
+
+ let message;
+ if ((a >= 5 && b >= 5) || (a + b >= 20)) {
+ message = "true";
+ }
+ else {
+   message = "false";
+ }
+
+document.getElementById("output").innerHTML = message;
+}
+
+</script>
+</head>
+
+<body>
+Please enter two numbers:
+<input type="text" id="one" size="5">
+<input type="text" id="two" size="5">
+<button type="button" onclick="">Click</button>
+<div id="output"></div>
+</body>
+</html>
+<!-- function absDifference() {
+  let a = parseFloat(document.getElementById("aInputBox").value);
+  let b = parseFloat(document.getElementById("bInputBox").value);  -->
+  
+   <!-- let diff = (Math.abs(a - b)); -->
+  
+  <!-- document.getElementById("outputDiv").innerHTML = diff; -->
+

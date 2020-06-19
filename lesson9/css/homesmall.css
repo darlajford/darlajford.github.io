@@ -102,6 +102,13 @@ article h2 {
   margin-top: 75px;
 }
 
+main article {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.9rem;
+  color: #0343A2;
+  margin: 0 75px 50px 75px;
+  text-align: center;
+}
 div h2 {
   font-family: "Roboto", sans-serif;
   color: navy;
@@ -111,13 +118,6 @@ div h2 {
   text-shadow: 3px 3px 1px #10BBCC;  
 }
 
-main article {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.9rem;
-  color: #0343A2;
-  margin: 0 75px 50px 75px;
-  text-align: center;
-}
 
 div h3 {
   font-style: italic;
