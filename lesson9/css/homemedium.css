@@ -34,30 +34,41 @@
     display: none;
   }
 
-  
-  .towns {
-    display: grid;
-    grid-template-columns:  1fr 1fr;
-    max-width: 600px;
-    margin: .5rem auto;
-  }
+/* home page section -----------------*/  
+div h2 {
+  display: block;
+  font-size: 2.1rem;  
+}
 
+div h3 {
+  font-size: 1.1rem;
+  display: block;
+  padding: 10px;
+}
 
-  section:nth-child(odd) img {
-    grid-column: 2;
-  }
+div p {
+  font-size: 1.1rem;
+}
 
-  section:nth-child(odd) {
-    grid-column: 1;
-    grid-row: 1;
-  }
+div img {
+  /* display: block; */
+  float: left;
+  /* margin: 0 auto;  */
+  max-width: 310px; 
+  border-radius: 10px;
+  border: #0343A2 5px solid;
+  box-shadow: 0 0 10px 5px gray;
+  margin-bottom: 15px;
+}
 
-  section img {
-    float: left;
-    width: 100%;
-    height: auto;
-    padding: 0;
-  }
+div section {
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* margin: 0 auto; */
+  max-width: 750px;
+  margin-top: 20px;
+  padding: 10px;
+}
 
 
 

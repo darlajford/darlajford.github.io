@@ -6,6 +6,13 @@
     font-size: 2rem;
     margin-left: 120px;
 }
+/* home page ----------------*/
+div h2 {
+  font-size: 3rem;
+}
+div h3 {
+  font-size: 1.7rem;
+}
 .towns {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -18,10 +25,18 @@ line-height: 30px;
 div section {
   display: block;
   margin: 0 auto;
-  width: 150rem;
-  margin-top: 20px;
+  max-width: 350px;
   padding: 20px;
   margin-bottom: 50px;
+}
+/* div section {
+  display: block;
+  margin: 0 auto;
+  background-color: paleturquoise;
+  border: #0343A2 5px solid;
+  max-width: 350px;
+  margin-top: 20px;
+  padding: 10px; */
 }
 
 }
