@@ -1,36 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Powers of Two</title>
   <script>
     /* Input: No user input, program will use a loop function.
- * Process: Compute all powers of 2 from 0 - 31. 
- * Output: All powers of 2 from 0 to 31, inclusive.
- */
- 
-  function powersOfTwo() {
-  let sum = ""; 
-for (let i = 0; i <= 31; i++) { 
-  // sum += Math.pow(2, i) + ", "; 
-  // the following elminates the last comma:
-  sum += Math.pow(2, i);
-  if (i != 31) {
-    sum += ", "
-  }
-
-  } 
-
-  document.getElementById("outputDiv").innerHTML = sum;
-}
-
+     * Process: Compute all powers of 2 from 0 - 31. 
+     * Output: All powers of 2 from 0 to 31, inclusive.
+     */
+    function powersOfTwo() {
+      let sum = "";
+      for (let i = 0; i <= 31; i++) {
+        // sum += Math.pow(2, i) + ", "; 
+        // the following elminates the last comma:
+        sum += Math.pow(2, i);
+        if (i != 31) {
+          sum += ", "
+        }
+      }
+      document.getElementById("outputDiv").innerHTML = sum;
+    }
   </script>
 </head>
+
 <body>
   <h2>Powers of 2 through 31</h2>
   <h3>Press the button to display the powers.</h3>
   <button type="button" onclick="powersOfTwo()">Click</button>
   <div id="outputDiv"></div>
 </body>
+
 </html>
