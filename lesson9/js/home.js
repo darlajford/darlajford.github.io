@@ -67,10 +67,7 @@ fetch(requestURL)
     // console.table(jsonObject);  // temporary checking for valid response and data parsing
 
     const special = towns.filter(town => (town.name == 'Preston') || (town.name == 'Fish Haven') || (town.name == 'Soda Springs')); //this line is in addition to const prophets line
-    // console.table(special);
-    // for (let i = 0; i < towns.length; i++) {
     special.forEach(town => {
-      // if (towns[i].name == "Fish Haven" || i == 4 || i == 5) {    //this will work with for loop instead of using each loop 
       let townSection = document.createElement('section');
       let h2 = document.createElement('h2');
       let motto = document.createElement('h3');
@@ -80,20 +77,13 @@ fetch(requestURL)
       let image = document.createElement('img');
       let alt = document.createElement('alt');
 
-      // alt.setAttribute('alt', towns[i].name);
       alt.setAttribute('alt', town.name);
-      // image.setAttribute('src', `images/${towns[i].photo}`);
       image.setAttribute('src', `images/${town.photo}`);
-      // h2.textContent = towns[i].name;
       h2.textContent = town.name;
-      // motto.textContent = towns[i].motto;
       motto.innerHTML = town.motto;
       if (town.name == 'Fish Haven') motto.innerHTML += "<br><br>";
-      // year.textContent = 'Year Founded: ' + towns[i].yearFounded;
       year.textContent = 'Year Founded: ' + town.yearFounded;
-      // population.textContent = 'Population: ' + towns[i].currentPopulation;
       population.textContent = 'Population: ' + town.currentPopulation;
-      // rainfall.textContent = 'Annual Rain Fall: ' + towns[i].averageRainfall;
       rainfall.textContent = 'Annual Rain Fall: ' + town.averageRainfall;
 
       townSection.appendChild(h2);
@@ -107,8 +97,20 @@ fetch(requestURL)
       document.querySelector('div.towns').appendChild(townSection);
     });
   });
-  //-------------------------------------------
-  
+
+
+
+// for (let i = 0; i < towns.length; i++) {
+// if (towns[i].name == "Fish Haven" || i == 4 || i == 5) {    //this will work with for loop instead of using each loop 
+// alt.setAttribute('alt', towns[i].name);
+// image.setAttribute('src', `images/${towns[i].photo}`);
+// h2.textContent = towns[i].name;
+// motto.textContent = towns[i].motto;
+// year.textContent = 'Year Founded: ' + towns[i].yearFounded;
+// population.textContent = 'Population: ' + towns[i].currentPopulation;
+// rainfall.textContent = 'Annual Rain Fall: ' + towns[i].averageRainfall;
+//-------------------------------------------
+
 //to control font loading
 WebFont.load({
   google: {

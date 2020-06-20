@@ -110,17 +110,30 @@ main article {
   text-align: center;
 }
 
-div h2 {
+main article img {
+  border-radius: 20px;
+  border: 5px solid #0343A2;
+  margin-right: 10px;
+  height: 60px;
+}
+
+.towns {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  text-align: center;
+}
+
+section h2 {
   font-family: "Roboto", sans-serif;
   color: navy;
   text-align: center;
   font-size: 3rem;
   font-weight: bolder;
-  text-shadow: 3px 3px 1px #10BBCC;  
+  text-shadow: 3px 3px 1px #10BBCC;
 }
 
-
-div h3 {
+section h3 {
   font-style: italic;
   font-family: "Roboto", sans-serif;
   font-size: 1.7rem;
@@ -128,7 +141,7 @@ div h3 {
   margin: -35px 0 50px;
 }
 
-div p {
+section p {
   font-family: "Open Sans", sans-serif;
   color: navy;
   text-align: center;
@@ -136,7 +149,7 @@ div p {
   line-height: 10px;
 }
 
-div img {
+section img {
   display: block;
   margin: 0 auto;
   max-width: 90%;

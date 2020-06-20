@@ -2,41 +2,50 @@
   .headings h1 {
     font-size: 3rem;
   }
+
   .motto {
     font-size: 2rem;
     margin-left: 120px;
-}
-/* home page ----------------*/
-div h2 {
-  font-size: 3rem;
-}
-div h3 {
-  font-size: 1.7rem;
-}
-.towns {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
+  }
 
-div p{
-line-height: 30px;
-}
+  /* home page ----------------*/
+  section h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin: 25px 0 40px;
+  }
 
-div section {
-  display: block;
-  margin: 0 auto;
-  max-width: 350px;
-  padding: 20px;
-  margin-bottom: 50px;
-}
-/* div section {
-  display: block;
-  margin: 0 auto;
-  background-color: paleturquoise;
-  border: #0343A2 5px solid;
-  max-width: 350px;
-  margin-top: 20px;
-  padding: 10px; */
-}
+  section h3 {
+    font-size: 1.7rem;
+    text-align: center;
+    margin: -35px 0 50px;
+  }
+
+  .towns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+  }
+
+  section p {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 30px;
+  }
+
+  div section {
+    display: block;
+    margin: 0 auto;
+    max-width: 335px;
+    padding: 20px;
+    margin-bottom: 50px;
+    height: 575px;
+  }
+
+  section img {
+    display: block;
+    margin: 0 auto;
+    max-width: 90%;
+  }
 
 }
