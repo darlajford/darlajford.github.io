@@ -146,7 +146,7 @@ section p {
   color: navy;
   text-align: center;
   font-size: 1.5rem;
-  line-height: 10px;
+  /* line-height: 10px; */
 }
 
 section img {

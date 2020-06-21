@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    'use strict';
+    //input: name, address, city, state, and zip code from user
+    //processing: concatenates all input into one address
+    //output: address
+    function getAddress() {
+      let name = document.getElementById('nameInputBox').value;
+      let street = document.getElementById('streetInputBox').value;
+      let city = document.getElementById('cityInputBox').value;
+      let state = document.getElementById('stateInputBox').value;
+      let zip = document.getElementById('zipInputBox').value;
+      let address = name + '<br>' + street + '<br>' + city + state + zip;
+
+      document.getElementById('outputDiv').innerHTML = address;
+    }
+  </script>
+</head>
+
+<body>
+  Name <input type='text' id="nameInputBox" size="30"><br>
+  Street <input type='text' id="streetInputBox" size="30"><br>
+  City <input type='text' id="cityInputBox" size="20">
+  State <input type='text' id="stateInputBox" size="3">
+  Zip Code <input type='text' id="zipInputBox" size="7"><br>
+  <button type="button" onclick="getAddress()">Make Address</button>
+  <div id="outputDiv"></div>
+</body>
+
+</html>
