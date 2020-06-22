@@ -6,16 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script>
+    'use strict';
     // Write code to call the square root function found in the Math object and assign the result returned from it to a variable named r. The square root function has this header:  
-    function sqrt(x)
+    function sqrt(x) 
 
     function testSqrt() {
       //Get a number from the user.
-      let value = parseFloat(document.getElementById('inputBox').value);
-
+      let value = parseFloat(document.getElementById('inputBox').value); 
+    
       //Call the Math.sqrt function.
-      let r = Math.sqrt(value);
-
+      let r = Math.sqrt(value); 
+    
       //Display the square root for the user to see.
       document.getElementById('outputDiv').innerHTML = r;
       
@@ -25,6 +26,11 @@
 </head>
 
 <body>
+  Please enter any integer to see square root: <input type="text" id="integerBox"><br>
+
+  <button type='button' onclick="testSqrt()">Click to see square root</button>
+  <div id="outputDiv"></div>
+
 
 </body>
 

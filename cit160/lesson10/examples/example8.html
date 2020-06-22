@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    'use strict';
+
+    // how to obtain a pseudo random integer that is in the range min inclusive to max exclusive, in other words in the range [min, max). Notice that this code calls both the random and floor functions from the Math object.
+    function randomInteger() {
+      let min = 2;
+      let max = 11;
+    
+      //call the Math.random and Math.floor functions.
+      let r = min + Math.floor(Math.random() * (max - min)); 
+
+      //display the random integer for the user to see
+      document.getElementById('outputDiv').innerHTML = r;
+
+    }
+  </script>
+</head>
+
+<body>
+  <button type='button' onclick='randomInteger()'>Click to see random integer</button>
+  <div id='outputDiv'></div>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    'use strict';
+
+    function doInputOutput() {
+      let number = parseInt(document.getElementById('numberInputBox').value);
+      let result = isEven(number);
+      document.getElementById('outputDiv').innerHTML = number + ' is even: ' + result;
+    }
+    //returns true if value is an even 
+    //integer; otherwise returns false.
+    function isEven(value) {
+      if ((value % 2) == 0) {} else {
+        return false;
+      }
+    }
+  </script>
+</head>
+
+<body>
+  Please enter an integer: <input type='text' id='numberInputBox'>
+  <button type='button' onclick='doInputOutput()'>Is Even?</button>
+  <div id='outputDiv'></div>
+</body>
+
+</html>
