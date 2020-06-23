@@ -33,6 +33,8 @@
   .navigation li:first-child {
     display: none;
   }
+/* ------------------------------------ */
+
     .forecast {
       display: block;
       margin: auto;
