@@ -7,7 +7,12 @@
   <title>Wind Chill</title>
   <script>
     'use strict';
+    /*input: temperature in Fahrenheit and wind speed
+    *processing: calculate the wind chill using 
+    *output: the wind chill
+    */
 
+    //Get temperature and wind speed from user, and output to HTML div.
     function doInputOutput() {
       let tempF = parseFloat(document.getElementById("tempInputBox").value);
       let speed = parseFloat(document.getElementById("windInputBox").value);
@@ -15,6 +20,7 @@
       document.getElementById("outputDiv").innerHTML = Math.round(chill);
     }
 
+    //Calculate wind chill.
     function windChill(tempF, speed) {
       let f = 35.74 + 0.6215 * tempF - 35.75 * Math.pow(speed, 0.16) + 0.4275 * tempF * Math.pow(speed, 0.16);
       return f;

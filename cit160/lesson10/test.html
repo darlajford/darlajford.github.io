@@ -1,0 +1,46 @@
+Local: Jun 22 at 4:46pm<br>Course: Jun 22 at 3:46pm
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Wind Chill Caculator</title>
+
+<script>
+/* Input: Enter temperature into first box, Then wind speed  into second box.
+ * Processing: Calucate the arithmetic for wind chill
+ * Output: The wind chill 
+ */
+
+function windchill(tempF,speed) {
+    let factor = 35.74 + (.6215 * tempF) - (35.75 *(speed^.16)) +(.4275*(tempF) * (speed^.16));
+    return factor;
+}
+
+function doInputOutput() {
+    let text1 = document.getElementById('tempInputBox').value
+    let text2 = document.getElementById('windInputBox').value
+
+
+// Convert what the user typed from text into a number.
+    let tempF = parseFloat(text1);
+// Convert what the user typed from text into a number.
+    let speed = parseFloat(text2);
+//Call windchill function for answer.
+    let answer = windchill(tempF,speed)
+    
+
+    document.getElementById('checkDiv').innerHTML = answer;
+}
+
+     // Display the answer to the user.
+
+</script>
+</head>
+<h1>Let's find out the wind chill?</h1> 
+Enter your information                               
+<br>Temperature<input type="text" id="tempInputBox">
+<br>Wind Speed<input type="text" id="windInputBox">
+<br><button type="button" onclick="doInputOutput()"> Wind Chill </button>
+<div id="checkDiv"></div>                     
+</body>            
+</html>
