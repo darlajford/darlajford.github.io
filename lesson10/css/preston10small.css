@@ -132,11 +132,13 @@ table {
   margin: auto;
 }
 
-table,
-th,
-td {
+table, th {
   border: 1px solid navy;
   border-collapse: collapse;
+}
+td#one {
+  /* border-left: 1px solid navy;
+  border-right: 1px solid navy;  */
 }
 
 th,

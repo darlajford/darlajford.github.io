@@ -17,6 +17,22 @@ let daynames = [
   "Friday",
   "Saturday"
 ];
+let shortDays = [
+  "Sun",
+  "Mon",
+  "Tue",
+  "Wed",
+  "Thu",
+  "Fri",
+  "Sat",
+  "Sun",
+  "Mon",
+  "Tue",
+  "Wed",
+  "Thu",
+  "Fri",
+  "Sat"
+];
 let months = [
   "January",
   "February",
@@ -82,13 +98,18 @@ fetch(requestURL)
     }
     chill()
 
-    //weather icons for 5 day forecast
+    //weather icons and info for 5 day forecast
     // ---------------------------
+    let dayNum = 1;
     const imagesrc = 'https://openweathermap.org/img/w/' + jsObject.weather[0].icon + '.png'; // note the concatenation
     const desc = jsObject.weather[0].description; // note how we reference the weather array
-    document.getElementById('imagesrc').textContent = imagesrc; // informational specification only
-    document.getElementById('icon').setAttribute('src', imagesrc); // focus on the setAttribute() method
-    document.getElementById('icon').setAttribute('alt', desc);
+    document.getElementById('day' + dayNum).setAttribute('src', imagesrc);
+    document.getElementById("temp" + dayNum).setAttribute('text', jsObject.main.temp);
+    // document.getElementById('day1').textContent = imagesrc; // informational specification only
+    // focus on the setAttribute() method
+    // document.getElementById('icon').setAttribute('alt', desc);  
+
+    paragraph.appendChild(text);
 
   });
 
@@ -103,3 +124,13 @@ WebFont.load({
     ]
   }
 });
+
+// console.log(document.getElementById("fc").rows[0].cells[0]);
+
+let day = d.getDay() + 1;
+for (let count = 0; count < 5; count++) {
+  let displayDay = shortDays[day];
+  day++;
+  document.getElementById("fc").rows[0].cells[count].innerHTML = displayDay;
+  // document.getElementById("fc").rows[1].cells[count].innerHTML = displayDay;
+}
