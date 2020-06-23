@@ -1,0 +1,13 @@
+@media only screen and (min-width: 64em) {
+  .headings h1 {
+    font-size: 3rem;
+  }
+
+  .motto {
+    font-size: 2rem;
+    margin-left: 120px;
+  }
+/* ======================================================= */
+
+
+}
