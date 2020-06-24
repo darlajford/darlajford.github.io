@@ -73,10 +73,12 @@ if (daynames[d.getDay()] == "Friday" || daynames[d.getDay()] == "Saturday") {
 
 // weather summary information from api
 const requestURL = 'https://api.openweathermap.org/data/2.5/weather?id=5604473&units=imperial&APPID=a442aaa7bf1b55d1a3f7a66de5e262fe';
+// const apiURL = 'https://api.openweathermap.org/data/2.5/forecast?id=5604473&units=imperial&APPID=a442aaa7bf1b55d1a3f7a66de5e262fe';
+
 fetch(requestURL)
   .then((response) => response.json())
   .then((jsObject) => {
-    // console.log(jsObject);
+    console.log(jsObject);
     document.getElementById('condition').textContent = jsObject.weather[0].main;
     document.getElementById('current-temp').textContent = jsObject.main.temp;
     document.getElementById('humid').textContent = jsObject.main.humidity;
@@ -100,7 +102,15 @@ fetch(requestURL)
 
     //weather icons and info for 5 day forecast
     // ---------------------------
-    let dayNum = 1;
+    // const apiURL = 'https://api.openweathermap.org/data/2.5/forecast?id=5604473&units=imperial&APPID=a442aaa7bf1b55d1a3f7a66de5e262fe';
+
+    // fetch(apiURL)
+    //   .then((response2) => response2.json())
+    //   .then((jsObject2) => {
+    //     console.log(jsObject2);
+
+
+        let dayNum = 1;
     const imagesrc = 'https://openweathermap.org/img/w/' + jsObject.weather[0].icon + '.png'; // note the concatenation
     const desc = jsObject.weather[0].description; // note how we reference the weather array
     document.getElementById('day' + dayNum).setAttribute('src', imagesrc);
