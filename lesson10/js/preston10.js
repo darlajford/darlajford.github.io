@@ -106,15 +106,10 @@ fetch(requestURL)
     fetch(apiURLforecast)
       .then((response) => response.json())
       .then((forecastinfo) => {
-        console.log(forecastinfo);
         const mylist = forecastinfo['list'];
         const mydate = new Date();
-
         const y = mydate.getDay();
-
         let forecastday = y;
-        console.log(forecastday);
-
         const dayofweek = new Array(7);
 
         dayofweek[0] = "Sun";
@@ -134,11 +129,9 @@ fetch(requestURL)
             }
             let nameofday = document.createElement('span');
             nameofday.textContent = dayofweek[forecastday];
-            console.log('>' + dayofweek[forecastday]);
 
             let theTemp = document.createElement('p');
             theTemp.textContent = mylist[i].main.temp.toFixed(0) + '\xB0';
-            console.log(mylist[i].main.temp + '\xB0');
 
             let iconcode = mylist[i].weather[0].icon;
             let iconPath = 'https://openweathermap.org/img/w/' + iconcode + '.png';
