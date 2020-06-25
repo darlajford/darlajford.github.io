@@ -79,9 +79,9 @@ fetch(requestURL)
   .then((jsObject) => {
     console.log(jsObject);
     document.getElementById('condition').textContent = jsObject.weather[0].main;
-    document.getElementById('current-temp').textContent = jsObject.main.temp;
+    document.getElementById('current-temp').textContent = jsObject.main.temp.toFixed(0);
     document.getElementById('humid').textContent = jsObject.main.humidity;
-    document.getElementById('wind').textContent = jsObject.wind.speed;
+    document.getElementById('wind').textContent = jsObject.wind.speed.toFixed(0);
 
     //wind chill factor
     //--------------------------------------

@@ -35,13 +35,16 @@
   }
 
   /* ------------------------------------------------- */
-h4 {
-  text-align: center;
-  font-size: 2.1rem;
-  font-family: "Roboto", sans-serif;
-  color: navy;
-  margin-bottom: 5px;;
-}
+  /* 5 day forecase with heading */
+  h5 {
+    display: block;
+    text-align: center;
+    font-size: 2.1rem;
+    font-family: "Roboto", sans-serif;
+    color: navy;
+    margin-bottom: 5px;
+    ;
+  }
 
   div#forecast {
     margin: auto;
@@ -50,10 +53,16 @@ h4 {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50%;
-    border: 1px solid;
+    width: 80%;
+    max-width: 35rem;
+    border: 1px solid navy;
+    box-shadow: 0 0 5px 3px #0343A2;
+    border-radius: 10px;
   }
-  div#forecast p, div#forecast span, div#forecast img  {
+
+  div#forecast p,
+  div#forecast span,
+  div#forecast img {
     /* display: block; */
     margin: 10px 25px -10px;
     font-family: "Open Sans", sans-serif;
@@ -61,50 +70,47 @@ h4 {
     /* padding: 0 75% 0 15%; */
     font-size: 1.3rem;
   }
+
   div#forecast span {
     border-bottom: navy 1px solid;
-  } 
+  }
+
   div#forecast p {
     text-align: center;
   }
 
-   /* .forecast {
-  display: block;
-  margin: auto;
-  margin-top: 50px;
-  max-width: 400px;
-} */
+  /* article image */
+  p img {
+    float: right;
+    width: 200px;
+    height: 200px;
+  }
 
-p img {
-  float: right;
-  width: 200px;
-  height: 200px;
-}
+  /* map and contact section */
+  .map {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 
-.map {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
+  .map img {
+    display: grid;
+    width: 250px;
+    height: 200px;
+    margin: 10px;
+    grid-column: 1;
+  }
 
-.map img {
-  display: grid;
-  width: 250px;
-  height: 200px;
-  margin: 10px;
-  grid-column: 1;
-}
+  section.contact {
+    grid-column: 2;
+    text-align: center;
+    align-self: center;
+  }
 
-section.contact {
-  grid-column: 2;
-  text-align: center;
-  align-self: center;
-}
-
-a .icon {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  border-radius: 4px;
-  margin-top: 15px;
-}
+  a .icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    margin-top: 15px;
+  }
 }
