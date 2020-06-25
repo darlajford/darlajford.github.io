@@ -1,5 +1,5 @@
-const apiURL = 'https://api.openweathermap.org/data/2.5/weather?id=5604473&units=imperial&APPID=a442aaa7bf1b55d1a3f7a66de5e262fe';
-fetch(apiURL)
+const requestURL = 'https://api.openweathermap.org/data/2.5/weather?id=5604473&units=imperial&APPID=a442aaa7bf1b55d1a3f7a66de5e262fe';
+fetch(requestURL)
   .then((response) => response.json())
   .then((jsObject) => {
     console.log(jsObject);
@@ -31,5 +31,15 @@ fetch(apiURL)
     document.getElementById('icon').setAttribute('src', imagesrc); // focus on the setAttribute() method
     document.getElementById('icon').setAttribute('alt', desc);
 
+    // ----------------------------------------------------------------
 
-  });
+    const apiURL = 'https://api.openweathermap.org/data/2.5/forecast?id=5604473&units=imperial&APPID=a442aaa7bf1b55d1a3f7a66de5e262fe';
+
+    fetch(apiURL)
+      .then((response2) => response2.json())
+      .then((jsObject2) => {
+        console.log(jsObject2);
+        document.getElementById('temp1').textContent = jsObject.weather[0].main;
+
+
+    })});

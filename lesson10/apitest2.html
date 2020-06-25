@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="">
+
+
+  <script>
+    const apiForecastURL =
+      'https://api.openweathermap.org/data/2.5/forecast?id=5604473&appid=a442aaa7bf1b55d1a3f7a66de5e262fe&units=imperial';
+
+    fetch(apiForecastURL)
+      .then((response) => response.json())
+      .then((jsonObject) => {
+        const sixOclock = jsonObject['list'];
+
+        const fcInfo = sixOclock.filter(isSixOclock);
+        // console.table(jsonObject);
+        console.table(fcInfo);
+        fcInfo.forEach(list => {
+          const imagesrc = 'https://openweathermap.org/img/w/' + list.weather[0].icon + '.png';
+
+          document.getElementById('fcTemp').innerHTML +=
+            `<span>${list.main.temp.toFixed(0)} F\xB0<img src="${imagesrc}"</img><span>`
+
+          // document.getElementById('testTable2').innerHTML +=
+          // `<tr><td>${list.main.temp}</td><td><img src="${imagesrc}"</td></tr>`
+        });
+      });
+
+    function isSixOclock(afterNoon) {
+      return afterNoon.dt_txt.includes("18:00:00");
+    }
+  </script>
+  <style>
+    div#fcTemp {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      /* justify-content: center; */
+      background-color: azure;
+      border: 1px solid navy;
+      width: 75%;
+    }
+    div span {
+      display: inline-flex;
+      align-items: center;
+      justify-items: center;
+      padding: 5px;
+      margin-left: 10px;;
+    }
+    section h2 {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section>
+    <h2>Five Day Forecast</h2>
+    <div id="fcTemp">
+
+      <!-- <hr> -->
+      <!-- <p><span>&deg F</span></p> -->
+      <!-- <table id="testTable2"> -->
+
+      <!-- </table> -->
+    </div>
+  </section>
+
+
+
+  <!-- <script src="javascript/weatherAPI.js" async defer></script> -->
+</body>
+
+</html>

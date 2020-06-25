@@ -124,22 +124,25 @@ h2 {
   opacity: .8;
 }
 
-h3 {
+.weathersum h3 {
   border-bottom: 2px solid navy;
 }
+/* .weathersum p {
+
+} */
 /*5 day forecast*/
-table {
+/* table {
   margin: auto;
 }
 
 table, th {
   border: 1px solid navy;
   border-collapse: collapse;
-}
-td#one {
+} */
+/* td#one { */
   /* border-left: 1px solid navy;
   border-right: 1px solid navy;  */
-}
+/* }
 
 th,
 td {
@@ -158,9 +161,9 @@ td {
 
 td img {
   border-radius: 30px;
-}
+} */
 
-.forecast {
+#forecast {
   display: none;
 }
 /*article with picture*/
@@ -172,6 +175,10 @@ td img {
   background-color: paleturquoise;
   border: 1px solid navy;
   padding: 0 20px;
+}
+div.article h4 {
+  font-size: 1.5rem;
+  text-align: left;
 }
 
 p img {

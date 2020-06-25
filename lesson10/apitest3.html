@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API test three</title>
+  <link rel="stylesheet" href="css/apitest3.css">
+
+  <script>
+    'use strict';
+    const apiURLforecast =
+      'https://api.openweathermap.org/data/2.5/forecast?id=5604473&appid=a442aaa7bf1b55d1a3f7a66de5e262fe&units=imperial';
+    fetch(apiURLforecast)
+      .then((response) => response.json())
+      .then((forecastinfo) => {
+        console.log(forecastinfo);
+        const mylist = forecastinfo['list'];
+        const mydate = new Date();
+
+        const y = mydate.getDay();
+
+        let forecastday = y;
+        console.log(forecastday);
+
+        const dayofweek = new Array(7);
+
+        dayofweek[0] = "Sun";
+        dayofweek[1] = "Mon";
+        dayofweek[2] = "Tue";
+        dayofweek[3] = "Wed";
+        dayofweek[4] = "Thu";
+        dayofweek[5] = "Fri";
+        dayofweek[6] = "Sat";
+
+        for (let i = 0; i < mylist.length; i++) {
+          let time = mylist[i].dt_txt;
+          if (time.includes('18:00:00')) {
+            forecastday += 1;
+            if (forecastday === 7) {
+              forecastday = 0;
+            }
+            let nameofday = document.createElement('span');
+            nameofday.textContent = dayofweek[forecastday];
+            console.log('>' + dayofweek[forecastday]);
+
+            let theTemp = document.createElement('p');
+            theTemp.textContent = mylist[i].main.temp.toFixed(0) + '\xB0';
+            console.log(mylist[i].main.temp + '\xB0');
+
+            let iconcode = mylist[i].weather[0].icon;
+            let iconPath = 'https://openweathermap.org/img/w/' + iconcode + '.png';
+            let theicon = document.createElement('img');
+            theicon.src = iconPath;
+
+            let theDay = document.createElement('div');
+            theDay.appendChild(nameofday);
+            theDay.appendChild(theTemp);
+            theDay.appendChild(theicon);
+
+            document.getElementById('forecast').appendChild(theDay);
+          }
+        }
+
+      })
+  </script>
+</head>
+
+<body>
+  <div id='forecast'></div>
+
+
+
+</body>
+
+</html>

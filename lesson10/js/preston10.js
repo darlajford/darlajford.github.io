@@ -73,7 +73,6 @@ if (daynames[d.getDay()] == "Friday" || daynames[d.getDay()] == "Saturday") {
 
 // weather summary information from api
 const requestURL = 'https://api.openweathermap.org/data/2.5/weather?id=5604473&units=imperial&APPID=a442aaa7bf1b55d1a3f7a66de5e262fe';
-// const apiURL = 'https://api.openweathermap.org/data/2.5/forecast?id=5604473&units=imperial&APPID=a442aaa7bf1b55d1a3f7a66de5e262fe';
 
 fetch(requestURL)
   .then((response) => response.json())
@@ -102,6 +101,78 @@ fetch(requestURL)
 
     //weather icons and info for 5 day forecast
     // ---------------------------
+    const apiURLforecast =
+      'https://api.openweathermap.org/data/2.5/forecast?id=5604473&appid=a442aaa7bf1b55d1a3f7a66de5e262fe&units=imperial';
+    fetch(apiURLforecast)
+      .then((response) => response.json())
+      .then((forecastinfo) => {
+        console.log(forecastinfo);
+        const mylist = forecastinfo['list'];
+        const mydate = new Date();
+
+        const y = mydate.getDay();
+
+        let forecastday = y;
+        console.log(forecastday);
+
+        const dayofweek = new Array(7);
+
+        dayofweek[0] = "Sun";
+        dayofweek[1] = "Mon";
+        dayofweek[2] = "Tue";
+        dayofweek[3] = "Wed";
+        dayofweek[4] = "Thu";
+        dayofweek[5] = "Fri";
+        dayofweek[6] = "Sat";
+
+        for (let i = 0; i < mylist.length; i++) {
+          let time = mylist[i].dt_txt;
+          if (time.includes('18:00:00')) {
+            forecastday += 1;
+            if (forecastday === 7) {
+              forecastday = 0;
+            }
+            let nameofday = document.createElement('span');
+            nameofday.textContent = dayofweek[forecastday];
+            console.log('>' + dayofweek[forecastday]);
+
+            let theTemp = document.createElement('p');
+            theTemp.textContent = mylist[i].main.temp.toFixed(0) + '\xB0';
+            console.log(mylist[i].main.temp + '\xB0');
+
+            let iconcode = mylist[i].weather[0].icon;
+            let iconPath = 'https://openweathermap.org/img/w/' + iconcode + '.png';
+            let theicon = document.createElement('img');
+            theicon.src = iconPath;
+
+            let theDay = document.createElement('div');
+            theDay.appendChild(nameofday);
+            theDay.appendChild(theTemp);
+            theDay.appendChild(theicon);
+
+            document.getElementById('forecast').appendChild(theDay);
+          }
+        }
+
+      })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // const apiURL = 'https://api.openweathermap.org/data/2.5/forecast?id=5604473&units=imperial&APPID=a442aaa7bf1b55d1a3f7a66de5e262fe';
 
     // fetch(apiURL)
@@ -110,16 +181,16 @@ fetch(requestURL)
     //     console.log(jsObject2);
 
 
-        let dayNum = 1;
-    const imagesrc = 'https://openweathermap.org/img/w/' + jsObject.weather[0].icon + '.png'; // note the concatenation
-    const desc = jsObject.weather[0].description; // note how we reference the weather array
-    document.getElementById('day' + dayNum).setAttribute('src', imagesrc);
-    document.getElementById("temp" + dayNum).setAttribute('text', jsObject.main.temp);
+    //     let dayNum = 1;
+    // const imagesrc = 'https://openweathermap.org/img/w/' + jsObject.weather[0].icon + '.png'; // note the concatenation
+    // const desc = jsObject.weather[0].description; // note how we reference the weather array
+    // document.getElementById('day' + dayNum).setAttribute('src', imagesrc);
+    // document.getElementById("temp" + dayNum).setAttribute('text', jsObject.main.temp);
     // document.getElementById('day1').textContent = imagesrc; // informational specification only
     // focus on the setAttribute() method
     // document.getElementById('icon').setAttribute('alt', desc);  
 
-    paragraph.appendChild(text);
+    // paragraph.appendChild(text);
 
   });
 
@@ -137,10 +208,10 @@ WebFont.load({
 
 // console.log(document.getElementById("fc").rows[0].cells[0]);
 
-let day = d.getDay() + 1;
-for (let count = 0; count < 5; count++) {
-  let displayDay = shortDays[day];
-  day++;
-  document.getElementById("fc").rows[0].cells[count].innerHTML = displayDay;
-  // document.getElementById("fc").rows[1].cells[count].innerHTML = displayDay;
-}
+// let day = d.getDay() + 1;
+// for (let count = 0; count < 5; count++) {
+//   let displayDay = shortDays[day];
+//   day++;
+//   document.getElementById("fc").rows[0].cells[count].innerHTML = displayDay;
+//   // document.getElementById("fc").rows[1].cells[count].innerHTML = displayDay;
+// }
