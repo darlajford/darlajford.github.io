@@ -77,7 +77,7 @@ const requestURL = 'https://api.openweathermap.org/data/2.5/weather?id=5604473&u
 fetch(requestURL)
   .then((response) => response.json())
   .then((jsObject) => {
-    console.log(jsObject);
+    // console.log(jsObject);
     document.getElementById('condition').textContent = jsObject.weather[0].main;
     document.getElementById('current-temp').textContent = jsObject.main.temp.toFixed(0);
     document.getElementById('humid').textContent = jsObject.main.humidity;
@@ -101,90 +101,51 @@ fetch(requestURL)
 
     //weather icons and info for 5 day forecast
     // ---------------------------
-    const apiURLforecast =
+    const forecastURL =
       'https://api.openweathermap.org/data/2.5/forecast?id=5604473&appid=a442aaa7bf1b55d1a3f7a66de5e262fe&units=imperial';
-    fetch(apiURLforecast)
+    fetch(forecastURL)
       .then((response) => response.json())
-      .then((forecastinfo) => {
-        const mylist = forecastinfo['list'];
-        const mydate = new Date();
-        const y = mydate.getDay();
-        let forecastday = y;
-        const dayofweek = new Array(7);
-
-        dayofweek[0] = "Sun";
-        dayofweek[1] = "Mon";
-        dayofweek[2] = "Tue";
-        dayofweek[3] = "Wed";
-        dayofweek[4] = "Thu";
-        dayofweek[5] = "Fri";
-        dayofweek[6] = "Sat";
-
-        for (let i = 0; i < mylist.length; i++) {
-          let time = mylist[i].dt_txt;
+      .then((fcinfo) => {
+        const fclist = fcinfo['list'];
+        const fcdate = new Date();
+        const dayNum = fcdate.getDay();
+        let fcday = dayNum;
+        let days = [
+          "Sun",
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat"
+        ];
+        for (let i = 0; i < fclist.length; i++) {
+          let time = fclist[i].dt_txt;
           if (time.includes('18:00:00')) {
-            forecastday += 1;
-            if (forecastday === 7) {
-              forecastday = 0;
+            fcday += 1;
+            if (fcday === 7) {
+              fcday = 0;
             }
-            let nameofday = document.createElement('span');
-            nameofday.textContent = dayofweek[forecastday];
+            let dayName = document.createElement('span');
+            dayName.textContent = days[fcday];
 
-            let theTemp = document.createElement('p');
-            theTemp.textContent = mylist[i].main.temp.toFixed(0) + '\xB0';
+            let dayTemp = document.createElement('p');
+            dayTemp.textContent = fclist[i].main.temp.toFixed(0) + '\xB0';
 
-            let iconcode = mylist[i].weather[0].icon;
-            let iconPath = 'https://openweathermap.org/img/w/' + iconcode + '.png';
-            let theicon = document.createElement('img');
-            theicon.src = iconPath;
+            let iconCode = fclist[i].weather[0].icon;
+            let iconPath = 'https://openweathermap.org/img/w/' + iconCode + '.png';
+            let iconImg = document.createElement('img');
+            iconImg.src = iconPath;
 
-            let theDay = document.createElement('div');
-            theDay.appendChild(nameofday);
-            theDay.appendChild(theTemp);
-            theDay.appendChild(theicon);
+            let weekDay = document.createElement('div');
+            weekDay.appendChild(dayName);
+            weekDay.appendChild(dayTemp);
+            weekDay.appendChild(iconImg);
 
-            document.getElementById('forecast').appendChild(theDay);
+            document.getElementById('forecast').appendChild(weekDay);
           }
         }
-
       })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // const apiURL = 'https://api.openweathermap.org/data/2.5/forecast?id=5604473&units=imperial&APPID=a442aaa7bf1b55d1a3f7a66de5e262fe';
-
-    // fetch(apiURL)
-    //   .then((response2) => response2.json())
-    //   .then((jsObject2) => {
-    //     console.log(jsObject2);
-
-
-    //     let dayNum = 1;
-    // const imagesrc = 'https://openweathermap.org/img/w/' + jsObject.weather[0].icon + '.png'; // note the concatenation
-    // const desc = jsObject.weather[0].description; // note how we reference the weather array
-    // document.getElementById('day' + dayNum).setAttribute('src', imagesrc);
-    // document.getElementById("temp" + dayNum).setAttribute('text', jsObject.main.temp);
-    // document.getElementById('day1').textContent = imagesrc; // informational specification only
-    // focus on the setAttribute() method
-    // document.getElementById('icon').setAttribute('alt', desc);  
-
-    // paragraph.appendChild(text);
-
   });
 
 
@@ -198,13 +159,3 @@ WebFont.load({
     ]
   }
 });
-
-// console.log(document.getElementById("fc").rows[0].cells[0]);
-
-// let day = d.getDay() + 1;
-// for (let count = 0; count < 5; count++) {
-//   let displayDay = shortDays[day];
-//   day++;
-//   document.getElementById("fc").rows[0].cells[count].innerHTML = displayDay;
-//   // document.getElementById("fc").rows[1].cells[count].innerHTML = displayDay;
-// }

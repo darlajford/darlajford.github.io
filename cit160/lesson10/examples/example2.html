@@ -12,6 +12,7 @@
       let sum = a + b + c;         //this and the next  2 lines are the body
       let avg = sum / 3;
       return avg;
+      document.getElementById('outputDiv').innerHTML = avg;
 
 
     }
@@ -23,6 +24,7 @@
   Second Number <input type="text" id="secondInputBox"><br>
   Third Number <input type="text" id="thirdInputBox"><br>
   <button id="button" onclick="average">click</button>
+  <div id='outputDiv'></div>
 </body>
 
 </html>

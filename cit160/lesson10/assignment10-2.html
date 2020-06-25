@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fahrenheit/Celsius</title>
+  <script>
+    'use strict';
+
+    function doInputOutput() {
+      let input = parseInt(document.getElementById('fahrInputBox').value);
+      let converted = fahrToCels(input);
+
+      document.getElementById('outputDiv').innerHTML = converted;
+
+    }
+
+    function fahrToCels(fahr) {
+      let celsius = (fahr - 32) * 5 / 9;
+      return celsius;
+
+    }
+  </script>
+</head>
+
+<body>
+  Fahrenheit: <input type="text" name="" id="fahrInputBox">
+  <button type="button" onclick="doInputOutput()">Celsius</button>
+  <div id="outputDiv"></div>
+</body>
+
+</html>

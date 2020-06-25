@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guessing Game</title>
+  <script>
+    'use strict';
+
+    function numberGuessGame() {
+      console.log("start of function");
+      let numGuesses = 0;
+      let message =
+        "I'm thinking of a number between 1 and 100.\n" +
+        "Try to guess it!\n" +
+        "Please enter an integer between 1 and 100.";
+      let min = 1;
+      let max = 100;
+
+      //call the Math.random and Math.floor functions.
+      let answer = min + Math.floor(Math.random() * (max - min));
+
+      // let answer = 38;
+      let guess;
+      do {
+        guess = parseInt(prompt(message));
+        numGuesses++;
+        if (guess < answer) {
+          message = guess +
+            " is too low. Please enter another integer.";
+        } else if (guess > answer) {
+          message = guess +
+            " is too high. Please enter another integer.";
+        }
+
+      } while (guess != answer);
+      message = guess + " is correct! and it only took you " +numGuesses + " guesses.";
+      alert(message);
+      console.log("end of function");
+    }
+    // function randomInteger() {
+    // let min = 5;
+    // let max = 11;
+
+    // Call the Math.random and Math.floor functions.
+    // let r = min + Math.floor(Math.random() * (max - min));
+
+    // Display the random integer for the user to see.
+    // document.getElementById('outputDiv').innerHTML = r;
+    // }
+  </script>
+</head>
+
+<body>
+  <button type="button" onclick="numberGuessGame()">Play</button>
+
+</body>
+
+</html>
