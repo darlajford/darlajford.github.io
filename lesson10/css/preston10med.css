@@ -43,7 +43,6 @@
     font-family: "Roboto", sans-serif;
     color: navy;
     margin-bottom: 5px;
-
   }
 
   #forecast div {
@@ -54,7 +53,6 @@
     padding: 10px;
     box-shadow: 0 0 10px 2px #0343A2;
     border-radius: 10px;
-
   }
 
   div#forecast {
@@ -73,10 +71,13 @@
   }
 
   div#forecast span {
-    border-bottom: navy 1px solid;
+    border: navy 1px solid;
     display: block;
     margin: 0 auto;
     text-align: center;
+    background-color: palegoldenrod ;
+    width: 100%;
+    border-radius: 10px;
   }
 
   div#forecast p {

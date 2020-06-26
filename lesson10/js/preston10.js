@@ -148,8 +148,6 @@ fetch(requestURL)
       })
   });
 
-
-
 //---------------------------------
 //to control font loading
 WebFont.load({
