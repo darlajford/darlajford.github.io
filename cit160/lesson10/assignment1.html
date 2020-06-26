@@ -17,7 +17,7 @@
       let tempF = parseFloat(document.getElementById("tempInputBox").value);
       let speed = parseFloat(document.getElementById("windInputBox").value);
       let chill = windChill(tempF, speed);
-      document.getElementById("outputDiv").innerHTML = Math.round(chill);
+      document.getElementById("outputDiv").innerHTML = chill.toFixed(2);
     }
 
     //Calculate wind chill.

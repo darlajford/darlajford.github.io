@@ -58,13 +58,15 @@
   div#forecast {
     margin: 10px;
     display: flex;
-    justify-content: center;    
+    justify-content: center;
+    
+    
   }
 
   div#forecast p,
   div#forecast span,
   div#forecast img {
-    margin: 10px 25px -10px;
+    margin: 10px 10px -10px;
     font-family: "Open Sans", sans-serif;
     color: navy;
     font-size: 1.3rem;

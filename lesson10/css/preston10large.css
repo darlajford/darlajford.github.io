@@ -1,5 +1,4 @@
-@media only screen and (min-width: 64em)
- {
+@media only screen and (min-width: 64em) {
   .headings h1 {
     font-size: 3rem;
   }
@@ -8,25 +7,41 @@
     font-size: 2rem;
     margin-left: 120px;
   }
-/* ======================================================= */
-.forecast {
-  max-width: 550px;
-}
-    p img {
-      float: right;
-      width: 250px;
-      margin: -35px 10px 10px;     
-    }
-    .map {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-    .map img {      
-      width: 400px;
-      height: 350px;     
-    }
-    a .icon {
-      width: 40px;
-      height: 40px;    
-    }
+
+  /* ======================================================= */
+  .forecast {
+    max-width: 550px;
+  }
+
+  p img {
+    float: right;
+    width: 250px;
+    margin: -35px 10px 10px;
+  }
+
+  .map {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .map img {
+    width: 400px;
+    height: 350px;
+  }
+
+  a .icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  div#forecast p,
+  div#forecast span,
+  div#forecast img {
+    margin: 10px 25px -10px;
+  }
+
+  div#forecast span {
+    margin: 0 auto;
+  }
+
 }
