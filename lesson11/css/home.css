@@ -1,0 +1,327 @@
+body {
+  background-color: #CFEFF6;
+  padding: 0;
+  margin: 0;
+}
+
+#eventMessage {
+  background-color: rgb(248, 243, 193);
+  color: navy;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.25rem;
+  padding: 10px;
+  text-align: center;
+  font-weight: bolder;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #10BBCC;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.logo img {
+  width: 125px;
+  height: auto;
+  border: 2px solid #0343A2;
+  border-radius: 50%;
+}
+
+.headings {
+  display: flex;
+  flex-direction: column;
+}
+
+.headings h1 {
+  font-size: 1.65rem;
+  margin: 0 0 0 17px;
+  font-family: Roboto, sans-serif;
+  font-weight: bolder;
+  color: #0343A2;
+}
+
+.motto {
+  font-style: italic;
+  letter-spacing: 1pt;
+  color: navy;
+  margin-left: 35px;
+  font-size: 1.5rem;
+}
+
+nav {
+  margin: -15px auto;
+  background-color: #0343A2;
+}
+
+.navigation {
+  list-style: none;
+  padding: 0;
+}
+
+.navigation li:first-child {
+  display: block;
+}
+
+.navigation li {
+  display: none;
+}
+
+.navigation a {
+  display: block;
+  color: #F7E449;
+  padding: 0.75rem;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2rem;
+}
+
+.navigation a:hover {
+  color: #0343A2;
+  background-color: paleturquoise;
+  font-weight: 700;
+}
+
+/* the onclick JS toggles the .responsive class from display none (.navigation li) to display block because the repsonsive class is added to the end of the class list like this in HTML.
+  <ul class="navigation responsive">
+  */
+.responsive li {
+  display: block;
+}
+
+/* home main section */
+article h2 {
+  text-align: center;
+  font-size: 3.5rem;
+  font-family: "Roboto", sans-serif;
+  color: #0343A2;
+  margin-top: 75px;
+}
+
+main article {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.9rem;
+  color: #0343A2;
+  margin: 0 75px 50px 75px;
+  text-align: center;
+}
+
+main article img {
+  border-radius: 20px;
+  border: 5px solid #0343A2;
+  margin-right: 10px;
+  height: 60px;
+}
+
+.towns {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  text-align: center;
+}
+
+section h2 {
+  font-family: "Roboto", sans-serif;
+  color: navy;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bolder;
+  text-shadow: 3px 3px 1px #10BBCC;
+}
+
+section h3 {
+  font-style: italic;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.7rem;
+  text-align: center;
+  margin: -35px 0 50px;
+}
+
+section p {
+  font-family: "Open Sans", sans-serif;
+  color: navy;
+  text-align: center;
+  font-size: 1.5rem;
+  /* line-height: 10px; */
+}
+
+section img {
+  display: block;
+  margin: 0 auto;
+  max-width: 90%;
+  border-radius: 10px;
+  border: #0343A2 5px solid;
+  box-shadow: 0 0 10px 5px gray;
+  margin-bottom: 15px;
+}
+
+div section {
+  display: block;
+  margin: 0 auto;
+  background-color: paleturquoise;
+  border: #0343A2 5px solid;
+  max-width: 350px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+footer {
+  background-color: #10BBCC;
+  color: navy;
+  margin: 15px auto;
+  padding: 5px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  max-width: 90%;
+}
+
+/* ======================
+====================== */
+/* medium view */
+/* Media Query for medium + screens */
+@media only screen and (min-width: 37.5em) {
+
+  .logo img {
+    width: 100%;
+  }
+
+  .headings h1 {
+    font-size: 2rem;
+  }
+
+  .motto {
+    letter-spacing: 1.5pt;
+    font-size: 1.5rem;
+    margin-left: 50px;
+  }
+
+  .navigation {
+    display: flex;
+  }
+
+  .navigation li {
+    display: block;
+    /* needed because of state in small view */
+    flex: 1 1 100%;
+  }
+
+  .navigation li a {
+    color: #F7E449;
+    text-align: center;
+  }
+
+  .navigation li:first-child {
+    display: none;
+  }
+
+  /* home page section -----------------*/
+  div section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 750px;
+    height: 300px;
+  }
+
+  div section:nth-child(odd) img {
+    grid-column: 2;
+    grid-row: 1 / 4;
+  }
+
+  div section:nth-child(odd) h2,
+  div section:nth-child(odd) h3,
+  div section:nth-child(odd) p {
+    grid-column: 1;
+  }
+
+  div section:nth-child(even) img {
+    grid-column: 1;
+    grid-row: 1 / 4;
+  }
+
+  div section:nth-child(even) h2,
+  div section:nth-child(even) h3,
+  div section:nth-child(even) p {
+    grid-column: 2;
+  }
+
+  section h2 {
+    font-size: 2.1rem;
+    /* margin: 25px; */
+  }
+
+  section h3,
+  section p {
+    font-size: 1.1rem;
+  }
+
+  section h3 {
+    padding: 15px;
+  }
+
+  section p {
+    line-height: 1px;
+  }
+
+  section img {
+    margin: 30px 0 -10px;
+  }
+}
+
+/* ==============================
+============================== */
+/* large view */
+@media only screen and (min-width: 64em) {
+  .headings h1 {
+    font-size: 3rem;
+  }
+
+  .motto {
+    font-size: 2rem;
+    margin-left: 120px;
+  }
+
+  /* home page ----------------*/
+  section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 25px 0 40px;
+  }
+
+  section h3 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: -35px 0 50px;
+  }
+
+  .towns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+  }
+
+  section p {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 30px;
+  }
+
+  div section {
+    display: block;
+    margin: 0 auto;
+    max-width: 335px;
+    padding: 20px;
+    margin-bottom: 50px;
+    height: 575px;
+  }
+
+  section img {
+    display: block;
+    margin: 0 auto;
+    max-width: 90%;
+  }
+
+}

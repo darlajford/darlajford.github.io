@@ -16,11 +16,13 @@
     fetch(apiForecastURL)
       .then((response) => response.json())
       .then((jsonObject) => {
-        const sixOclock = jsonObject['list'];
+        const sixOclock = jsonObject['list'];//sixOclock pulls up an array list of 40 and a list of 5 at the time 18:00:00
+        // console.log(sixOclock);
 
         const fcInfo = sixOclock.filter(isSixOclock);
-        // console.table(jsonObject);
-        console.table(fcInfo);
+        // console.log(fcInfo); //fcInfo holds the array list of 5 with the time 18:00:00
+        // console.table(jsonObject); //jsonObject holds city of Preston and array of 40
+        // console.table(fcInfo); //same as console.log(fcInfo)
         fcInfo.forEach(list => {
           const imagesrc = 'https://openweathermap.org/img/w/' + list.weather[0].icon + '.png';
 

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heat Index</title>
+  <script>
+    'use strict';
+    // input: temperature and relative humidity from user input.
+    // processing: determine the heat index using temperature and humidity info.
+    // output: the heat index.
+
+    function doInputOutput() {
+      let tempF = parseFloat(document.getElementById('tempInputBox').value);
+      let humid = parseFloat(document.getElementById('humidInputBox').value);
+      let index = heatIndex(tempF, humid);
+      document.getElementById('outputDiv').innerHTML = Math.round(index);
+    }
+
+
+    function heatIndex(tempF, humid) {
+      let i = -42.379 + 2.04901523 * tempF + 10.14333127 * humid - 0.22475541 * tempF * humid - 0.00683783 * Math.pow(
+          tempF, 2) - 0.05481717 * Math.pow(humid, 2) + 0.00122874 * Math.pow(tempF, 2) * humid + 0.00085282 * tempF *
+        Math.pow(humid, 2) - 0.00000199 * Math.pow(tempF, 2) * Math.pow(humid, 2);
+      return i;
+    }
+  </script>
+</head>
+
+<body>
+  Temperature: <input type="text" id="tempInputBox"><br>
+  RelativeHumidity: <input type="text" id="humidInputBox"><br>
+  <button id="button" onclick="doInputOutput()">Heat Index</button>
+  <div id="outputDiv"></div>
+</body>
+
+</html>
