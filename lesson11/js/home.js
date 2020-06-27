@@ -44,7 +44,7 @@ document.getElementById("currentdate").textContent = fulldate;
 console.log(fulldate);
 
 //to display current year next to copyright (although copyright year should remain the same)
-document.getElementById("year").textContent = year;
+// document.getElementById("year").textContent = year;
 
 //to display pancake message on fridays
 const banner = document.getElementById("eventMessage");
@@ -55,7 +55,7 @@ if (daynames[d.getDay()] == "Friday" || daynames[d.getDay()] == "Saturday") {
   banner.style.display = "none";
 }
 // ----------------------------------------------------
-// fetching json
+// fetching json for town general info
 const requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
 
 fetch(requestURL)
@@ -64,7 +64,6 @@ fetch(requestURL)
   })
   .then(function (jsonObject) {
     const towns = jsonObject['towns'];
-    // console.table(jsonObject);  // temporary checking for valid response and data parsing
 
     const special = towns.filter(town => (town.name == 'Preston') || (town.name == 'Fish Haven') || (town.name == 'Soda Springs')); //this line is in addition to const prophets line
     special.forEach(town => {
@@ -97,7 +96,7 @@ fetch(requestURL)
       document.querySelector('div.towns').appendChild(townSection);
     });
   });
-  
+
 //-------------------------------------------
 
 //to control font loading

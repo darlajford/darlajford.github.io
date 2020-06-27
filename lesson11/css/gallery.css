@@ -1,0 +1,222 @@
+body {
+  background-color: #CFEFF6;
+  padding: 0;
+  margin: 0;
+}
+
+#eventMessage {
+  background-color: rgb(248, 243, 193);
+  color: navy;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.25rem;
+  padding: 10px;
+  text-align: center;
+  font-weight: bolder;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #10BBCC;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.logo img {
+  width: 125px;
+  height: auto;
+  border: 2px solid #0343A2;
+  border-radius: 50%;
+}
+
+.headings {
+  display: flex;
+  flex-direction: column;
+}
+
+.headings h1 {
+  font-size: 1.65rem;
+  margin: 0 0 0 17px;
+  font-family: Roboto, sans-serif;
+  font-weight: bolder;
+  color: #0343A2;
+}
+
+.motto {
+  font-style: italic;
+  letter-spacing: 1pt;
+  color: navy;
+  margin-left: 35px;
+  font-size: 1.5rem;
+}
+
+nav {
+  margin: -15px auto;
+  background-color: #0343A2;
+}
+
+.navigation {
+  list-style: none;
+  padding: 0;
+}
+
+.navigation li:first-child {
+  display: block;
+}
+
+.navigation li {
+  display: none;
+}
+
+.navigation a {
+  display: block;
+  color: #F7E449;
+  padding: 0.75rem;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2rem;
+}
+
+.navigation a:hover {
+  color: #0343A2;
+  background-color: paleturquoise;
+  font-weight: 700;
+}
+
+/* the onclick JS toggles the .responsive class from display none (.navigation li) to display block because the repsonsive class is added to the end of the class list like this in HTML.
+  <ul class="navigation responsive">
+  */
+.responsive li {
+  display: block;
+}
+
+h2 {
+  color: #0343A2;
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  font-size: 1.75rem;
+  margin: 50px 0 30px 0;
+}
+
+.container {
+  display: grid;
+  align-self: auto;  
+}
+
+img[data-src] {
+  filter: blur(0.2em);
+}
+
+img {
+  filter: blur(0em);
+  transition: filter 0.5s;
+}
+
+.gallery img {
+  display: block;
+  margin: 0 auto;
+  max-width: 350px;
+  height: 300px;
+  margin: auto;
+}
+
+figcaption {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  color: navy;
+  font-size: 1.25rem;
+  padding: 10px;
+}
+
+footer {
+  background-color: #10BBCC;
+  color: navy;
+  margin: 15px auto;
+  padding: 5px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  max-width: 90%;
+}
+/* =================================
+================================= */
+/* medium view */
+@media only screen and (min-width: 37.5em) {
+
+  .logo img {
+    width: 100%;
+  }
+
+  .headings h1 {
+    font-size: 2rem;
+  }
+
+  .motto {
+    letter-spacing: 1.5pt;
+    font-size: 1.5rem;
+    margin-left: 50px;
+  }
+
+  .navigation {
+    display: flex;
+  }
+
+  .navigation li {
+    display: block;
+    /* needed because of state in small view */
+    flex: 1 1 100%;
+  }
+
+  .navigation li a {
+    color: #F7E449;
+    text-align: center;
+  }
+
+  .navigation li:first-child {
+    display: none;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery image {
+    display: block;
+    max-width: 300px;
+  }
+
+}
+
+/* ===============================
+=============================== */
+/* large view */
+@media only screen and (min-width: 64em) 
+{
+  .headings h1 {
+    font-size: 3rem;
+  }
+  .motto {
+    font-size: 2rem;
+    margin-left: 120px;
+}
+
+.container {  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* margin: -10px; */
+}
+.gallery img {
+  display: block;
+  max-width: 90%;
+  height: 300px;
+  margin: auto;
+  margin-top: 25px;
+}
+
+figure:hover {
+  box-shadow: 0 0 30px navy;
+}
+}

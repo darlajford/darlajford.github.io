@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Storm Center</title>
+  <meta name="description" content="storm report">
+  <link rel="icon" href="favicon2.ico">
+  <link rel="stylesheet" href="css/normalize.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <link rel="stylesheet" href="css/stormcenter.css">
+</head>
+
+<body>
+  <div id="eventMessage">Saturday = Preston Pancakes in the Park!<br>
+    9:00 a.m. Saturday at the city park.
+  </div>
+
+  <header>
+    <picture class="logo">
+      <a href="../lesson9/index.html"><img src="images/weathersitelogo3.png" alt="logo"></a>
+      
+    </picture>
+    <section class="headings">
+      <h1>My Weather Report Today</h1>
+      <div class="motto">We've got you covered!</div>
+    </section>
+  </header>
+
+  <nav>
+    <ul class="navigation">
+      <li><a class="ham" href="#">&#9776; Menu</a></li>
+      <li><a href="../lesson11/index.html">Home</a></li>
+      <li><a href="../lesson11/preston.html">Preston</a></li>
+      <li><a href="../lesson11/sodaSprings.html">Soda Springs</a></li>
+      <li><a href="../lesson11/fishHaven.html">Fish Haven</a></li>
+      <li><a href="../lesson11/stormcenter.html" class="active">&#9734; Storm Center</a></li>
+      <li><a href="../lesson11/gallery.html">Gallery</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2 class="storm">Report a Storm</h2>
+    <form action="storm8thanks.html" method="get">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label class="top">Full Name* <input type="text" name="fullName" pattern="[a-zA-Z \.\-\p{L}]{5,}" placeholder="John Doe" required></label>
+        <label class="top">Phone* <input type="tel" name="phone" placeholder="1235551234" required></label>
+        <label class="top">Zip Code* <input type="number" name="zipcode" placeholder="12345" required></label>
+        <label class="top">Email <input type="email" name="email" placeholder="someone@gmail.com"></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Storm Details</legend>
+        <label class="top">Storm Date <input type="date" name="stormDate"></label>
+        <label class="top">Type of Storm
+          <input list="stormtype" id="storm">
+          <datalist id="stormtype">
+            <option value="Flash Flood"></option>
+            <option value="Hail"></option>
+            <option value="Thunderstorm"></option>
+            <option value="Tornado"></option>
+            <option value="Blizzard"></option>
+            <option value="Other"></option>
+          </datalist>
+        </label>
+
+        <label class="top">Storm Severity (1 to 10)&nbsp; <input type="range" id="rating" value="5" min="1" max="10"
+            step="1" list="tickmarks">
+        </label>
+        <datalist id="tickmarks">
+          <option value="1"></option>
+          <option value="2"></option>
+          <option value="3"></option>
+          <option value="4"></option>
+          <option value="5"></option>
+          <option value="6"></option>
+          <option value="7"></option>
+          <option value="8"></option>
+          <option value="9"></option>
+          <option value="10"></option>
+        </datalist>
+
+
+        <label class="top">Storm Region
+          <select name="region">
+            <option value="">Choose Region&#9662; </option>
+            <option value="preston">Preston</option>
+            <option value="ssprings">Soda Springs</option>
+            <option value="fishhav">Fish Haven</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Additional Information</legend>
+        <h4>Are you in danger?</h4>
+        <label class="info"><input type="radio" name="viewer" value="yes"> Yes</label>
+        <label class="info"><input type="radio" name="viewer" value="no"> No</label>
+        <label class="info"><input type="radio" name="viewer" value="maybe"> Maybe</label>
+        <label for="comment"><textarea name="textarea" cols="40" rows="6">Enter Additional Comments:</textarea></label>
+      </fieldset>
+
+      <input type="submit" value="Report Storm" class="submitBtn">
+
+    </form>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2020 | Darla J Ford | Texas | <a href="https://openweathermap.org/"
+      style=color:cornsilk>OpenWeatherMap</a>
+    <p id="date"><span id="currentdate"></span></p>
+  </footer>
+
+  <script src="js/stormcenter.js"></script>
+
+</body>
+
+</html>
