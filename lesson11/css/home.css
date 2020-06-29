@@ -121,7 +121,7 @@ main article img {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 20px;
-  text-align: center;
+  text-align: center;  
 }
 
 section h2 {
@@ -154,8 +154,8 @@ section img {
   margin: 0 auto;
   max-width: 90%;
   border-radius: 10px;
-  border: #0343A2 5px solid;
-  box-shadow: 0 0 10px 5px gray;
+  border: #0343A2 4px solid;
+  box-shadow: 0 0 15px #10BBCC;
   margin-bottom: 15px;
 }
 
@@ -163,7 +163,9 @@ div section {
   display: block;
   margin: 0 auto;
   background-color: paleturquoise;
-  border: #0343A2 5px solid;
+  border: #0343A2 4px solid;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #0343A2;
   max-width: 350px;
   margin-top: 20px;
   padding: 10px;

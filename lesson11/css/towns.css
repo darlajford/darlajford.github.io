@@ -156,7 +156,7 @@ h5 {
     border: 1px solid navy;
     border-radius: 10px;
     width: 50%;
-    box-shadow: 0 0 15px 2px #0343A2;    
+    box-shadow: 0 0 15px #0343A2;    
   }
 
   .towns div h6 {
@@ -207,7 +207,7 @@ p img {
   width: 275px;
   border: 1px solid navy;
   border-radius: 10px;
-  box-shadow: 0 0 20px gray;
+  box-shadow: 0 0 20px #0343A2;
 }
 
 /*map and contact info*/
@@ -318,7 +318,7 @@ footer p {
     display: block;
     margin: 10px;
     padding: 10px;
-    box-shadow: 0 0 10px 2px #0343A2;
+    box-shadow: 0 0 15px #0343A2;
     border-radius: 10px;
   }
 
