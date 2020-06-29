@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investment Calculator</title>
+  <script>
+    'use strict';
+    // input: principal, interest rate, number of years, and periods per year from user. 
+    // processing: compute future value of investment.
+    // output: future value.
+    function dFV() {
+      let principal = parseFloat(document.getElementById('prinInputBox').value);
+      let rate = parseFloat(document.getElementById('rateInputBox').value);
+      let years = parseFloat(document.getElementById('yearsInputBox').value);
+      let periods = parseFloat(document.getElementById('periodsInputBox').value);
+      let futureValue = computeFutureValue(principal, annualRate, years, periodsPerYear);
+      document.getElementById('outputDiv').innerHTML = futureValue;
+    }
+
+    function computeFutureValue(principal, annualRate, years, periodsPerYear) {
+      let fv = principal * (1 + rate) * periods * years;
+      return fv;
+    }
+  </script>
+</head>
+
+<body>
+  Amount invested (principal)&nbsp; <input type="text" name="" id="prinInputBox" size="10"><br>
+  Annual rate (example: .08)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" id="rateInputBox"
+    size="7"><br>
+  Number of
+  years&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="text" id="yearsInputBox" size="5"> <br>
+  Periods per
+  year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="text" id="periodsInputBox" size="5"><br>
+  <button type="button" onclick="doFV()">Compute Future Value</button>
+  <div id="outputDiv"></div>
+</body>
+
+</html>

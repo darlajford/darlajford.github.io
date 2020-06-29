@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volume of Triangular Prism</title>
+  <script>
+    'use strict';
+    // input: three side lengths and length of triangular prism from user.
+    // processing: calculate the volume of the triangular prism. 
+    // output: the volume of the prism. 
+    function doInputOutput() {
+      let sideA = parseFloat(document.getElementById('aInputBox').value);
+      let sideB = parseFloat(document.getElementById('bInputBox').value);
+      let sideC = parseFloat(document.getElementById('cInputBox').value);
+      let length = parseFloat(document.getElementById('lengthInputBox').value);
+      let v = prismVolume(a, b, c, length);
+      document.getElementById('outputDiv').innerHTML = v;
+    }
+
+    function prismVolume(a, b, c, length) {
+      let area = triangleArea(a, b, c);
+      let volume = triangleArea * length;
+      return volume;
+    }
+
+    function triangleArea(a, b, c) {
+      let sides = (a + b + c) / 2;
+      let area = Math.sqrt(sides * (sides - a) * (sides - b) * (sides - c));
+      return area;
+    }
+  </script>
+</head>
+
+<body>
+  First side length <input type="text" id="aInputBox"><br>
+  Second side length <input type="text" id="bInputBox"><br>
+  Third side length <input type="text" id="cInputBox"><br>
+  Prism length <input type="text" id="lengthInputBox"><br>
+  <button type="button" onclick="doInputOutput()">Volume</button>
+  <div id="outputDiv"></div>
+</body>
+
+</html>

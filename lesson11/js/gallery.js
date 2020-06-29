@@ -79,7 +79,6 @@ console.log(fulldate);
 
 //to display current year next to copyright (although copyright year should remain the same)
 document.getElementById("year").textContent = year;
-
 //to display pancake message on fridays
 const banner = document.getElementById("eventMessage");
 
