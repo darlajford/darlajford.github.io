@@ -10,7 +10,7 @@ fetch(requestURL)
     // console.table(jsonObject);  // temporary checking for valid response and data parsing
 
     // const special = towns.filter(town => (town.name == 'Preston') || (town.name == 'Fish Haven') || (town.name == 'Soda Springs')); //this line is in addition to const prophets line
-    const special = towns.filter(town => (town.name == 'Soda Springs')); //this line is in addition to const prophets line
+    const special = towns.filter(town => (town.name == 'Fish Haven')); //this line is in addition to const prophets line
     special.forEach(town => {
       // let townSection = document.createElement('section');
       // let h2 = document.createElement('h2');
@@ -33,7 +33,7 @@ fetch(requestURL)
       // population.textContent = 'Population: ' + town.currentPopulation;
       // rainfall.textContent = 'Annual Rain Fall: ' + town.averageRainfall;
       h6.textContent = 'Upcoming Events ';           + town.events;
-      events.innerHTML = town.events[0] + '<br>' + town.events[1] + '<br>' + town.events[2];
+      events.innerHTML = town.events[0] + '<br>' + town.events[1] + '<br>' + town.events[2] + '<br' + town.events[3];
 
       // townSection.appendChild(h2);
       // townSection.appendChild(motto);
