@@ -79,6 +79,7 @@ fetch(requestURL)
 
       alt.setAttribute('alt', town.name);
       image.setAttribute('src', `images/${town.photo}`);
+      console.log(`images/${town.photo}`),
       h2.textContent = town.name;
       motto.innerHTML = town.motto;
       if (town.name == 'Fish Haven') motto.innerHTML += "<br><br>";
