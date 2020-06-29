@@ -166,7 +166,7 @@ fetch(requestEventsURL)
       let events = document.createElement('p');
 
       h6.textContent = 'Upcoming Events ';           + town.events;
-      events.innerHTML = town.events[0] + '<br>' + town.events[1] + '<br>' + town.events[2];
+      events.innerHTML = town.events[0] + '<br>' + town.events[1] + '<br>' + town.events[2] + '<br>' + town.events[3];
 
       townDiv.appendChild(h6);
       townDiv.appendChild(events);
