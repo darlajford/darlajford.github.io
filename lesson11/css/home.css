@@ -115,7 +115,10 @@ main article img {
   border: 5px solid #0343A2;
   margin-right: 10px;
   float: left;
-  height: 200px;
+  height: 200px;  
+}
+main article img:hover {
+  box-shadow: 0 0 30px #0343A2;
 }
 
 .towns {
