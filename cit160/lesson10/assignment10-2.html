@@ -11,7 +11,7 @@
     function doInputOutput() {
       let input = parseInt(document.getElementById('fahrInputBox').value);
       let converted = fahrToCels(input);
-      document.getElementById('outputDiv').innerHTML = converted;
+      document.getElementById('outputDiv').innerHTML = converted.toFixed(0);
     }
 
     function fahrToCels(fahr) {

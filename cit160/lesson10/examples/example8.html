@@ -10,11 +10,11 @@
 
     // how to obtain a pseudo random integer that is in the range min inclusive to max exclusive, in other words in the range [min, max). Notice that this code calls both the random and floor functions from the Math object.
     function randomInteger() {
-      let min = 2;
+      let min = 5;
       let max = 11;
     
       //call the Math.random and Math.floor functions.
-      let r = min + Math.floor(Math.random() * (max - min)); 
+      let r = min + Math.floor(.483 * (max - min)); 
 
       //display the random integer for the user to see
       document.getElementById('outputDiv').innerHTML = r;

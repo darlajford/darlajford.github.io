@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Test Pyramid</title>
   <script>
     'use strict';
     // input: no user input
@@ -13,6 +13,7 @@
     function testPyramid() {
       let pa = pyramidSurfaceArea(8, 7);
       document.getElementById('outputDiv').innerHTML = pa;
+      // console.log(pa);
     }
 
     //computes and returns the surface area of the four triangular faces
@@ -21,7 +22,9 @@
       let edge = Math.sqrt(base*base/2 + height*height);
       let triArea = triangleArea(base, edge, edge);
       let pyramidArea= 4 * triArea;
+      console.log(triArea);
       return pyramidArea;
+      console.log(pyramidArea);
     }
 
     //computes and returns the area of a triangle
@@ -31,6 +34,7 @@
       let area = Math.sqrt(s * (s - a) * (s - b) *(s - c));
       area = area.toFixed(2);
       return area;
+      console.log(area);
     }
   </script>
 </head>

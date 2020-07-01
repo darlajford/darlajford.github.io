@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volume of House</title>
+  <script>
+    'use strict';
+
+    function doInputOutput() {
+      let w = parseFloat(document.getElementById('widthInputBox').value);
+      let d = parseFloat(document.getElementById('depthInputBox').value);
+      let h = parseFloat(document.getElementById('heightInputBox').value);
+      let s = parseFloat(document.getElementById('sweepInputBox').value);
+      let v = houseVolume(w, d, h, s);
+      document.getElementById('outputDiv').innerHTML = Math.round(v);
+    }
+
+    function houseVolume(width, depth, height, sweep) {
+      let rV = roofVolume(width, depth, sweep);
+      let lV = livingVolume(width, depth, height);
+      return rV + lV;
+    }
+
+    function livingVolume(width, depth, height) {
+
+      let lV = width * depth * height;
+      return lV;
+    }
+
+    function roofVolume(width, depth, sweep) {
+
+      let tA = triangleArea(depth, sweep, sweep);
+      let rV = tA * width;
+      return rV;
+    }
+
+    function triangleArea(a, b, c) {
+      let s = (a + b + c) / 2;
+      let area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+      return area;
+    }
+  </script>
+</head>
+
+<body>
+  Enter width <input type="text" id="widthInputBox"><br>
+  Enter depth <input type="text" id="depthInputBox"><br>
+  Enter height <input type="text" id="heightInputBox"><br>
+  Enter sweep <input type="text" id="sweepInputBox"><br>
+  <button id="button" onclick="doInputOutput()">Click</button>
+  <div id="outputDiv"></div>
+
+</body>
+
+</html>

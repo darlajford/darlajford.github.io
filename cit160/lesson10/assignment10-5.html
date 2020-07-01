@@ -15,13 +15,13 @@
       let sideB = parseFloat(document.getElementById('bInputBox').value);
       let sideC = parseFloat(document.getElementById('cInputBox').value);
       let length = parseFloat(document.getElementById('lengthInputBox').value);
-      let v = prismVolume(a, b, c, length);
+      let v = prismVolume(sideA, sideB, sideC, length);
       document.getElementById('outputDiv').innerHTML = v;
     }
 
     function prismVolume(a, b, c, length) {
       let area = triangleArea(a, b, c);
-      let volume = triangleArea * length;
+      let volume = area * length;
       return volume;
     }
 

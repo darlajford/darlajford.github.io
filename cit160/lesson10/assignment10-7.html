@@ -10,32 +10,30 @@
     // input: principal, interest rate, number of years, and periods per year from user. 
     // processing: compute future value of investment.
     // output: future value.
-    function dFV() {
+    function doFV() {
       let principal = parseFloat(document.getElementById('prinInputBox').value);
       let rate = parseFloat(document.getElementById('rateInputBox').value);
       let years = parseFloat(document.getElementById('yearsInputBox').value);
       let periods = parseFloat(document.getElementById('periodsInputBox').value);
-      let futureValue = computeFutureValue(principal, annualRate, years, periodsPerYear);
+      let futureValue = computeFutureValue(principal, rate, years, periods);
       document.getElementById('outputDiv').innerHTML = futureValue;
     }
 
     function computeFutureValue(principal, annualRate, years, periodsPerYear) {
-      let fv = principal * (1 + rate) * periods * years;
-      return fv;
+      let a = principal;
+      let r = (annualRate / periodsPerYear);
+      let n = periodsPerYear * years;
+      let f = a * Math.pow(1 + r, n);
+      return f.toFixed(2);
     }
   </script>
 </head>
 
 <body>
-  Amount invested (principal)&nbsp; <input type="text" name="" id="prinInputBox" size="10"><br>
-  Annual rate (example: .08)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" id="rateInputBox"
-    size="7"><br>
-  Number of
-  years&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <input type="text" id="yearsInputBox" size="5"> <br>
-  Periods per
-  year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <input type="text" id="periodsInputBox" size="5"><br>
+  Amount invested (principal) <input type="text" name="" id="prinInputBox" size="10"><br>
+  Annual rate (example: .08) <input type="text" id="rateInputBox" size="7"><br>
+  Number of years <input type="text" id="yearsInputBox" size="5"> <br>
+  Periods per year <input type="text" id="periodsInputBox" size="5"><br>
   <button type="button" onclick="doFV()">Compute Future Value</button>
   <div id="outputDiv"></div>
 </body>
