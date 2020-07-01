@@ -77,7 +77,7 @@ fetch(requestURL)
       let image = document.createElement('img');
       let alt = document.createElement('alt');
 
-      alt.setAttribute('alt', town.name);
+      // alt.setAttribute('alt', town.name);
       image.setAttribute('src', `images/${town.photo}`);
       // console.log(`images/${town.photo}`),
       image.setAttribute('alt', `Picture of ${town.name}`);
