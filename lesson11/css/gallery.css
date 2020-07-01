@@ -103,7 +103,7 @@ h2 {
 
 .container {
   display: grid;
-  align-self: auto;  
+  align-self: auto;
 }
 
 img[data-src] {
@@ -140,6 +140,7 @@ footer {
   text-align: center;
   max-width: 90%;
 }
+
 /* =================================
 ================================= */
 /* medium view */
@@ -193,30 +194,31 @@ footer {
 /* ===============================
 =============================== */
 /* large view */
-@media only screen and (min-width: 64em) 
-{
+@media only screen and (min-width: 64em) {
   .headings h1 {
     font-size: 3rem;
   }
+
   .motto {
     font-size: 2rem;
     margin-left: 120px;
-}
+  }
 
-.container {  
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  /* margin: -10px; */
-}
-.gallery img {
-  display: block;
-  max-width: 90%;
-  height: 300px;
-  margin: auto;
-  margin-top: 25px;
-}
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* margin: -10px; */
+  }
 
-figure:hover {
-  box-shadow: 0 0 30px #0343A2;
-}
+  .gallery img {
+    display: block;
+    max-width: 90%;
+    height: 300px;
+    margin: auto;
+    margin-top: 25px;
+  }
+
+  figure:hover {
+    box-shadow: 0 0 30px #0343A2;
+  }
 }

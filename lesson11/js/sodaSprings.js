@@ -53,14 +53,10 @@ let dayname = daynames[d.getDay()];
 let monthname = months[d.getMonth()];
 let year = d.getFullYear();
 
-//let fulldate = dayname + ", " + monthname + " " + d.getDate() +", " + year;  (shows day month date year format)
 let fulldate = dayname + ", " + d.getDate() + " " + monthname + " " + year;
 
 document.getElementById("currentdate").textContent = fulldate;
 console.log(fulldate);
-
-//to display current year next to copyright (although copyright year should remain the same)
-// document.getElementById("year").textContent = year;
 
 //to display pancake message on fridays and saturdays
 const banner = document.getElementById("eventMessage");
@@ -104,7 +100,7 @@ fetch(requestURL)
     const forecastURL =
       'https://api.openweathermap.org/data/2.5/forecast?lat=42.65&lon=-111.6&appid=a442aaa7bf1b55d1a3f7a66de5e262fe&units=imperial';
     fetch(forecastURL)
-   
+
       .then((response) => response.json())
       .then((fcinfo) => {
         console.log(fcinfo);
@@ -167,7 +163,7 @@ fetch(requestEventsURL)
       let h6 = document.createElement('h6');
       let events = document.createElement('p');
 
-      h6.textContent = 'Upcoming Events ';           + town.events;
+      h6.textContent = 'Upcoming Events '; + town.events;
       events.innerHTML = town.events[0] + '<br>' + town.events[1] + '<br>' + town.events[2];
 
       townDiv.appendChild(h6);
@@ -176,8 +172,6 @@ fetch(requestEventsURL)
       document.querySelector('div.towns').appendChild(townDiv);
     });
   });
-
-
 
 
 //---------------------------------

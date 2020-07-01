@@ -37,14 +37,10 @@ let dayname = daynames[d.getDay()];
 let monthname = months[d.getMonth()];
 let year = d.getFullYear();
 
-//let fulldate = dayname + ", " + monthname + " " + d.getDate() +", " + year;  (shows day month date year format)
 let fulldate = dayname + ", " + d.getDate() + " " + monthname + " " + year;
 
 document.getElementById("currentdate").textContent = fulldate;
 console.log(fulldate);
-
-//to display current year next to copyright (although copyright year should remain the same)
-// document.getElementById("year").textContent = year;
 
 //to display pancake message on fridays
 const banner = document.getElementById("eventMessage");

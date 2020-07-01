@@ -148,38 +148,39 @@ h5 {
 #forecast {
   display: none;
 }
-  /* events container */
-  .towns div {
-    display: block;
-    margin: 30px auto;
-    background-color: #F7E449;
-    border: 1px solid navy;
-    border-radius: 10px;
-    width: 50%;
-    box-shadow: 0 0 15px #0343A2;    
-  }
 
-  .towns div h6 {
-    font-size: 1.2rem;
-    font-family: 'Roboto', sans-serif;
-    color: navy;
-    display: block;
-    margin: 25px auto;
-    padding: 10px;
-    text-align: center;
-    border: 1px solid navy;
-    border-radius: 30px;
-    width: 60%;
-    background-color: paleturquoise;
-  }
+/* events container */
+.towns div {
+  display: block;
+  margin: 30px auto;
+  background-color: #F7E449;
+  border: 1px solid navy;
+  border-radius: 10px;
+  width: 50%;
+  box-shadow: 0 0 15px #0343A2;
+}
 
-  .towns div p {
-    font-family: 'Open Sans', sans-serif;
-    color: navy;
-    text-align: center;
-    line-height: 35px;
-    padding: 0 0 10px;
-  }
+.towns div h6 {
+  font-size: 1.2rem;
+  font-family: 'Roboto', sans-serif;
+  color: navy;
+  display: block;
+  margin: 25px auto;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid navy;
+  border-radius: 30px;
+  width: 60%;
+  background-color: paleturquoise;
+}
+
+.towns div p {
+  font-family: 'Open Sans', sans-serif;
+  color: navy;
+  text-align: center;
+  line-height: 35px;
+  padding: 0 0 10px;
+}
 
 /* ================================== */
 
@@ -261,6 +262,7 @@ footer {
 footer p {
   font-size: 1.2rem;
 }
+
 /* ========================================
 ======================================== */
 /* medium view */
@@ -325,7 +327,7 @@ footer p {
   div#forecast {
     margin: 10px;
     display: flex;
-    justify-content: center;    
+    justify-content: center;
   }
 
   div#forecast p,
@@ -351,7 +353,7 @@ footer p {
     text-align: center;
   }
 
-/* ====================================== */
+  /* ====================================== */
 
   /* article image */
   p img {

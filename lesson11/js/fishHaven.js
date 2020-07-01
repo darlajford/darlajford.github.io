@@ -53,14 +53,10 @@ let dayname = daynames[d.getDay()];
 let monthname = months[d.getMonth()];
 let year = d.getFullYear();
 
-//let fulldate = dayname + ", " + monthname + " " + d.getDate() +", " + year;  (shows day month date year format)
 let fulldate = dayname + ", " + d.getDate() + " " + monthname + " " + year;
 
 document.getElementById("currentdate").textContent = fulldate;
 console.log(fulldate);
-
-//to display current year next to copyright (although copyright year should remain the same)
-// document.getElementById("year").textContent = year;
 
 //to display pancake message on fridays and saturdays
 const banner = document.getElementById("eventMessage");
@@ -149,7 +145,7 @@ fetch(requestURL)
       })
   });
 
-  // to request town events
+// to request town events
 const requestEventsURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
 
 fetch(requestEventsURL)
@@ -165,7 +161,7 @@ fetch(requestEventsURL)
       let h6 = document.createElement('h6');
       let events = document.createElement('p');
 
-      h6.textContent = 'Upcoming Events ';           + town.events;
+      h6.textContent = 'Upcoming Events '; + town.events;
       events.innerHTML = town.events[0] + '<br>' + town.events[1] + '<br>' + town.events[2] + '<br>' + town.events[3];
 
       townDiv.appendChild(h6);
