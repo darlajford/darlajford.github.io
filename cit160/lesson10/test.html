@@ -1,70 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en-us">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <script>
-    function doPayment() {
-      let principal = parseFloat(document.getElementById('Principal').value);
-      let annualRate = parseFloat(document.getElementById('Annual Rate').value);
-      let years = parseFloat(document.getElementById('NumbYears').value);
-      let periodsPerYear = parseFloat(document.getElementById('NumbPayments').value);
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment</title>
+<script>
+// first function 
+function doFV() {
 
-      let payment = computePayment(principal, annualRate, years, periodsPerYear);
+// get user input
+var principal = parseFloat(document.getElementById('principal').value);
+var rate = parseFloat(document.getElementById('rate').value);
+var years = parseFloat(document.getElementById('years').value);
+var periods = parseFloat(document.getElementById('periods').value);
 
-      document.getElementById('payment').innerHTML = payment;
+// get display
+ var futureValue = computeFutureValue(principal,rate,years,periods);
 
-    }
+ // display user
+ document.getElementById('output').innerHTML = '$' + futureValue.toFixed(2);
+}
 
-    function doBalance() {
-      let principal = parseFloat(document.getElementById('Principal').value);
-      let annualRate = parseFloat(document.getElementById('Annual Rate').value);
-      let years = parseFloat(document.getElementById('NumbYears').value);
-      let periodsPerYear = parseFloat(document.getElementById('NumbPayments').value);
-      let numberOfPaymentPaidToDate = parseFloat(document.getElementById('PaymentsMade').value);
+// second function 
+function computeFutureValue(principal,rate,years,periods) {
+    var futureValue = principal * (Math.pow((1 + rate/periods),(periods * years)));
+    return futureValue;
+}
 
-      let Balance = computeBalance(principal, annualRate, years, periodsPerYear, numberOfPaymentPaidToDate);
-
-      document.getElementById('Balance').innerHTML = Balance;
-
-    }
-
-    function computePayment(principal, annualRate, years, periodsPerYear) {
-      let periodRate = annualRate / periodsPerYear;
-      let totalPeriods = periodsPerYear * years;
-      let payment = (periodRate * principal) / (1 - (Math.pow(1 + periodRate, -totalPeriods)));
-      return parseFloat(payment).toFixed(2);
-
-    }
-
-    function computeBalance(principal, annualRate, years, periodsPerYear, numberOfPaymentPaidToDate) {
-      let periodRate = annualRate / periodsPerYear;
-      let totalPeriods = periodsPerYear * years;
-      let payment = (periodRate * principal) / (1 - (Math.pow(1 + periodRate, -totalPeriods)));
-      payment = parseFloat(payment.toFixed(2));
-      let Balance = (principal * (Math.pow(1 + periodRate, numberOfPaymentPaidToDate))) - (payment * (Math.pow(1 +
-        periodRate, numberOfPaymentPaidToDate) - 1)) / (periodRate)
-
-      return parseFloat(Balance).toFixed(2);
-
-    }
-  </script>
+</script>
 </head>
-
 <body>
-  <h1>Loan Calculator</h1>
-  <p>Amount Borrowed (Principal) <input type="text" id="Principal"></p>
-  <p>Annual Interst Rate (example .08) <input type="text" id="Annual Rate"></p>
-  <p>Number of Years <input type="text" id="NumbYears"></p>
-  <p>Payments per Year <input type="text" id="NumbPayments"></p>
+    <div class="user-input">
+  <h4>Investment Calculator</h4>
 
-  <button type="button" onclick="doPayment ( )">Compute Payment</button>
-  <div id="payment"></div>
-  <p>Number of Payments Paid to date <input type="text" ID="PaymentsMade"></p>
-  <button type="button" onclick="doBalance ( )">Compute Payoff Amount</button>
-  <div id="Balance"></div>
+  <p>Amount Invested (principal):<input type="text" id= "principal"></p>
+  <p>Annual Rate (example: .08): <input type="text" id= "rate"></p>
+  <p>Number of years: <input type="text" id= "years"></p>
+  <p>Periods per year: <input type="text" id= "periods"></p>
+
+  <button type="button" onclick="doFV()">Compute future value</button>
+    </div>
+    <div id="output" type="text"></div>
 </body>
-
 </html>
