@@ -47,8 +47,8 @@
       let p = computePayment(principal, annualRate, years, periodsPerYear);
       // let balance = principal * Math.pow(1 + annualRate/periodsPerYear, numberOfPaymentsPaidToDate)
       // - (payment *( Math.pow(1+ annualRate/periodsPerYear, numberOfPaymentsPaidToDate)-1))/(annualRate/periodsPerYear);
-      let balance = a * Math.pow(1 + r, d) - (p * (Math.pow(1 + r, d) - 1)) / r;
-      return balance.toFixed(2);
+      let computeBalance = a * Math.pow(1 + r, d) - (p * (Math.pow(1 + r, d) - 1)) / r;
+      return computeBalance.toFixed(2);
     }
   </script>
 </head>

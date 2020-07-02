@@ -1,45 +1,52 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en-us">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investment</title>
+<meta charset="utf-8">
+<title>Monthly Payment</title>
 <script>
-// first function 
-function doFV() {
+function doPayment() {
+let a= parseFloat(document.getElementById('a').value);
+let r= parseFloat(document.getElementById('rate').value);
+let y= parseFloat(document.getElementById('year').value);
+let p= parseFloat(document.getElementById('period').value); 
 
-// get user input
-var principal = parseFloat(document.getElementById('principal').value);
-var rate = parseFloat(document.getElementById('rate').value);
-var years = parseFloat(document.getElementById('years').value);
-var periods = parseFloat(document.getElementById('periods').value);
+let result=computePayment(a, r, y, p); 
 
-// get display
- var futureValue = computeFutureValue(principal,rate,years,periods);
+document.getElementById('output').innerHTML=result.toFixed(2);} 
 
- // display user
- document.getElementById('output').innerHTML = '$' + futureValue.toFixed(2);
+function computePayment (a, r, y, p) {
+return (a*r/p)/(1-(1+r/p)**(-y*p));
+} 
+
+function doBalance() {
+let a= parseFloat(document.getElementById('a').value);
+let r= parseFloat(document.getElementById('rate').value);
+let y= parseFloat(document.getElementById('year').value);
+let p= parseFloat(document.getElementById('period').value);
+let d= parseFloat(document.getElementById('paid').value); 
+let result=computeBalance(a, r, y, p, d); 
+
+document.getElementById('outPut').innerHTML=result.toFixed(2);
 }
 
-// second function 
-function computeFutureValue(principal,rate,years,periods) {
-    var futureValue = principal * (Math.pow((1 + rate/periods),(periods * years)));
-    return futureValue;
+function computeBalance (a, r, y, p, d) {
+  let pr = r/y;
+  
+// return (a*(1+pr)**d)-(p*((1+pr)**d-1))/pr;
+return a*Math.pow(1+pr, d) - (p *(Math.pow(1+pr, d)-1))/pr;
 }
 
 </script>
 </head>
 <body>
-    <div class="user-input">
-  <h4>Investment Calculator</h4>
-
-  <p>Amount Invested (principal):<input type="text" id= "principal"></p>
-  <p>Annual Rate (example: .08): <input type="text" id= "rate"></p>
-  <p>Number of years: <input type="text" id= "years"></p>
-  <p>Periods per year: <input type="text" id= "periods"></p>
-
-  <button type="button" onclick="doFV()">Compute future value</button>
-    </div>
-    <div id="output" type="text"></div>
+Amount borrowed:<input type="text" id="a"><br>
+Annual interest rate:<input type="text" id="rate"><br>
+Number of Years:<input type="text" id="year"><br>
+Periods per year:<input type="text" id="period"><br>
+<button type="button" onclick="doPayment()">Compute payment</button>
+<div id="output"></div>
+Number of Payments paid to date: <input type="text" id="paid"><br>
+<button type="button" onclick="doBalance()">Compute payoff amount</button>
+<div id="outPut"></div>
 </body>
 </html>
