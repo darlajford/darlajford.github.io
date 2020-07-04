@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // 'use strict';
+    const apiURLI = 'https://api.openweathermap.org/data/2.5/forecast?id=5604473&APPID=a442aaa7bf1b55d1a3f7a66de5e262fe&units=imperial';
+
+fetch(apiURLI)
+    .then((response) => response.json())
+    .then((jsObject) => {
+      console.log(jsObject);
+        const fiveDayForecast = jsObject.list.filter(x => x.dt_txt.includes('18:00:00'));
+
+        const weekdays = ['Sun', 'Mon', 'Tues', 'Wed', 'Thu', 'Fri', 'Sat'];
+        let day = 0;
+        fiveDayForecast.forEach(forecast => {
+            let d = new Date(forecast.dt_txt);
+            //document.getElementById(`forecast${day+1}`).textContent = forecast.main.temp.toFixed(0);
+            document.getElementById(`weekday${day+1}`).textContent = weekdays[d.getDay()];
+            day++;
+        });
+
+        //This for loop was used with permission from Lance Rob
+
+        for (let index = 0; index < fiveDayForecast.length; index++) {
+            const imagesrc = 'https://openweathermap.org/img/w/' + fiveDayForecast[index].weather[0].icon + '.png';
+            const desc = fiveDayForecast[index].weather[0].description;
+            document.getElementById(`icon${index+1}`).setAttribute('src', imagesrc);
+            document.getElementById(`icon${index+1}`).setAttribute('alt', desc);
+            document.getElementById(`day${index+1}`).innerHTML = `${Math.round(fiveDayForecast[index].main.temp)}`;
+        }
+
+    });
+  </script>
+  <style>
+    table {
+    text-align: center;
+}
+table tr th {
+    border: 1px solid;
+}
+table tr td {
+    border: 1px solid;
+}
+.forecast {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    border: 1px solid;
+    max-width: 600px;
+} 
+  </style>
+</head>
+<body>
+  <main>
+    <div class="forecast">
+      <table>
+          <tr>
+              <th id="weekday1"></th>
+              <th id="weekday2"></th>
+              <th id="weekday3"></th>
+              <th id="weekday4"></th>
+              <th id="weekday5"></th>
+          </tr>
+          <tr>
+              <td><img id="icon1"></td>
+              <td><img id="icon2"></td>
+              <td><img id="icon3"></td>
+              <td><img id="icon4"></td>
+              <td><img id="icon5"></td>
+          </tr>
+          <tr>
+              <td id="day1"> °F</td>
+              <td id="day2"> °F</td>
+              <td id="day3"> °F</td>
+              <td id="day4"> °F</td>
+              <td id="day5"> °F</td>
+          </tr>
+      </table>
+  </div>
+</main>
+</body>
+</html>

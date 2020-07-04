@@ -1,0 +1,60 @@
+<!-- This table was built By Brother Boyce in CIT160 -->
+
+
+<table><tbody>
+
+  <tr><td>Amount borrowed (principal)</td>
+
+      <td><input type="text" id="txtPrincipal" size="9" maxlength="15"></td>
+
+  </tr>
+
+  <tr><td>Annual interest rate (example: .065)</td>
+
+      <td><input type="text" id="txtAnnualRate" size="7" maxlength="7"></td>
+
+  </tr>
+
+  <tr><td>Number of years</td>
+
+      <td><input type="text" id="txtYears" size="3" maxlength="3"></td>
+
+  </tr>
+
+  <tr><td>Payments per year</td>
+
+      <td><input type="text" id="txtPeriodsPerYear" size="3"
+
+              maxlength="3" value="12"></td>
+
+  </tr>
+
+  <tr><td><button type="button" onclick="doPayment()">
+
+          Compute payment</button></td>
+
+      <td><div id="txtPayment"></div></td>
+
+  </tr>
+
+  <tr><td>Number of payments paid to date</td>
+
+      <td><input type="text" id="txtPaidToDate" size="3" maxlength="4"></td>
+
+  </tr>
+
+  <tr><td><button type="button" onclick="doBalance()">
+
+          Compute payoff amount</button></td>
+
+      <td><div id="txtPayoff"></div></td>
+
+  </tr>
+
+  <tr><td><button type="button" onclick="clearText()">Reset</button></td>
+
+      <td></td>
+
+  </tr>
+
+</tbody></table>
