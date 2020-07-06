@@ -1,0 +1,61 @@
+table {
+  margin: auto;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 15px;
+}
+
+th {
+  background-color: lightgrey;
+}
+
+#prim {
+  background-color: #0a0a0a;
+  color: white;
+}
+
+#sec {
+  background-color: #bb0d07;
+  color: white;
+
+}
+
+#acc1 {
+  background-color: #fddd24;
+}
+
+#acc2 {
+  background-color: #17e44c;
+}
+
+h1
+h2 {
+  color: #0a0a0a;
+  text-align: center;
+}
+
+ul#colorplan {
+  list-style-type: none;
+  font-size: 1.2em;
+  line-height: 1.75em;
+}
+
+ul,
+table {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #0a0a0a;
+}
+
+main#color {
+  margin-bottom: 75px;
+}

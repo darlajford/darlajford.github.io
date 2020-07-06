@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Return Sum of First and Last Numbers in Array</title>
+</head>
+
+<body>
+
+  <!-- <p> Return sum of first and last numbers in array.</p>
+
+  <div id="output"></div> -->
+
+
+  <h1>Array values: [17, 8, 9, 5, 20]</h1>
+  <button type="button" onclick="doArrayMath()">Go!</button>
+ <div id=" outputDiv"></div>
+
+    <script>
+      //this one is taken from instructions on w3schools. it works with and without the function part. ??<br>
+      // but does not work if placed in the head of html doc.
+
+      // input: no input from user 
+      // processing: finds and adds together the first and last numbers in the array 
+      // output: the sum of the first and last numbers of the array
+
+      // function addEnds() {
+      //   let value = addEnds(list);
+      // }
+
+      // let list = [17, 8, 9, 5, 20];
+      // value = list[0] + list[list.length - 1];
+
+      // document.getElementById("output").innerHTML = value;
+      // ========================================== 
+
+      // this one was given by instructor. it too does not work when placed in the head of document.
+      // function doArrayMath() {
+      //   let myArray = [17, 8, 9, 5, 20];
+      //   let sumOfEnds = addEnds(myArray);
+
+      //   document.getElementById('outputDiv').innerHTML = sumOfEnds;
+      // }
+
+      // function addEnds(list) {
+      //   let first = list[0];
+      //   let last = list[list.length - 1];
+      //   let sum = first + last;
+      //   return sum;
+      // }
+
+      // this one came from internet.. https://jsfiddle.net/oL70e50v/10/
+      function doArrayMath() {
+        let list = [17, 8, 9, 5, 20];
+        let result = 0;
+        result = addEnds(list);
+        document.getElementById("outputDiv()").innerHTML = result;
+      }
+
+      function addEnds(list) {
+        return list[0] + list[list.length - 1];
+      }
+    </script>
+
+</body>
+
+</html>

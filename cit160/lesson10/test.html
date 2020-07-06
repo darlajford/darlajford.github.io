@@ -1,52 +1,52 @@
-<!DOCTYPE HTML>
-<html lang="en-us">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Monthly Payment</title>
-<script>
-function doPayment() {
-let a= parseFloat(document.getElementById('a').value);
-let r= parseFloat(document.getElementById('rate').value);
-let y= parseFloat(document.getElementById('year').value);
-let p= parseFloat(document.getElementById('period').value); 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // / This function calls the addEnds function and the getMiddle function.
+    // function multipleFunctions() {
+    //     var list = [10, 20, 30, 40, 50]; //numeric array
+    //     var result = 0;
+    //     var result2 = 0;
+    //     var result3 = 0;
+    //     result = addEnds(list);
+    //     result2 = getMiddle(list);
+    //     result3 = "The sum of the array ends is " + result + "." + "<br>" + "The middle value of the array is " + result2 + ".";
+    //     document.getElementById("outputDiv1").innerHTML = result;
+    // }
+    // This function adds the ends of the array index values.
+    // function addEnds(list) {
+    //     var sum = list[0] + list[list.length -1];
+    //     console.log(sum);
+    // }
 
-let result=computePayment(a, r, y, p); 
+    // /*Write a defining table and a function that returns the value of the middle element in an array.  If the array has an even number of elements, then this function must return the average of the two middle elements.The function must have this header:function getMiddle(list)*/
+    // function getMiddle(list) {
 
-document.getElementById('output').innerHTML=result.toFixed(2);} 
+    //     if(list.length % 2 === 0){
+    //       var middle = list.length /2; 
+    //       return (list[middle] + list[middle -1]) / 2;
+    //     }
+    //     else{
 
-function computePayment (a, r, y, p) {
-return (a*r/p)/(1-(1+r/p)**(-y*p));
-} 
+    //         return list[Math.round((list.length - 1) / 2)];
+    //     }
+    // }
 
-function doBalance() {
-let a= parseFloat(document.getElementById('a').value);
-let r= parseFloat(document.getElementById('rate').value);
-let y= parseFloat(document.getElementById('year').value);
-let p= parseFloat(document.getElementById('period').value);
-let d= parseFloat(document.getElementById('paid').value); 
-let result=computeBalance(a, r, y, p, d); 
-
-document.getElementById('outPut').innerHTML=result.toFixed(2);
+    function addEnds(list) {
+      
+      // let value = addEnds(list)
+    let value = (list[0] + list[list.length - 1]);
+    // let n2 = Number(list[list.length - 1]);
+    console.log(value);
 }
-
-function computeBalance (a, r, y, p, d) {
-  let pr = r/y;
-  
-// return (a*(1+pr)**d)-(p*((1+pr)**d-1))/pr;
-return a*Math.pow(1+pr, d) - (p *(Math.pow(1+pr, d)-1))/pr;
-}
-
-</script>
+ 
+     let list = ([17, 8, 9, 5, 20]);
+  </script>
 </head>
 <body>
-Amount borrowed:<input type="text" id="a"><br>
-Annual interest rate:<input type="text" id="rate"><br>
-Number of Years:<input type="text" id="year"><br>
-Periods per year:<input type="text" id="period"><br>
-<button type="button" onclick="doPayment()">Compute payment</button>
-<div id="output"></div>
-Number of Payments paid to date: <input type="text" id="paid"><br>
-<button type="button" onclick="doBalance()">Compute payoff amount</button>
-<div id="outPut"></div>
+  
 </body>
 </html>
