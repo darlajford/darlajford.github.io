@@ -8,47 +8,31 @@
 </head>
 
 <body>
-  <!-- <h1> Array list: 10, 20, 30, 40, 50</h1> -->
-  <h2>Click the compute function button to return the sum of the first and last values in the array list.<br> It will
-    also return the average of the two middle elements of the array list.</h2>
-  <button type="button" onclick="multipleFunctions()">Compute Functions</button>
-  <div id="outputDiv1"></div>
-  </p>
-  <script>
-    /*Write a defining table and a function that returns the sum of the first and last values in an array. The function must have this header: function addEnds(list)*/
 
+  <h3>Array values: [12, 4, 8, 15, 17, 5, 20, 11]</h3>
+  <div id="outputDiv"></div>
+
+  <script>
     /*Input: No input from user.
-      Process: Calls the addEnds function to add the ends of the array.
-      Output: Displays the sum of the array ends.
+      Processing: Finds the value of the middle element in array.
+      Output: Displays the value of the middle element.
      */
 
-    // This function calls the addEnds function and the getMiddle function.
-    function multipleFunctions() {
-      var list = [12, 4, 8, 15, 5, 20, 11];
-      var result = 0;
-      var result2 = 0;
-      var result3 = 0;
-      result = addEnds(list);
-      result2 = getMiddle(list);
-      result3 = "The middle value of the array is " + result2 + ".";
-      document.getElementById("outputDiv1").innerHTML = result3;
-    }
-    // This function adds the ends of the array index values.
+    let list = [12, 4, 8, 15, 17, 5, 20, 11];
+    let result = getMiddle(list);
+    message = "The middle value of the array is " + result + ".";
+    document.getElementById("outputDiv").innerHTML = message;
 
-    function addEnds(list) {
-      return list[0] + list[list.length - 1];
-    }
-
-    /*Write a defining table and a function that returns the value of the middle element in an array.  If the array has an even number of elements, then this function must return the average of the two middle elements.The function must have this header:function getMiddle(list)*/
+    /*Function returns the value of the middle element in an array.  If the array has an even number of elements, then this function must return the average of the two middle elements.*/
     function getMiddle(list) {
-      var middle = Math.floor(list.length / 2);
-      var evenOrOdd = list % 2;
+      let middle = Math.floor(list.length / 2);
+      let evenOrOdd = list.length % 2;
       // Odd number of elements. 
-      if (list != 0) {
+      if (evenOrOdd != 0) {
         return list[middle];
       } else {
         // Even number of elements. 
-        return list[middle] + list[middle + 1] / 2;
+        return (list[middle] + list[middle - 1]) / 2;
       }
     }
   </script>

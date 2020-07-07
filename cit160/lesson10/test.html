@@ -1,52 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html lang="en-us">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <script>
-    // / This function calls the addEnds function and the getMiddle function.
-    // function multipleFunctions() {
-    //     var list = [10, 20, 30, 40, 50]; //numeric array
-    //     var result = 0;
-    //     var result2 = 0;
-    //     var result3 = 0;
-    //     result = addEnds(list);
-    //     result2 = getMiddle(list);
-    //     result3 = "The sum of the array ends is " + result + "." + "<br>" + "The middle value of the array is " + result2 + ".";
-    //     document.getElementById("outputDiv1").innerHTML = result;
-    // }
-    // This function adds the ends of the array index values.
-    // function addEnds(list) {
-    //     var sum = list[0] + list[list.length -1];
-    //     console.log(sum);
-    // }
-
-    // /*Write a defining table and a function that returns the value of the middle element in an array.  If the array has an even number of elements, then this function must return the average of the two middle elements.The function must have this header:function getMiddle(list)*/
-    // function getMiddle(list) {
-
-    //     if(list.length % 2 === 0){
-    //       var middle = list.length /2; 
-    //       return (list[middle] + list[middle -1]) / 2;
-    //     }
-    //     else{
-
-    //         return list[Math.round((list.length - 1) / 2)];
-    //     }
-    // }
-
-    function addEnds(list) {
-      
-      // let value = addEnds(list)
-    let value = (list[0] + list[list.length - 1]);
-    // let n2 = Number(list[list.length - 1]);
-    console.log(value);
-}
- 
-     let list = ([17, 8, 9, 5, 20]);
-  </script>
+    <meta charset="utf-8">
+    <title>get middle array</title>
+    <script>
+        //input (enter array) into my function
+        function myFunction() {
+            var list = [12, 4, 15, 17, 5, 20]
+            var answer = 0;
+            answer = getMiddle(list)
+            //outputDiv answer
+            document.getElementById('outputDiv').innerHTML = answer;
+            //math function average of array 
+            function getMiddle(list) {
+                let middle = Math.floor(list.length / 2);
+                let oddOrEven = list.length % 2;
+                if (oddOrEven != 0) {
+                    return list[middle];
+                }
+                else {
+                    //final output return middle
+                    return (list[middle] + list[middle - 1]) / 2;
+                }
+            }
+        }  
+    </script>
 </head>
+
 <body>
-  
+    <h2>Get the middle array</h2>
+    <button type="button" onclick="myFunction()">Click Start</button>
+    <div id='outputDiv'></div>
 </body>
-</html>
