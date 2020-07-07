@@ -1,0 +1,37 @@
+{
+  "rentals": [
+    {
+      "name": "Honda Metro Scooter",
+      "photo": "hondaMetro.png",
+      "max persons": "1",
+      "reservation prices": [
+       {"half day": "$20", "full day": "$30"}
+      ],
+      "walk in prices": [
+        {"half day": "$25", "full day": "$35"}
+      ]
+    },
+    {
+      "name": "Honda Dio Scooter",
+      "photo": "hondaDio.png",
+      "max persons": "2",
+      "reservation prices": [
+       {"half day": "$30", "full day": "$40"}
+      ],
+      "walk in prices": [
+        {"half day": "$35", "full day": "$45"}
+      ]
+    },
+    {
+      "name": "Honda PCX150 Scooter",
+      "photo": "hondaPCX150.png",
+      "max persons": "2",
+      "reservation prices": [
+       {"half day": "$40", "full day": "$50"}
+      ],
+      "walk in prices": [
+        {"half day": "$45", "full day": "$55"}
+      ]
+    }
+  ]
+}

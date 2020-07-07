@@ -77,7 +77,7 @@ const requestURL = 'https://api.openweathermap.org/data/2.5/weather?id=5604473&u
 fetch(requestURL)
   .then((response) => response.json())
   .then((jsObject) => {
-    // console.log(jsObject);
+    console.log(jsObject);
     document.getElementById('condition').textContent = jsObject.weather[0].main;
     document.getElementById('current-temp').textContent = jsObject.main.temp.toFixed(0);
     document.getElementById('humid').textContent = jsObject.main.humidity;
