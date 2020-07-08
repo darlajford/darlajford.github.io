@@ -6,9 +6,9 @@
   <title>Document</title>
   <script>
     // 'use strict';
-    const apiURLI = 'https://api.openweathermap.org/data/2.5/forecast?id=5604473&APPID=a442aaa7bf1b55d1a3f7a66de5e262fe&units=imperial';
+    const forecastURL = 'https://api.openweathermap.org/data/2.5/forecast?id=5604473&APPID=a442aaa7bf1b55d1a3f7a66de5e262fe&units=imperial';
 
-fetch(apiURLI)
+fetch(forecastURL)
     .then((response) => response.json())
     .then((jsObject) => {
       console.log(jsObject);
@@ -36,14 +36,26 @@ fetch(apiURLI)
     });
   </script>
   <style>
-    table {
+    .forecast table {
     text-align: center;
+    border-collapse: collapse;
+
 }
-table tr th {
+.forecast table, .forecast tr, .forecast th {
     border: 1px solid;
+    background-color: #17e44c;
+    font-family: Montserrat, sans-serif;
+
 }
-table tr td {
+.forecast table, .forecast tr, .forecast td {
     border: 1px solid;
+    font-family: Montserrat, sans-serif;
+    background-color: #8efaab;
+    
+
+
+
+
 }
 .forecast {
     display: flex;
