@@ -87,10 +87,59 @@ nav {
 .responsive li {
   display: block;
 }
+.cozTours h3 {
+  font-family: Bangers, sans-serif;
+  font-size: 1.85rem;
+  font-weight: 500;
+  color: #bb0d07;
+  text-align: center;
+  margin: 70px 0 0 0;
+}
+.cozTours p{
+  display: block;
+  margin: 25px auto;
+  font-family: Monsterrat, sans-serif;
+  font-size: 1.2rem;
+  line-height: 35px;
+  width: 70%;
+  text-align: center;
+  font-weight: 600;
+}
+.cozTours ul {
+    display: block;
+    margin: 25px auto;
+    font-family: Monsterrat, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 35px;
+    width: 70%;
+    margin-left: 90px;
+    color: #bb0d07;
+  }
 .toursGalContainer {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr;
 }
+/* .galleryContainer {
+  display: block;
+} */
+
+.toursGalContainer img {
+  display: block;
+  margin:  25px auto;
+  border: 10px ridge;
+  border-radius: 50px;
+  box-shadow: 0 0 15px rgb(73, 73, 100);
+  margin-bottom: 5px;
+  }
+  figcaption {
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-align: center;
+
+  }
+
 footer {
   background-color: #17e44c;
   margin: auto;
@@ -146,6 +195,15 @@ footer p {
     display: grid;
     grid-template-columns: 1fr 1fr;;
   }
+  .toursGalContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .cozTours ul {
+    margin-left: 170px;
+  }
+
 }
 /* end medium view */
 
@@ -184,6 +242,15 @@ footer p {
     padding: .4rem;
     opacity: .9;
   }
+  .toursGalContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .cozTours ul {
+    margin-left: 250px;
+  }
+
 }
 
 
