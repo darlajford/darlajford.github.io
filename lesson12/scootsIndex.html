@@ -10,10 +10,11 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link
-  href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@400;600&family=Oleo+Script:wght@700&display=swap"
-  rel="stylesheet">
-<link rel="stylesheet" href="css/scootsIndex.css">
+    href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@400;600&family=Oleo+Script:wght@700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/scootsIndex.css">
 </head>
+
 <body>
   <header>
     <div class="logo">
@@ -27,12 +28,12 @@
       <p>Currently: <span id="condition"></span></p>
       <p>Temperature: <span id="current-temp"></span>&deg; F</p>
       <p>Humidity: <span id="humid"></span>&#37; </p>
-    </section>  
+    </section>
   </header>
   <nav>
     <ul class='navigation'>
       <li><a class="ham" href="#">&#9776; Menu</a></li>
-      <li><a href="scootsIndex.html"class="active">&#9734; Home</a></li>
+      <li><a href="scootsIndex.html" class="active">&#9734; Home</a></li>
       <li><a href="scootsRentals.html">Rentals</a></li>
       <li><a href="scootsReserv.html">Reservations</a></li>
       <li><a href="scootsTours.html">Tours</a></li>
@@ -40,7 +41,7 @@
     </ul>
   </nav>
   <main>
-    <h2>Scoots Rentals Cozumel</h2>
+    <h2>Scooter Rentals on Cozumel</h2>
 
     <div class="rentalsPicContainer">
       <picture>
@@ -48,80 +49,112 @@
         <source srcset="images/rentalStore600.png" media="(max-width: 900px)">
         <img src="images/rentalStore850.png" alt="Scooters Rental Store">
       </picture>
-      </div>
-      <div class="forecast">
-        <table>
-            <tr>
-                <th id="weekday1"></th>
-                <th id="weekday2"></th>
-                <th id="weekday3"></th>
-                <th id="weekday4"></th>
-                <th id="weekday5"></th>
-            </tr>
-            <tr>
-                <td><img id="icon1"></td>
-                <td><img id="icon2"></td>
-                <td><img id="icon3"></td>
-                <td><img id="icon4"></td>
-                <td><img id="icon5"></td>
-            </tr>
-            <tr>
-                <td id="day1"> °F</td>
-                <td id="day2"> °F</td>
-                <td id="day3"> °F</td>
-                <td id="day4"> °F</td>
-                <td id="day5"> °F</td>
-            </tr>
-        </table>
+      <h3>Two convenient locations, one near the Playa del Carmen-Cozumel Ferry Dock and
+        the other one near the Terminal Puerta Maya. Rentals can be picked up and/or returned to either location.</h3>
+    </div>
+    <div class="forecast">
+      <table>
+        <tr>
+          <th id="weekday1"></th>
+          <th id="weekday2"></th>
+          <th id="weekday3"></th>
+          <th id="weekday4"></th>
+          <th id="weekday5"></th>
+        </tr>
+        <tr>
+          <td><img id="icon1"></td>
+          <td><img id="icon2"></td>
+          <td><img id="icon3"></td>
+          <td><img id="icon4"></td>
+          <td><img id="icon5"></td>
+        </tr>
+        <tr>
+          <td class="fc" id="day1"> °F</td>
+          <td class="fc" id="day2"> °F</td>
+          <td class="fc" id="day3"> °F</td>
+          <td class="fc" id="day4"> °F</td>
+          <td class="fc" id="day5"> °F</td>
+        </tr>
+      </table>
     </div>
     <div class="call">
       <a class="button" href="#">Make Reservations Now</a>
     </div>
+    <div class="rentInfo">
+      <h3>The following vehicles are available to rent by half day (3 hours) or by full day. Check our 5 day weather forecast, and either walk in or make reservations
+        now to select the vehicle of your choice and visit the sites in our gallery (and more) on the
+        beautiful island of Cozumel. ENJOY YOUR VISIT!!</h3>
+    </div>
+    <div class="rentals">
+      <table id="rent">
+        <tr>
+          <th>Honda Metro</th>
+          <th>Honda Dio</th>
+          <th>Honda PCX150</th>
+          <th>Honda Pioneer</th>
+          <th>Jeep 2-door</th>
+          <th>Jeep 4-door</th>
+
+        </tr>
+        <tr>
+          <td><img src="images/hondaMetro150.png" alt="Honda Metro"></td>
+          <td><img src="images/hondaDio150.png" alt="Honda Dio"></td>
+          <td><img src="images/hondaPCX150-150.png" alt="Honda PCX"></td>
+          <td><img src="images/hondaPioneer150.png" alt="Honda Pioneer"></td>
+          <td><img src="images/wrangler2door150.png" alt="Wrangler 2-door"></td>
+          <td><img src="images/wrangler4door150.png" alt="Wrangler 4-door"></td>
+
+        </tr>
+        <tr>
+          <td class="prices">$20 and up</td>
+          <td class="prices">$30 and up</td>
+          <td class="prices">$40 and up</td>
+          <td class="prices">$50 and up</td>
+          <td class="prices">$60 and up</td>
+          <td class="prices">$70 and up</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="galleryHeading">Gallery</div>
+
     <div class="galleryContainer">
       <figure class="gallery">
         <img src="images/cozumelBeachChairs.png" alt="Cozumel Boat">
         <figcaption> Island Tour Boat</figcaption>
       </figure>
-    <figure class="gallery">
-      <img src="images/cozumelCove350.png" alt="Cozumel Cove">
-      <figcaption>Cozumel Cove</figcaption>
-    </figure>
-    <figure class="gallery">
-      <img src="images/cozumelHammock350.png" alt="Hammock Over Water">
-      <figcaption>Hammock with High Tide</figcaption>
-    </figure>
-    <figure class="gallery">
-      <img src="images/cozumelShore350.png" alt="Cozumel Shore Line">
-      <figcaption>Cozumel Shore Line</figcaption>
-    </figure>
-    <figure class="gallery">
-      <img src="images/rockArch350.png" alt="Rock Arch">
-      <figcaption>Rock Arch</figcaption>
-    </figure>
-    <figure class="gallery">
-      <img src="images/cozumelHammock350.png" alt="Hammock Over Water">
-      <figcaption>Hammock with High Tide</figcaption>
-    </figure>
-
-  </div>
-
-
-
-
+      <figure class="gallery">
+        <img src="images/cozumelCove350.png" alt="Cozumel Cove">
+        <figcaption>Cozumel Cove</figcaption>
+      </figure>
+      <figure class="gallery">
+        <img src="images/cozumelHammock350.png" alt="Hammock Over Water">
+        <figcaption>Hammock with High Tide</figcaption>
+      </figure>
+      <figure class="gallery">
+        <img src="images/cozumelShore350.png" alt="Cozumel Shore Line">
+        <figcaption>Cozumel Shore Line</figcaption>
+      </figure>
+      <figure class="gallery">
+        <img src="images/rockArch350.png" alt="Rock Arch">
+        <figcaption>Rock Arch</figcaption>
+      </figure>
+      <figure class="gallery">
+        <img src="images/cozumelHammock350.png" alt="Hammock Over Water">
+        <figcaption>Hammock with High Tide</figcaption>
+      </figure>
+    </div>
 
   </main>
   <footer>
 
-    <p>&copy; 2020 | Darla J Ford | Texas | <a href="#"
-      style=color:white>Attribution</a>
-    <p id="date"><span id="currentdate"></span></p>
+    <p>&copy; 2020 | Darla J Ford | Texas | <a href="#" style=color:white>Attribution</a>
+      <p id="date"><span id="currentdate"></span></p>
   </footer>
-  
 
-
-  
   <script src="js/scootsWeather.js"></script>
   <script src="js/scoots.js"></script>
-</body>
-</html>
 
+</body>
+
+</html>

@@ -6,12 +6,44 @@
   <title>Document</title>
 </head>
 <body>
+  <div class="forecast">
+    <table>
+        <tr>
+            <th id="weekday1"></th>
+            <th id="weekday2"></th>
+            <th id="weekday3"></th>
+            <th id="weekday4"></th>
+            <th id="weekday5"></th>
+        </tr>
+        <tr>
+            <td><img id="icon1"></td>
+            <td><img id="icon2"></td>
+            <td><img id="icon3"></td>
+            <td><img id="icon4"></td>
+            <td><img id="icon5"></td>
+        </tr>
+        <tr>
+            <td id="day1"> °F</td>
+            <td id="day2"> °F</td>
+            <td id="day3"> °F</td>
+            <td id="day4"> °F</td>
+            <td id="day5"> °F</td>
+        </tr>
+    </table>
+</div>
   <script>
     // let requestURL = 'https://darlajford.github.io/week12TestCodes/test.json';
     fetch("test.json")
   .then(response => response.json())
-  .then(json => console.log(json));
+  .then(json => {
+    console.log(json.rentals[0]["walk in"][0]["full day"])
+    // ["full day"]
 
+  console.log(json)})
+
+  .catch((err) => {
+    console.log("whoops")
+  })
 
     // fetch(requestURL)
     // console.log(requestURL);

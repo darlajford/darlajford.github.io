@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>~Scoots</title>
+  <meta name="description" content="scoots home page">
+  <link rel="shortcut icon" type="image/x-icon" href="/scoots.ico">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@400;600&family=Oleo+Script:wght@700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/scootsContact.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/scooterLogo200.jpg" alt="logo">
+    </div>
+    <section class="headings">
+      <h1>~Scoots</h1>
+    </section>
+    <section class="weathersum">
+      <h3>Weather Summary</h3>
+      <p>Currently: <span id="condition"></span></p>
+      <p>Temperature: <span id="current-temp"></span>&deg; F</p>
+      <p>Humidity: <span id="humid"></span>&#37; </p>
+    </section>
+  </header>
+  <nav>
+    <ul class='navigation'>
+      <li><a class="ham" href="#">&#9776; Menu</a></li>
+      <li><a href="scootsIndex.html">Home</a></li>
+      <li><a href="scootsRentals.html">Rentals</a></li>
+      <li><a href="scootsReserv.html">Reservations</a></li>
+      <li><a href="scootsTours.html">Tours</a></li>
+      <li><a href="scootsContact.html" class="active">&#9734; Contact Us</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h3 class="contact">Please see our Rentals and Reservations pages for rental and reservations requirements.
+      Questions may be
+      directed to us by filling out and submitting contact form below.</h3>
+    <form action="#">
+      <fieldset>
+        <legend>Contact Us</legend>
+        <label class="top">Your Name* <input type="text" name="fullName" pattern="[a-zA-Z \.\-\p{L}]{5,}"
+            placeholder="John Doe" required></label>
+        <label class="top">Your Email* <input type="email" name="email" placeholder="someone@gmail.com"
+            required></label>
+        <label for="textarea"><textarea name="textarea" cols="40" rows="6">Your Message:</textarea></label>
+      </fieldset>
+
+      <input type="submit" value="SEND" class="submitBtn">
+    </form>
+    <h3 class="map">Scoots has two convenient locations on Cozumel, one near the Playa del Carmen-Cozumel Ferry Dock and
+      the other one near the Terminal Puerta Maya. Rentals can be picked up and/or returned to either location.</h3>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d29898.362652748958!2d-86.97442172786339!3d20.494116072571977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x8f4e5748bac98d29%3A0xec697a2a774f7a00!2sPuerta%20Maya%20Cruise%20Ship%20Terminal%2C%20Coastal%20Highway%20South%2C%20San%20Miguel%20de%20Cozumel%2C%20Quintana%20Roo%2C%20Mexico!3m2!1d20.475821999999997!2d-86.974762!4m5!1s0x8f4e59cf3a0ece15%3A0x9216e3c2b55e5526!2sPlaya%20del%20Carmen-Cozumel%20Ferry%20Dock%2C%20Avenida%20Rafael%20E.%20Melgar%2C%20Centro%2C%20San%20Miguel%20de%20Cozumel%2C%20Quintana%20Roo%2C%20Mexico!3m2!1d20.5119974!2d-86.950779!5e0!3m2!1sen!2sus!4v1594248467199!5m2!1sen!2sus"
+      width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+      tabindex="0"></iframe>
+  </main>
+
+  <footer>
+
+    <p>&copy; 2020 | Darla J Ford | Texas | <a href="#" style=color:white>Attribution</a>
+      <p id="date"><span id="currentdate"></span></p>
+  </footer>
+
+  <script src="js/scootsWeather.js"></script>
+  <script src="js/scoots.js"></script>
+     
+  </body>
+  </html>

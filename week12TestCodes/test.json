@@ -4,10 +4,10 @@
       "name": "Honda Metro Scooter",
       "photo": "hondaMetro.png",
       "max persons": "1",
-      "reservation prices": [
+      "reservation": [
        {"half day": "$20", "full day": "$30"}
       ],
-      "walk in prices": [
+      "walk in": [
         {"half day": "$25", "full day": "$35"}
       ]
     },
@@ -15,10 +15,10 @@
       "name": "Honda Dio Scooter",
       "photo": "hondaDio.png",
       "max persons": "2",
-      "reservation prices": [
+      "reservation": [
        {"half day": "$30", "full day": "$40"}
       ],
-      "walk in prices": [
+      "walk in": [
         {"half day": "$35", "full day": "$45"}
       ]
     },

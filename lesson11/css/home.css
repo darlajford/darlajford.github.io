@@ -115,7 +115,7 @@ main article img {
   border: 5px solid #0343A2;
   margin-right: 10px;
   float: left;
-  height: 200px;
+  height: 175px;
 }
 
 main article img:hover {
@@ -316,8 +316,9 @@ article h2 {
 
   .towns {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     padding: 20px;
+    margin-top: 50px;
   }
 
   section p {
