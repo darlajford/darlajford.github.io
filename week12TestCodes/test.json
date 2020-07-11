@@ -2,69 +2,52 @@
   "rentals": [
     {
       "name": "Honda Metro Scooter",
-      "photo": "hondaMetro.png",
-      "max persons": "1",
-      "reservation": [
-       {"half day": "$20", "full day": "$30"}
-      ],
-      "walk in": [
-        {"half day": "$25", "full day": "$35"}
-      ]
-    },
+      "maxPersons": "1",
+      "rHalfDay": "$20",
+      "rFullDday": "$30",
+      "wHalfDay": "$25",
+      "wFullDay": "$35"
+      },
     {
       "name": "Honda Dio Scooter",
-      "photo": "hondaDio.png",
-      "max persons": "2",
-      "reservation": [
-       {"half day": "$30", "full day": "$40"}
-      ],
-      "walk in": [
-        {"half day": "$35", "full day": "$45"}
-      ]
+      "maxPersons": "2",
+      "rHalfDay": "$30",
+      "rFullDay": "$40",
+      "wHalfDay": "$35",
+      "wFullDay": "$45"
     },
     {
       "name": "Honda PCX150 Scooter",
-      "photo": "hondaPCX150.png",
-      "max persons": "2",
-      "reservation prices": [
-       {"half day": "$40", "full day": "$50"}
-      ],
-      "walk in prices": [
-        {"half day": "$45", "full day": "$55"}
-      ]
+      "maxPersons": "2",
+      "rHalfDay": "$40",
+      "rFullDay": "$50",
+      "wHalfDay": "$45",
+      "wFullDay": "$55"
     },
     {
       "name": "Honda Pioneer ATV",
-      "photo": "hondaPioneer.png",
-      "max persons": "4",
-      "reservation prices": [
-       {"half day": "$50", "full day": "$70"}
-      ],
-      "walk in prices": [
-        {"half day": "$60", "full day": "$80"}
-      ]
+      "maxPersons": "4",
+      "rHalfDay": "$50",
+      "rFullDay": "$70",
+      "wHalfDay": "$60",
+      "wFullDay": "$80"
     },
     {
       "name": "Jeep Wrangler - 2 door",
-      "photo": "wrangler2door.png",
-      "max persons": "4",
-      "reservation prices": [
-       {"half day": "$60", "full day": "$85"}
-      ],
-      "walk in prices": [
-        {"half day": "$70", "full day": "$90"}
-      ]
+      "maxPersons": "4",
+      "rHalfDay": "$60",
+      "rFullDay": "$85",
+      "wHalfDay": "$70",
+      "wFullDay": "$90"
     },
     {
       "name": "Jeep Wrangler - 4 door with a/c",
-      "photo": "wrangler4door.png",
-      "max persons": "5",
-      "reservation prices": [
-       {"half day": "$70", "full day": "$100"}
-      ],
-      "walk in prices": [
-        {"half day": "$85", "full day": "$125"}
-      ]
-    }
+      "maxPersons": "5",
+      "rHalfDay": "$70",
+      "rFullDay": "$100",
+      "wHalfDay": "$85",
+      "wFullDay": "$125"
+    }     
+    
   ]
 }

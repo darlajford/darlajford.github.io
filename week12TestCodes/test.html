@@ -1,59 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    .rentals table {
+      border: 1px solid;
+      border-collapse: collapse;
+    }
+    .rentals th, .rentals td {
+      border: 1px solid;
+      padding: 10px;
+    }
+  </style>
 </head>
+
 <body>
-  <div class="forecast">
+  <div class="rentals">
     <table>
-        <tr>
-            <th id="weekday1"></th>
-            <th id="weekday2"></th>
-            <th id="weekday3"></th>
-            <th id="weekday4"></th>
-            <th id="weekday5"></th>
-        </tr>
-        <tr>
-            <td><img id="icon1"></td>
-            <td><img id="icon2"></td>
-            <td><img id="icon3"></td>
-            <td><img id="icon4"></td>
-            <td><img id="icon5"></td>
-        </tr>
-        <tr>
-            <td id="day1"> °F</td>
-            <td id="day2"> °F</td>
-            <td id="day3"> °F</td>
-            <td id="day4"> °F</td>
-            <td id="day5"> °F</td>
-        </tr>
+      <tr>
+        <th colspan="6">Max Persons and Price Chart (includes tax)</th>
+      </tr>
+      <tr>
+        <th colspan="2"></th>
+        <th colspan="2">Reservations</th>
+        <th colspan="2">Walk-In</th>
+      </tr>
+
+      <tr>
+        <th>Rental Type</th>
+        <th>Max. Persons</th>
+        <th>Half Day<br>(3 hrs)</th>
+        <th>Full Day</th>
+        <th>Half Day<br>(3 hrs)</th>
+        <th>Full Day</th>
+      </tr>
+      <tr>
+        <td><id="name"></td>
+        <td><id="maxPersons"></td>
+        <td><id="rHalfDay"></td>
+        <td><id="rFullDay"></td>
+        <td><id="wHalfDay"></td>
+        <td><id="wFullDay"></td>
+      </tr>
+      <tr>
+        <td><id="name"></td>
+        <td><id="maxPersons"></td>
+        <td><id="rHalfDay"></td>
+        <td><id="rFullDay"></td>
+        <td><id="wHalfDay"></td>
+        <td><id="wFullDay"></td>
+      </tr>
+      <tr>
+        <td><id="name"></td>
+        <td><id="maxPersons"></td>
+        <td><id="rHalfDay"></td>
+        <td><id="rFullDay"></td>
+        <td><id="wHalfDay"></td>
+        <td><id="wFullDay"></td>
+      </tr>
+      <tr>
+        <td><id="name"></td>
+        <td><id="maxPersons"></td>
+        <td><id="rHalfDay"></td>
+        <td><id="rFullDay"></td>
+        <td><id="wHalfDay"></td>
+        <td><id="wFullDay"></td>
+      </tr>
+      <tr>
+        <td><id="name"></td>
+        <td><id="maxPersons"></td>
+        <td><id="rHalfDay"></td>
+        <td><id="rFullDay"></td>
+        <td><id="wHalfDay"></td>
+        <td><id="wFullDay"></td>
+      </tr>
+      <tr>
+        <td><id="name"></td>
+        <td><id="maxPersons"></td>
+        <td><id="rHalfDay"></td>
+        <td><id="rFullDay"></td>
+        <td><id="wHalfDay"></td>
+        <td><id="wFullDay"></td>
+      </tr>
     </table>
-</div>
+  </div>
   <script>
-    // let requestURL = 'https://darlajford.github.io/week12TestCodes/test.json';
-    fetch("test.json")
-  .then(response => response.json())
-  .then(json => {
-    console.log(json.rentals[0]["walk in"][0]["full day"])
-    // ["full day"]
+    fetch("rentals.json")
+      .then(response => response.json())
+      .then(json => {
+        console.log(json.rentals[0]["wHalfDay"][0]["wFullDay"])
 
-  console.log(json)})
+        console.log(json)
+      })
 
-  .catch((err) => {
-    console.log("whoops")
-  })
-
-    // fetch(requestURL)
-    // console.log(requestURL);
-  // .then((response) => response.json())
-  // .then((jsObject) => {
-  //   console.log(jsObject);
-
-
+      .catch((err) => {
+        console.log("whoops")
+      })
 
   </script>
-  
+
 </body>
+
 </html>
