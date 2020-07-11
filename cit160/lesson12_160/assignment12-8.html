@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="outputDiv"></div>
+
+  <script>
+    let list = [3.4, -2, 5, 7, 12];
+    let s = sum(list);
+
+    document.getElementById("outputDiv").innerHTML = s;
+
+    function sum(list) {
+      let s = 0;
+      for (let i = 0; i < list.length; i++) {
+        s += list[i];
+      }
+      return s;
+    }
+    // let hand = [5, "King", 10, 3, 1, "Queen"];
+    // // let hand = h;
+    // let sum = golfScore(hand);
+
+    // document.getElementById("outputDiv").innerHTML = sum;
+
+    // function golfScore(hand) {
+    //   let King = 10;
+    // let Queen = 10;
+
+    //   let h = 0;
+    //   for (let i = 0; i < list.length; i++) {
+    //     h += hand[i]
+    //   }
+    //   return h;
+  </script>
+
+</body>
+
+</html>

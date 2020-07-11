@@ -5,27 +5,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Return Sum of First and Last Numbers in Array</title>
-</head>
-
-<body>
-
-  <h3>Array values: [17, 8, 9, 5, 20]</h3>
-  <div id="outputDiv"></div>
-
   <script>
     // input: no input from user 
     // processing: finds and adds together the first and last numbers in the array 
     // output: the sum of the first and last numbers of the array
 
+    function math() {
+      let list = [17, 8, 9, 5, 20];
+      let value = addEnds(list);
+
+      document.getElementById("outputDiv").innerHTML = value;
+    }
+
     function addEnds(list) {
       return list[0] + list[list.length - 1];
     }
-    let list = [17, 8, 9, 5, 20];
-    let value = addEnds(list);
-    message = "The sum of the first and last elements of the array is " + value + ".";
-
-    document.getElementById("outputDiv").innerHTML = message;
   </script>
+
+</head>
+
+<body>
+
+  <h3>Array values: [17, 8, 9, 5, 20]</h3>
+  <button type="button" onClick="math()">Click</button>
+  <div id="outputDiv"></div>
+
 
 </body>
 

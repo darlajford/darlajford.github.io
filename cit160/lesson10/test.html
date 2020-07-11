@@ -1,35 +1,43 @@
-<!DOCTYPE HTML>
-<html lang="en-us">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>get middle array</title>
-    <script>
-        //input (enter array) into my function
-        function myFunction() {
-            var list = [12, 4, 15, 17, 5, 20]
-            var answer = 0;
-            answer = getMiddle(list)
-            //outputDiv answer
-            document.getElementById('outputDiv').innerHTML = answer;
-            //math function average of array 
-            function getMiddle(list) {
-                let middle = Math.floor(list.length / 2);
-                let oddOrEven = list.length % 2;
-                if (oddOrEven != 0) {
-                    return list[middle];
-                }
-                else {
-                    //final output return middle
-                    return (list[middle] + list[middle - 1]) / 2;
-                }
-            }
-        }  
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Return value of middle element of array</title>
+  <script>
+    /*Input: No input from user.
+      Processing: Finds the value of the middle element in array.
+      Output: Displays the value of the middle element.
+     */
+
+    let list = [12, 4, 8, 15, 17, 5, 20, 11];
+    let result = getMiddle(list);
+    message = "The middle value of the array is " + result + ".";
+    document.getElementById("outputDiv").innerHTML = message;
+
+    /*Function returns the value of the middle element in an array.  If the array has an even number of elements, then this function must return the average of the two middle elements.*/
+    function getMiddle(list) {
+      let middle = Math.floor(list.length / 2);
+      let evenOrOdd = list.length % 2;
+      // Odd number of elements. 
+      if (evenOrOdd != 0) {
+        return list[middle];
+      } else {
+        // Even number of elements. 
+        return (list[middle] + list[middle - 1]) / 2;
+      }
+    }
+  </script>
+
 </head>
 
 <body>
-    <h2>Get the middle array</h2>
-    <button type="button" onclick="myFunction()">Click Start</button>
-    <div id='outputDiv'></div>
+
+  <h3>Array values: [12, 4, 8, 15, 17, 5, 20, 11]</h3>
+  <div id="outputDiv"></div>
+
+  
 </body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+.container {
+  height: 300px;
+  display: flex;
+}
+.left {
+  flex: 1 0;
+  background: gold;
+}
+.right {
+  height: 100%;
+  flex: 1 0;
+  background: pink;
+}
+form {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  background: grey;
+}
+form > div {
+  flex: 1 0;
+}
+#submitHolder {
+  flex: 0 0 auto;
+  text-align: right;
+}
+</style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="left"></div>
+    <div class="right">
+        <form>
+            <div>
+                <input type="text" />
+            </div>
+            <div id="submitHolder">
+                <input type="submit" class="submit">
+            </div>
+        </form>
+    </div>
+  </div> 
+</body>
+</html>
+

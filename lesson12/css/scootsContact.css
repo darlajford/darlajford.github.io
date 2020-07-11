@@ -85,6 +85,16 @@ nav {
 .responsive li {
   display: block;
 }
+h2 {
+  color: #bb0d07;
+  font-family: Bangers, sans-serif;
+  text-align: center;
+  font-size: 1.85rem;
+  margin: 50px 0 50px 0;
+  font-weight: 500;
+
+}
+
 
 h3.contact,
 h3.map {

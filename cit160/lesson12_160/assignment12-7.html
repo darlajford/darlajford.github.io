@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
   <div id="outputDiv"></div>
 
   <script>
     let list = [ 17, 8, 9, 5, 20 ];
-    let newList =  rotateLeft(list);
+    let index = 5;
+
+    let newList =  rotateRight(list);
 
    document.getElementById("outputDiv").innerHTML = newList ;
 
-   function rotateLeft(list) {
-     list[list.length] = list[0];
-     return list.slice(1);
-   }
- </script>
+   function rotateRight(list) {
+   return list.unshift(list.splice(index, 1)[0]);
 
+    //  list[list.length] = list[0];
+    //  return list.slice(1);
+   }
+
+
+
+</script>
 
 </body>
+
 </html>

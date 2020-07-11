@@ -5,24 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Return value of middle element of array</title>
-</head>
-
-<body>
-
-  <h3>Array values: [12, 4, 8, 15, 17, 5, 20, 11]</h3>
-  <div id="outputDiv"></div>
-
   <script>
     /*Input: No input from user.
       Processing: Finds the value of the middle element in array.
       Output: Displays the value of the middle element.
      */
+    function math() {
 
-    let list = [12, 4, 8, 15, 17, 5, 20, 11];
-    let result = getMiddle(list);
-    message = "The middle value of the array is " + result + ".";
-    document.getElementById("outputDiv").innerHTML = message;
-
+      let list = [12, 4, 8, 15, 17, 5, 20, 11];
+      let result = getMiddle(list);
+      document.getElementById("outputDiv").innerHTML = result;
+    }
     /*Function returns the value of the middle element in an array.  If the array has an even number of elements, then this function must return the average of the two middle elements.*/
     function getMiddle(list) {
       let middle = Math.floor(list.length / 2);
@@ -36,6 +29,15 @@
       }
     }
   </script>
+
+</head>
+
+<body>
+
+  <h3>Array values: [12, 4, 8, 15, 17, 5, 20, 11]</h3>
+  <button type="button" onclick="math()">Click</button>
+  <div id="outputDiv"></div>
+
 
 </body>
 

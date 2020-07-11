@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>~Scoots</title>
+  <meta name="description" content="scoots payment page">
+  <link rel="shortcut icon" type="image/x-icon" href="/scoots.ico">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@400;600&family=Oleo+Script:wght@700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/scootsPay.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/scooterLogo200.jpg" alt="logo">
+    </div>
+    <section class="headings">
+      <h1>~Scoots</h1>
+    </section>
+    <section class="weathersum">
+      <h3>Weather Summary</h3>
+      <p>Currently: <span id="condition"></span></p>
+      <p>Temperature: <span id="current-temp"></span>&deg; F</p>
+      <p>Humidity: <span id="humid"></span>&#37; </p>
+    </section>
+    <style>
+
+    </style>
+  </header>
+  <nav>
+    <ul class='navigation'>
+      <li><a class="ham" href="#">&#9776; Menu</a></li>
+      <li><a href="scootsIndex.html">Home</a></li>
+      <li><a href="scootsRentals.html">Rentals</a></li>
+      <li><a href="scootsReserv.html" class="active">&#9734; Reservations</a></li>
+      <li><a href="scootsTours.html">Tours</a></li>
+      <li><a href="scootsContact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h2>Scooter Rentals on Cozumel</h2>
+    <div class="payFormContainer">
+      <form action="#">
+        <fieldset>
+          <legend>Payment Information</legend>
+          <label class="fname">Accepted Cards</label>
+            <div class="icon-container">
+              <img src="images/googleLogo75.jpg" alt="google pay logo" width="50"></i>
+              <img src="images/paypalLogo75.jpg"alt="pp logo" width="50"></i>
+              <img src="images/mcLogo75.jpg"alt="mc logo" width="50"></i>
+              <img src="images/visaLogo75.jpg"alt="mc logo" width="50"></i>
+
+            </div>
+          <label class="payForm">Name on Card* <input type="text" name="cardName" pattern="[a-zA-Z \.\-\p{L}]{5,}"
+              placeholder="John Doe" required></label>
+          <label class="payForm">Credit Card Number* <input type="text" name="ccnumber"
+              placeholder="1111-2222-3333-4444" required></label>
+          </label>
+          <label class="payForm">Expiration Date* <input type="text" name="expDate" placeholder="Mo/Year"
+              required></label>
+          <label class="payForm">CVV* <input type="text" required></label>
+        </fieldset>
+
+        <input type="submit" value="SUBMIT" class="submitBtn">
+      </form>
+      <form action="#">
+        <fieldset>
+          <legend>Billing Information</legend>
+          <label class="payForm">Full Name* <input type="text" name="fullName" pattern="[a-zA-Z \.\-\p{L}]{5,}"
+              placeholder="John Doe" required></label>
+          <label class="payForm">Your Email* <input type="email" name="email" placeholder="someone@gmail.com"
+              required></label>
+          <label class="payForm">Street Address*<input type="text" required></label>
+          <label class="payForm">City*<input type="text" required></label>
+          <label class="payForm">State or Country*<input type="text" required></label>
+          <label class="payForm">Zip Code*<input type="text" required></label>
+
+        </fieldset>
+
+      </form>
+    </div>
+
+
+
+  </main>
+  <footer>
+
+    <p>&copy; 2020 | Darla J Ford | Texas | <a href="#" style=color:white>Attribution</a>
+      <p id="date"><span id="currentdate"></span></p>
+  </footer>
+
+  <script src="js/scootsWeather.js"></script>
+  <script src="js/scoots.js"></script>
+
+</body>
+
+</html>

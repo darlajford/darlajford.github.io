@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>~Scoots</title>
+  <meta name="description" content="scoots home page">
+  <link rel="shortcut icon" type="image/x-icon" href="/scoots.ico">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@400;600&family=Oleo+Script:wght@700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/scootsContact.css">
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    header {
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .headings h1 {
+      font-family: 'Oleo Script', script;
+      font-size: 4rem;
+      color: #fddd24;
+      -webkit-text-stroke: 4px #bb0d07;
+      text-shadow: 4px 0 #0a0a0a;
+      text-align: center;
+    }
+
+    .logo img {
+      width: 125px;
+      height: auto;
+    }
+
+    .weathersum {
+      text-align: center;
+      color: #0a0a0a;
+      display: block;
+      margin: 10px auto;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      background: radial-gradient(#fddd24, #bb0d07);
+      box-shadow: 0 0 30px;
+      border-radius: 10px;
+      padding: .4rem;
+      opacity: .9;
+    }
+
+    .weathersum h3 {
+      border-bottom: 2px solid #bb0d07;
+    }
+
+
+    nav {
+      background-color: #0a0a0a;
+      margin: -15px auto;
+      box-shadow: 0 2px 15px gray;
+    }
+
+    .navigation {
+      list-style: none;
+      padding: 0;
+    }
+
+    .navigation li:first-child {
+      display: block;
+    }
+
+    .navigation li {
+      display: none;
+    }
+
+    .navigation a {
+      display: block;
+      color: #fddd24;
+      padding: 0.75rem;
+      text-align: center;
+      text-decoration: none;
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.4rem;
+    }
+
+    .navigation a:hover {
+      color: white;
+      background-color: #bb0d07;
+      font-weight: 700;
+    }
+
+    /* the onclick JS toggles the .responsive class from display none (.navigation li) to display block because the repsonsive class is added to the end of the class list like this in HTML.
+  <ul class="navigation responsive">
+  */
+    .responsive li {
+      display: block;
+    }
+
+    h3.contact,
+    h3.map {
+      display: block;
+      margin: 25px auto;
+      text-align: center;
+      font-family: Montserrat, sans-serif;
+      font-size: 1.5rem;
+      padding: 35px;
+      width: 70%;
+    }
+
+    .rentFormContainer {
+      /* width: 90%; */
+      max-width: 900px;
+      border: 1px solid;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      justify-content: space-evenly;
+      margin: 50px auto;
+
+    }
+
+    form fieldset {
+      margin: 2rem 3.5rem;
+      border: 1px solid #0a0a0a;
+      border-radius: 10px;
+      padding: .5rem 2%;
+      width: 60%;
+      margin: 50px auto;
+    }
+
+    form legend {
+      color: #0a0a0a;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin: 0 1rem;
+      padding: 0 .5rem;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    form label.rentForm {
+      display: block;
+      padding-top: 1rem;
+      color: #9c2c13;
+      font-size: 1rem;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+    }
+
+    form label.rentForm input,
+    form label.rentForm select {
+      display: block;
+      font-size: 1rem;
+      border: solid 2px 0a0a0a;
+      border-radius: 6px;
+      padding: .75rem;
+      color: #555;
+      width: 96%;
+      max-width: 20rem;
+      background-color: #f7e898;
+    }
+
+    form textarea {
+      font-family: "Montserrat", sans-serif;
+      font-size: .95rem;
+      padding: 10px;
+      color: #555;
+      background-color: #f7e898;
+      border: solid 2px #0a0a0a;
+      border-radius: 6px;
+      margin-top: 35px;
+    }
+
+    form input.submitBtn {
+      display: block;
+      margin: auto;
+      border: none;
+      background-color: #9c2c13;
+      color: white;
+      border-radius: 1rem;
+      padding: .75rem 1.5rem;
+      width: 50%;
+      max-width: 10rem;
+    }
+
+    form label.rentForm input:required {
+      border-left: red solid 6px;
+    }
+
+    form label.rentForm input:required:valid {
+      border-left: green solid 6px;
+    }
+
+
+    footer {
+      background-color: #17e44c;
+      margin: auto;
+      width: 80%;
+      font-family: Montserrat, sans-serif;
+      text-align: center;
+      font-size: 1.2em;
+      padding: 5px;
+      border: 2px solid #0a0a0a;
+      border-radius: 15px;
+    }
+
+    footer p {
+      margin: 0;
+      padding: 10px;
+    }
+
+
+    /* begin medium view */
+    /* Media Query for medium + screens */
+    @media only screen and (min-width: 37.5em) {
+
+      .headings h1 {
+        margin: 25px;
+        font-size: 5rem;
+      }
+
+      .logo img {
+        width: 150px;
+        height: auto;
+        display: block;
+        margin-left: 100px;
+      }
+
+      .navigation {
+        display: flex;
+      }
+
+      .navigation li {
+        display: block;
+        /* needed because of state in small view */
+        flex: 1 1 100%;
+      }
+
+      .navigation li a {
+        color: #fddd24;
+        text-align: center;
+      }
+
+      .navigation li:first-child {
+        display: none;
+      }
+
+      .galleryContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+      }
+
+      iframe {
+        width: 70%;
+      }
+
+
+
+    }
+
+
+
+
+    /* end medium view */
+
+    /* =================== */
+
+    /* begin large view */
+    @media only screen and (min-width: 64em) {
+
+      header {
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-left: 200px;
+      }
+
+      .headings h1 {
+        margin: 35px;
+        font-size: 6rem;
+      }
+
+      .weathersum {
+        text-align: center;
+        color: #0a0a0a;
+        display: block;
+        margin-left: 80px;
+        /* margin: 10px auto; */
+        /* position: absolute;
+  top: 2rem;
+  left: 5rem; */
+        font-family: "Montserrat", sans-serif;
+        background: radial-gradient(#fddd24, #bb0d07);
+        box-shadow: 0 0 30px;
+        border-radius: 10px;
+        padding: .4rem;
+        opacity: .9;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/scooterLogo200.jpg" alt="logo">
+    </div>
+    <section class="headings">
+      <h1>~Scoots</h1>
+    </section>
+    <section class="weathersum">
+      <h3>Weather Summary</h3>
+      <p>Currently: <span id="condition"></span></p>
+      <p>Temperature: <span id="current-temp"></span>&deg; F</p>
+      <p>Humidity: <span id="humid"></span>&#37; </p>
+    </section>
+  </header>
+  <nav>
+    <ul class='navigation'>
+      <li><a class="ham" href="#">&#9776; Menu</a></li>
+      <li><a href="scootsIndex.html">Home</a></li>
+      <li><a href="scootsRentals.html">Rentals</a></li>
+      <li><a href="scootsReserv.html">Reservations</a></li>
+      <li><a href="scootsTours.html">Tours</a></li>
+      <li><a href="scootsContact.html" class="active">&#9734; Contact Us</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h3 class="contact">Please see our Rentals and Reservations pages for rental and reservations requirements.
+      Questions may be
+      directed to us by filling out and submitting contact form below.</h3>
+    <div class="rentFormContainer">
+      <form action="#">
+        <fieldset>
+          <legend>Rental Information</legend>
+          <label class="rentForm">Date of Rental* <input type="date" name="date" required></label>
+          <label class="rentForm">Select Rental Type 
+            <select name="vehicle">
+              <option value="">Choose Vehicle&#9662; </option>
+              <option value="metro">Honda Metro</option>
+              <option value="dio">Honda Dio</option>
+              <option value="pcx150">Honda PCX150</option>
+              <option value="atv">Honda ATV</option>
+              <option value="2-door">Jeep 2-door</option>
+              <option value="4-door">Jeep 4-door</option>
+            </select>  
+          </label>
+          <label class="rentForm">Phone* <input type="tel" name="phone" placeholder="1235551234" required></label>
+          <label for="textarea"><textarea name="textarea" cols="40" rows="6">Additional Rental Information:</textarea></label>
+        </fieldset>
+
+        <input type="submit" value="SEND" class="submitBtn">
+      </form>
+      <form action="#">
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label class="rentForm">Full Name* <input type="text" name="fullName" pattern="[a-zA-Z \.\-\p{L}]{5,}"
+              placeholder="John Doe" required></label>
+          <label class="rentForm">Your Email* <input type="email" name="email" placeholder="someone@gmail.com"
+              required></label>
+              <label class="rentForm">State or Country<input type="text"></label>
+              <label class="rentForm">Cruise Line (if applicable)<input type="text"></label>
+
+          <label for="textarea"><textarea name="textarea" cols="40" rows="6">Additional Comments:</textarea></label>
+        </fieldset>
+
+      </form>
+    </div>
+
+  </main>
+
+  <footer>
+
+    <p>&copy; 2020 | Darla J Ford | Texas | <a href="#" style=color:white>Attribution</a>
+      <p id="date"><span id="currentdate"></span></p>
+  </footer>
+
+  <script src="js/scootsWeather.js"></script>
+  <script src="js/scoots.js"></script>
+
+</body>
+
+</html>
