@@ -123,7 +123,7 @@ ul.reserv {
 
 form fieldset {
   margin: 2rem 3.5rem;
-  border: 1px solid #0a0a0a;
+  border: 1px solid white;
   border-radius: 10px;
   padding: .5rem 2%;
   width: 60%;
@@ -194,9 +194,10 @@ form label.rentForm input:required:valid {
 
 footer {
   background-color: #17e44c;
-  margin: auto;
+  margin: 25px auto;
   width: 80%;
   font-family: Montserrat, sans-serif;
+  font-weight: 600;
   text-align: center;
   font-size: 1.2em;
   padding: 5px;

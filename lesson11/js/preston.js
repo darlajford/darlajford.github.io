@@ -102,7 +102,7 @@ fetch(requestURL)
     fetch(forecastURL)
       .then((response) => response.json())
       .then((fcinfo) => {
-        console.log(fcinfo);
+        // console.log(fcinfo);
         const fclist = fcinfo['list'];
         const fcdate = new Date();
         const dayNum = fcdate.getDay();

@@ -17,6 +17,9 @@
   </style>
 </head>
 
+
+
+
 <body>
   <div class="rentals">
     <table>
@@ -38,67 +41,101 @@
         <th>Full Day</th>
       </tr>
       <tr>
-        <td><id="name"></td>
-        <td><id="maxPersons"></td>
-        <td><id="rHalfDay"></td>
-        <td><id="rFullDay"></td>
-        <td><id="wHalfDay"></td>
-        <td><id="wFullDay"></td>
+        <td id="name1"></td>
+        <td id="maxPersons1"></td>
+        <td id="rHalfDay1"></td>
+        <td id="rFullDay1"></td>
+        <td id="wHalfDay1"></td>
+        <td id="wFullDay1"></td>
       </tr>
       <tr>
-        <td><id="name"></td>
-        <td><id="maxPersons"></td>
-        <td><id="rHalfDay"></td>
-        <td><id="rFullDay"></td>
-        <td><id="wHalfDay"></td>
-        <td><id="wFullDay"></td>
+        <td id="name"></td>
+        <td id="maxPersons"></td>
+        <td id="rHalfDay"></td>
+        <td id="rFullDay"></td>
+        <td id="wHalfDay"></td>
+        <td id="wFullDay"></td>
       </tr>
       <tr>
-        <td><id="name"></td>
-        <td><id="maxPersons"></td>
-        <td><id="rHalfDay"></td>
-        <td><id="rFullDay"></td>
-        <td><id="wHalfDay"></td>
-        <td><id="wFullDay"></td>
+        <td id="name"></td>
+        <td id="maxPersons"></td>
+        <td id="rHalfDay"></td>
+        <td id="rFullDay"></td>
+        <td id="wHalfDay"></td>
+        <td id="wFullDay"></td>
       </tr>
       <tr>
-        <td><id="name"></td>
-        <td><id="maxPersons"></td>
-        <td><id="rHalfDay"></td>
-        <td><id="rFullDay"></td>
-        <td><id="wHalfDay"></td>
-        <td><id="wFullDay"></td>
+        <td id="name"></td>
+        <td id="maxPersons"></td>
+        <td id="rHalfDay"></td>
+        <td id="rFullDay"></td>
+        <td id="wHalfDay"></td>
+        <td id="wFullDay"></td>
       </tr>
       <tr>
-        <td><id="name"></td>
-        <td><id="maxPersons"></td>
-        <td><id="rHalfDay"></td>
-        <td><id="rFullDay"></td>
-        <td><id="wHalfDay"></td>
-        <td><id="wFullDay"></td>
+        <td id="name"></td>
+        <td id="maxPersons"></td>
+        <td id="rHalfDay"></td>
+        <td id="rFullDay"></td>
+        <td id="wHalfDay"></td>
+        <td id="wFullDay"></td>
       </tr>
       <tr>
-        <td><id="name"></td>
-        <td><id="maxPersons"></td>
-        <td><id="rHalfDay"></td>
-        <td><id="rFullDay"></td>
-        <td><id="wHalfDay"></td>
-        <td><id="wFullDay"></td>
+        <td id="name"></td>
+        <td id="maxPersons"></td>
+        <td id="rHalfDay"></td>
+        <td id="rFullDay"></td>
+        <td id="wHalfDay"></td>
+        <td id="wFullDay"></td>
       </tr>
     </table>
   </div>
   <script>
     fetch("rentals.json")
       .then(response => response.json())
-      .then(json => {
-        console.log(json.rentals[0]["wHalfDay"][0]["wFullDay"])
+    .then((rentalInfo) => {
+      console.log(rentalInfo);
 
-        console.log(json)
-      })
+      const table = document.querySelector('table');
+      request.onload = function() {
+        const rentals = request.response;
+        populateTable(rentals);
+      
+          
+          
+        }
 
-      .catch((err) => {
-        console.log("whoops")
-      })
+      }
+
+        )
+
+
+    //      {
+    //         let desc = rentalInfo[index].rentals[0].description;
+
+    //         document.getElementById(`name${index+1}`).innerHTML = `$`;
+    //         document.getElementById(`maxPersons${index+1}`).innerHTML = `$`;
+    //         document.getElementById(`rHalfDay${index+1}`).innerHTML = `$`;
+    //         document.getElementById(`rFullDay${index+1}`).innerHTML = `$`;
+    //         document.getElementById(`wHalfDay${index+1}`).innerHTML = `$`;
+    //         document.getElementById(`wFullDay${index+1}`).innerHTML = `$`;
+
+    //     }
+
+    // });
+    // this is the beginning of travis's testing on thursday
+    // fetch("rentals.json")
+    //   .then(response => response.json())
+    //   .then(json => {
+    //     console.log(json.rentals[0]["wHalfDay"][0]["wFullDay"])
+
+    //     console.log(json)
+    //   })
+
+    //   .catch((err) => {
+    //     console.log("whoops")
+    //   })
+
 
   </script>
 
