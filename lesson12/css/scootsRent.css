@@ -109,8 +109,23 @@ table#rentTable th {
   padding: 10px;
   font-family: Montserrat, sans-serif;
   font-size: .75rem;
-
 }
+.rentContainer {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.rentContainer img {
+  display: block;
+  margin: auto;
+  border: 5px ridge;
+  border-radius: 50px;
+  box-shadow: 0 0 15px rgb(73, 73, 100);
+  margin-bottom: 5px;
+  }
+
 
 
 footer {
@@ -172,8 +187,12 @@ footer p {
   table#rentTable td,
 table#rentTable th {
   font-size: 1rem;
-
 }
+.rentContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;;
+}
+
 
   
   
@@ -223,6 +242,11 @@ table#rentTable th {
   table#rentTable {
     width: 70%;
   }
+  .rentContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 30vw);
+  }
+  
   
 
 

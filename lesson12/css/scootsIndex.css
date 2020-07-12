@@ -241,7 +241,7 @@ td img {
 .galleryContainer img {
   display: block;
   margin: auto;
-  border: 10px ridge;
+  border: 5px ridge;
   border-radius: 50px;
   box-shadow: 0 0 15px rgb(73, 73, 100);
   margin-bottom: 5px;
