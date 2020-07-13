@@ -7,7 +7,6 @@
   <title>~Scoots</title>
   <meta name="description" content="scoots home page">
   <link rel="shortcut icon" type="image/x-icon" href="/scoots.ico">
-
   <link rel="stylesheet" href="css/normalize.css">
   <link
     href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@400;600&family=Oleo+Script:wght@700&display=swap"
@@ -18,7 +17,7 @@
 <body>
   <header>
     <div class="logo">
-      <a href="scootsIndex.html"><img src="images/scooterLogo200.jpg" alt="logo"></a> 
+      <a href="scootsIndex.html"><img src="images/scooterLogo200.jpg" alt="logo"></a>
     </div>
     <section class="headings">
       <h1>~Scoots</h1>
@@ -29,10 +28,8 @@
       <p>Temperature: <span id="current-temp"></span>&deg; F</p>
       <p>Humidity: <span id="humid"></span>&#37; </p>
     </section>
-    <style>
-      
-    </style>
   </header>
+
   <nav>
     <ul class='navigation'>
       <li><a class="ham" href="#">&#9776; Menu</a></li>
@@ -43,10 +40,12 @@
       <li><a href="scootsContact.html">Contact Us</a></li>
     </ul>
   </nav>
+
   <main>
     <h2>Scooter Rentals on Cozumel</h2>
+
     <div class="reservInfo">
-      <h3 class="reserv" >Rental Agreement and Services</h3>
+      <h3 class="reserv">Rental Agreement and Services</h3>
       <ul class="reserv">
         <li>A $50 security deposit is required to confirm reservation.</li>
         <li>A valid driver's license is required in hand at time of rental.</li>
@@ -60,12 +59,13 @@
         <li>Rentals may be returned to either of Scoots convenient locations.</li>
       </ul>
     </div>
+
     <div class="rentFormContainer">
       <form action="scootsPay.html">
         <fieldset>
           <legend>Rental Information</legend>
           <label class="rentForm">Date of Rental* <input type="date" name="date" required></label>
-          <label class="rentForm">Select Rental Type 
+          <label class="rentForm">Select Rental Type
             <select name="vehicle">
               <option value="">Choose Vehicle&#9662; </option>
               <option value="metro">Honda Metro</option>
@@ -74,12 +74,12 @@
               <option value="atv">Honda ATV</option>
               <option value="2-door">Jeep 2-door</option>
               <option value="4-door">Jeep 4-door</option>
-            </select>  
+            </select>
           </label>
           <label class="rentForm">Phone* <input type="tel" name="phone" placeholder="1235551234" required></label>
-          <label for="textarea"><textarea name="textarea" cols="40" rows="6">Additional Rental Information:</textarea></label>
+          <label for="textarea"><textarea name="textarea" cols="40"
+              rows="6">Additional Rental Information:</textarea></label>
         </fieldset>
-
         <input type="submit" value="SEND" class="submitBtn">
       </form>
       <form action="#">
@@ -89,18 +89,15 @@
               placeholder="John Doe" required></label>
           <label class="rentForm">Your Email* <input type="email" name="email" placeholder="someone@email.com"
               required></label>
-              <label class="rentForm">State or Country<input type="text"></label>
-              <label class="rentForm">Cruise Line (if applicable)<input type="text"></label>
-
+          <label class="rentForm">State or Country<input type="text"></label>
+          <label class="rentForm">Cruise Line (if applicable)<input type="text"></label>
           <label for="textarea"><textarea name="textarea" cols="40" rows="6">Additional Comments:</textarea></label>
         </fieldset>
-
       </form>
     </div>
 
-
-
   </main>
+
   <footer>
     <div class="address">
       <h6>Scoots<br>
@@ -109,17 +106,25 @@
         &#9742; 011 52 987 555 5555<br>
         &#9993; scoots@scoots.com</h6>
     </div>
+
     <div>
       <p>&copy; 2020 | Darla J Ford | Texas<br> <a href="https://openweathermap.org/"
           style=color:white>OpenWeatherMap</a><br>
         <p id="date"><span id="currentdate"></span></p>
     </div>
+
     <div class="social">
-      <a class="socialmedia" target="_blank" href="https://www.facebook.com/taichiwithdarla"> <img class="icon" src="https://cdn.glitch.com/291fe87e-0bf2-4a1b-ba91-da2cebda9c80%2Ffacebook.png?1580166368325" alt="facebook"></a>
-      
-    <a class="socialmedia" target="_blank" href="https://www.twitter.com"> <img class="icon" src="https://cdn.glitch.com/291fe87e-0bf2-4a1b-ba91-da2cebda9c80%2Ftwitter.png?1580166371603" alt="twitter"></a>
-        
-     <a class="socialmedia" target="_blank" href="https://www.youtube.com"> <img class="icon" src="https://cdn.glitch.com/291fe87e-0bf2-4a1b-ba91-da2cebda9c80%2Fyoutube.png?1580166374379" alt="youtube"></a>  
+      <a class="socialmedia" target="_blank" href="https://www.facebook.com"> <img class="icon"
+          src="https://cdn.glitch.com/291fe87e-0bf2-4a1b-ba91-da2cebda9c80%2Ffacebook.png?1580166368325"
+          alt="facebook"></a>
+
+      <a class="socialmedia" target="_blank" href="https://www.twitter.com"> <img class="icon"
+          src="https://cdn.glitch.com/291fe87e-0bf2-4a1b-ba91-da2cebda9c80%2Ftwitter.png?1580166371603"
+          alt="twitter"></a>
+
+      <a class="socialmedia" target="_blank" href="https://www.youtube.com"> <img class="icon"
+          src="https://cdn.glitch.com/291fe87e-0bf2-4a1b-ba91-da2cebda9c80%2Fyoutube.png?1580166374379"
+          alt="youtube"></a>
     </div>
 
   </footer>
