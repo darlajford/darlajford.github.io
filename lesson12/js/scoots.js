@@ -42,11 +42,12 @@ document.getElementById("currentdate").textContent = fulldate;
 // console.log(fulldate);
 
 // //to control font loading
-
+function webfontload() {
 WebFont.load({
   google: {
     families: [
-      'Oleo Script', 'Bangers', 'Montserrat'
+      'Oleo+Script', 'Bangers', 'Montserrat'
     ]
   }
 });
+}

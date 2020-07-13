@@ -29,11 +29,8 @@ fetch(forecastURL)
         fiveDayFC.forEach(forecast => {
             let d = new Date(forecast.dt_txt);
             //document.getElementById(`forecast${day+1}`).textContent = forecast.main.temp.toFixed(0);
-            document.getElementById(`weekday${day+1}`).textContent = weekdays[d.getDay()];
-            day++;
+            document.getElementById(`weekday${day+1}`).textContent = weekdays[d.getDay()]; day++;
         });
-
-
         for (let index = 0; index < fiveDayFC.length; index++) {
             const imagesrc = 'https://openweathermap.org/img/w/' + fiveDayFC[index].weather[0].icon + '.png';
             const desc = fiveDayFC[index].weather[0].description;
@@ -41,10 +38,7 @@ fetch(forecastURL)
             document.getElementById(`icon${index+1}`).setAttribute('alt', desc);
             document.getElementById(`day${index+1}`).innerHTML = `${Math.round(fiveDayFC[index].main.temp)}` + '\xB0 F' ;
         }
-
     });
-
-
   //   const forecastURL =
   //   'https://api.openweathermap.org/data/2.5/forecast?id=3530103&appid=a442aaa7bf1b55d1a3f7a66de5e262fe&units=imperial';
     
@@ -56,15 +50,7 @@ fetch(forecastURL)
   //     const fcdate = new Date();
   //     const dayNum = fcdate.getDay();
   //     let fcday = dayNum;
-  //     let days = [
-  //       "Sun",
-  //       "Mon",
-  //       "Tue",
-  //       "Wed",
-  //       "Thu",
-  //       "Fri",
-  //       "Sat"
-  //     ];
+  //     let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   //     for (let i = 0; i < fclist.length; i++) {
   //       let time = fclist[i].dt_txt;
   //       if (time.includes('18:00:00')) {
