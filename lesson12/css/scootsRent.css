@@ -94,6 +94,7 @@ h2 {
   margin: 50px 0 25px 0;
   font-weight: 500;
 }
+
 .rentVehicle {
   font-family: Montserrat, sans-serif;
   font-size: 1.3rem;
@@ -103,6 +104,7 @@ h2 {
   width: 75%;
   margin: 25px auto;
 }
+
 table {
   border-collapse: collapse;
   margin: 25px auto;
@@ -119,6 +121,7 @@ table#rentTable th {
   font-family: Montserrat, sans-serif;
   font-size: .75rem;
 }
+
 .rentContainer {
   display: block;
   width: 90%;
@@ -133,42 +136,48 @@ table#rentTable th {
   border-radius: 50px;
   box-shadow: 0 0 15px rgb(73, 73, 100);
   margin-bottom: 5px;
-  }
+}
 
 
 
-  footer {
-    display: block;
-    background-color: #17e44c;
-    justify-content: center;
-    margin: 25px auto;
-    width: 80%;
-    font-family: Montserrat, sans-serif;
-    font-weight: 600;
-    text-align: center;
-    font-size: 1.2em;
-    padding: 5px;
-    border: 2px solid #0a0a0a;
-    border-radius: 15px;
-  }
-  
-  footer p {
-    margin: 0;
-    padding: 10px;
-  }
-  footer div {
-    line-height: 35px;
-  }
-  footer div.address {
-    line-height: 20px;
-    font-size: 1.3rem;
-  }
-  .socialmedia .icon {
-    border-radius: 50px;
-    padding: 5px;
-   margin: 35px auto;
-  }
-  
+footer {
+  display: block;
+  background-color: #17e44c;
+  justify-content: center;
+  margin: 25px auto;
+  width: 80%;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 5px;
+  border: 2px solid #0a0a0a;
+  border-radius: 15px;
+}
+
+footer p {
+  margin: 0;
+  padding: 10px;
+}
+
+footer div {
+  line-height: 35px;
+}
+
+footer div.address {
+  line-height: 20px;
+  font-size: 1.3rem;
+}
+
+.socialmedia .icon {
+  border: 2px solid white;
+  border-radius: 50px;
+
+  border-radius: 50px;
+  padding: 5px;
+  margin: 35px auto;
+}
+
 
 
 
@@ -206,21 +215,25 @@ table#rentTable th {
   .navigation li:first-child {
     display: none;
   }
+
   table#rentTable td,
-table#rentTable th {
-  font-size: 1rem;
-}
-.rentContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;;
-}
-footer {
+  table#rentTable th {
+    font-size: 1rem;
+  }
+
+  .rentContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    ;
+  }
+
+  footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 
-}
-  
-  
+  }
+
+
 
 }
 
@@ -264,15 +277,17 @@ footer {
     padding: .4rem;
     opacity: .9;
   }
+
   table#rentTable {
     width: 70%;
   }
+
   .rentContainer {
     display: grid;
     grid-template-columns: repeat(3, 30vw);
   }
-  
-  
+
+
 
 
 
