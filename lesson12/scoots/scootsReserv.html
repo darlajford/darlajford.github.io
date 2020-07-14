@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>~Scoots</title>
+  <meta name="description" content="scoots home page">
+  <link rel="shortcut icon" type="image/x-icon" href="/scoots.ico">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@400;600&family=Oleo+Script:wght@700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/scootsReserv.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a href="scootsIndex.html"><img src="images/scooterLogo200.jpg" alt="logo"></a>
+    </div>
+    <section class="headings">
+      <h1>~Scoots</h1>
+    </section>
+    <section class="weathersum">
+      <h3>Weather Summary</h3>
+      <p>Currently: <span id="condition"></span></p>
+      <p>Temperature: <span id="current-temp"></span>&deg; F</p>
+      <p>Humidity: <span id="humid"></span>&#37; </p>
+    </section>
+  </header>
+
+  <nav>
+    <ul class='navigation'>
+      <li><a class="ham" href="#">&#9776; Menu</a></li>
+      <li><a href="scootsIndex.html">Home</a></li>
+      <li><a href="scootsRent.html">Rentals</a></li>
+      <li><a href="scootsReserv.html" class="active">&#9758; Reservations</a></li>
+      <li><a href="scootsTours.html">Tours</a></li>
+      <li><a href="scootsContact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>Scooter Rentals on Cozumel</h2>
+
+    <div class="reservInfo">
+      <h3 class="reserv">Rental Agreement and Services</h3>
+      <ul class="reserv">
+        <li>A $50 security deposit is required to confirm reservation.</li>
+        <li>A valid driver's license is required in hand at time of rental.</li>
+        <li>No one under 12 years of age are allowed to ride on the scooters.</li>
+        <li>Fuel charge is NOT included.</li>
+        <li>Unlimited mileage.</li>
+        <li>Liability insurance is free of charge.</li>
+        <li>Reservations rate requires 24 hour prior notification.</li>
+        <li>Free delivery to Cozumel hotel, Airbnb, or private residence for 2+ day rentals.</li>
+        <li>Payment via Google pay, cash, credit card, debit card, or PayPal.</li>
+        <li>Rentals may be returned to either of Scoots convenient locations.</li>
+      </ul>
+    </div>
+
+    <div class="rentFormContainer">
+      <form action="scootsPay.html">
+        <fieldset>
+          <legend>Rental Information</legend>
+          <label class="rentForm">Date of Rental* <input type="date" name="date" required></label>
+          <label class="rentForm">Select Rental Type
+            <select name="vehicle">
+              <option value="">Choose Vehicle&#9662; </option>
+              <option value="metro">Honda Metro</option>
+              <option value="dio">Honda Dio</option>
+              <option value="pcx150">Honda PCX150</option>
+              <option value="atv">Honda ATV</option>
+              <option value="2-door">Jeep 2-door</option>
+              <option value="4-door">Jeep 4-door</option>
+            </select>
+          </label>
+          <label class="rentForm">Phone* <input type="tel" name="phone" placeholder="1235551234" required></label>
+          <label for="textarea"><textarea name="textarea" cols="40"
+              rows="6">Additional Rental Information:</textarea></label>
+        </fieldset>
+        <input type="submit" value="SEND" class="submitBtn">
+      </form>
+      <form action="#">
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label class="rentForm">Full Name* <input type="text" name="fullName" pattern="[a-zA-Z \.\-\p{L}]{5,}"
+              placeholder="John Doe" required></label>
+          <label class="rentForm">Your Email* <input type="email" name="email" placeholder="someone@email.com"
+              required></label>
+          <label class="rentForm">State or Country<input type="text"></label>
+          <label class="rentForm">Cruise Line (if applicable)<input type="text"></label>
+          <label for="textarea"><textarea name="textarea" cols="40" rows="6">Additional Comments:</textarea></label>
+        </fieldset>
+      </form>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="address">
+      <h6>Scoots<br>
+        PO Box 555<br>
+        Cozumel MX 77675<br>
+        &#9742; 011 52 987 555 5555<br>
+        &#9993; scoots@scoots.com</h6>
+    </div>
+
+    <div>
+      <p>&copy; 2020 | Darla J Ford | Texas<br> <a href="https://openweathermap.org/"
+          style=color:white>OpenWeatherMap</a><br>
+        <p id="date"><span id="currentdate"></span></p>
+    </div>
+
+    <div class="social">
+      <a class="socialmedia" target="_blank" rel="noopener" href="https://www.facebook.com"> <img class="icon"
+          src="images/fblogo40.jpg"
+          alt="facebook"></a>
+
+      <a class="socialmedia" target="_blank" rel="noopener" href="https://www.twitter.com"> <img class="icon"
+          src="images/twitter40.jpg"
+          alt="twitter"></a>
+
+      <a class="socialmedia" target="_blank" rel="noopener" href="https://www.youtube.com"> <img class="icon"
+          src="images/youtubelogo40.jpg"
+          alt="youtube"></a>
+    </div>
+
+  </footer>
+
+  <script src="js/scootsWeather.js"></script>
+  <script src="js/scoots.js"></script>
+
+</body>
+
+</html>

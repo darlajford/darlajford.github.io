@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>~Scoots</title>
+  <meta name="description" content="scoots payment page">
+  <link rel="shortcut icon" type="image/x-icon" href="/scoots.ico">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@400;600&family=Oleo+Script:wght@700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/scootsPay.css">
+</head>
+
+<body>
+  <header>
+
+    <div class="logo">
+      <a href="scootsIndex.html"><img src="images/scooterLogo200.jpg" alt="logo"></a>
+    </div>
+    <section class="headings">
+      <h1>~Scoots</h1>
+    </section>
+    <section class="weathersum">
+      <h3>Weather Summary</h3>
+      <p>Currently: <span id="condition"></span></p>
+      <p>Temperature: <span id="current-temp"></span>&deg; F</p>
+      <p>Humidity: <span id="humid"></span>&#37; </p>
+    </section>
+  </header>
+
+  <nav>
+    <ul class='navigation'>
+      <li><a class="ham" href="#">&#9776; Menu</a></li>
+      <li><a href="scootsIndex.html">Home</a></li>
+      <li><a href="scootsRent.html">Rentals</a></li>
+      <li><a href="scootsReserv.html" class="active">&#9758; Reservations</a></li>
+      <li><a href="scootsTours.html">Tours</a></li>
+      <li><a href="scootsContact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>Scooter Rentals on Cozumel</h2>
+    <div class="payFormContainer">
+      <form action="#">
+
+        <fieldset>
+          <legend>Payment Information</legend>
+          <label class="fname">Accepted Cards</label>
+          <div class="icon-container">
+            <img src="images/gpay80.png" alt="google pay logo"width="50"></i>
+            <img src="images/paypal80.png" alt="pp logo" width="50"></i>
+            <img src="images/mcLogo70.png" alt="mc logo" width="50"></i>
+            <img src="images/visalogo75.png" alt="mc logo" width="50"></i>
+          </div>
+          <label class="payForm">Name on Card* <input type="text" name="cardName" pattern="[a-zA-Z \.\-\p{L}]{5,}"
+              placeholder="John Doe" required></label>
+          <label class="payForm">Credit Card Number* <input type="text" name="ccnumber"
+              placeholder="1111-2222-3333-4444" required></label>
+          </label>
+          <label class="payForm">Expiration Date* <input type="text" name="expDate" placeholder="Mo/Year"
+              required></label>
+          <label class="payForm">CVV* <input type="text" required></label>
+        </fieldset>
+
+        <input type="submit" value="SUBMIT" class="submitBtn">
+      </form>
+      <form action="#">
+        <fieldset>
+          <legend>Billing Information</legend>
+          <label class="payForm">Full Name* <input type="text" name="fullName" pattern="[a-zA-Z \.\-\p{L}]{5,}"
+              placeholder="John Doe" required></label>
+          <label class="payForm">Your Email* <input type="email" name="email" placeholder="myEmail"
+              required></label>
+          <label class="payForm">Street Address*<input type="text" required></label>
+          <label class="payForm">City*<input type="text" required></label>
+          <label class="payForm">State or Country*<input type="text" required></label>
+          <label class="payForm">Zip Code*<input type="text" required></label>
+        </fieldset>
+      </form>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="address">
+      <h6>Scoots<br>
+        PO Box 555<br>
+        Cozumel MX 77675<br>
+        &#9742; 011 52 987 555 5555<br>
+        &#9993; scoots@scoots.com</h6>
+    </div>
+
+    <div>
+      <p>&copy; 2020 | Darla J Ford | Texas<br> <a href="https://openweathermap.org/"
+          style=color:white>OpenWeatherMap</a><br>
+        <p id="date"><span id="currentdate"></span></p>
+    </div>
+
+    <div class="social">
+      <a class="socialmedia" target="_blank" rel="noopener" href="https://www.facebook.com"> <img class="icon"
+          src="images/fblogo40.jpg"
+          alt="facebook"></a>
+
+      <a class="socialmedia" target="_blank" rel="noopener"  href="https://www.twitter.com"> <img class="icon"
+          src="images/twitter40.jpg"
+          alt="twitter"></a>
+
+      <a class="socialmedia" target="_blank" rel="noopener" href="https://www.youtube.com"> <img class="icon"
+          src="images/youtubelogo40.jpg"
+          alt="youtube"></a>
+    </div>
+
+  </footer>
+
+  <script src="js/scootsWeather.js"></script>
+  <script src="js/scoots.js"></script>
+
+</body>
+
+</html>
