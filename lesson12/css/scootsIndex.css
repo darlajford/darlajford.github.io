@@ -1,3 +1,4 @@
+/* beginning of small view */
 body {
   padding: 0;
   margin: 0;
@@ -42,8 +43,6 @@ header {
 .weathersum h3 {
   border-bottom: 2px solid #bb0d07;
 }
-
-
 
 nav {
   background-color: #0a0a0a;
@@ -94,7 +93,6 @@ h2 {
   font-size: 1.85rem;
   margin: 50px 0 25px 0;
   font-weight: 500;
-
 }
 
 .rentalsPicContainer {
@@ -110,6 +108,7 @@ h2 {
   border-radius: 10px;
   box-shadow: 0 0 20px #0343A2;
 }
+
 .rentalsPicContainer h3 {
   display: block;
   margin: 25px auto;
@@ -119,6 +118,7 @@ h2 {
   padding: 20px;
   width: 70%;
 }
+
 .forecast {
   width: 80%;
   margin: 25px auto;
@@ -139,7 +139,6 @@ h2 {
   background-color: #17e44c;
   font-family: Montserrat, sans-serif;
   font-weight: 600;
-
 }
 
 .forecasst table,
@@ -157,9 +156,11 @@ h2 {
   border: 1px solid;
   max-width: 600px;
 }
+
 .forecast td.fc {
   background-color: #17e44c;
 }
+
 .call {
   display: block;
   margin: 50px auto;
@@ -174,11 +175,13 @@ h2 {
   border-radius: 10px;
   box-shadow: 0 0 25px #fddd24;
 }
+
 .button {
   text-decoration: none;
   color: white;
   padding: 10px;
 }
+
 .rentInfo h3 {
   display: block;
   margin: 25px auto;
@@ -186,8 +189,8 @@ h2 {
   font-family: Montserrat, sans-serif;
   font-size: 1.5rem;
   width: 70%;
-
 }
+
 table {
   margin: auto;
   width: 50%;
@@ -216,6 +219,7 @@ th {
 td {
   background-color: white;
 }
+
 tr .prices {
   background-color: #fddd24;
 }
@@ -231,6 +235,7 @@ td img {
   font-size: 2.5rem;
   color: #bb0d07;
 }
+
 .galleryContainer {
   display: block;
   width: 90%;
@@ -245,50 +250,52 @@ td img {
   border-radius: 50px;
   box-shadow: 0 0 15px rgb(73, 73, 100);
   margin-bottom: 5px;
-  }
-  figcaption {
-    font-family: Montserrat, sans-serif;
-    font-weight: 600;
-    font-size: 1.2rem;
-    text-align: center;
+}
 
-  }
+figcaption {
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-align: center;
+}
 
+footer {
+  display: block;
+  background-color: #17e44c;
+  justify-content: center;
+  margin: 25px auto;
+  width: 80%;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 5px;
+  border: 2px solid #0a0a0a;
+  border-radius: 15px;
+}
 
+footer p {
+  margin: 0;
+  padding: 10px;
+}
 
-  footer {
-    display: block;
-    background-color: #17e44c;
-    justify-content: center;
-    margin: 25px auto;
-    width: 80%;
-    font-family: Montserrat, sans-serif;
-    font-weight: 600;
-    text-align: center;
-    font-size: 1.2em;
-    padding: 5px;
-    border: 2px solid #0a0a0a;
-    border-radius: 15px;
-  }
-  
-  footer p {
-    margin: 0;
-    padding: 10px;
-  }
-  footer div {
-    line-height: 35px;
-  }
-  footer div.address {
-    line-height: 20px;
-    font-size: 1.3rem;
-  }
-  .socialmedia .icon {
-    border: 2px solid white;
-    border-radius: 50px;
-    padding: 5px;
-   margin: 35px auto;
-  }
-  
+footer div {
+  line-height: 35px;
+}
+
+footer div.address {
+  line-height: 20px;
+  font-size: 1.3rem;
+}
+
+.socialmedia .icon {
+  border: 2px solid white;
+  border-radius: 50px;
+  padding: 5px;
+  margin: 35px auto;
+}
+/* end of small view */
+/* ============================================ */
 
 
 
@@ -326,23 +333,17 @@ td img {
   .navigation li:first-child {
     display: none;
   }
+
   .galleryContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
   footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-
+  }
 }
- 
-  
-
-}
-
-
-
-
 /* end medium view */
 
 /* =================== */
@@ -369,10 +370,6 @@ td img {
     color: #0a0a0a;
     display: block;
     margin-left: 80px;
-    /* margin: 10px auto; */
-    /* position: absolute;
-  top: 2rem;
-  left: 5rem; */
     font-family: "Montserrat", sans-serif;
     background: radial-gradient(#fddd24, #bb0d07);
     box-shadow: 0 0 30px;
@@ -380,11 +377,10 @@ td img {
     padding: .4rem;
     opacity: .9;
   }
+
   .galleryContainer {
     display: grid;
     grid-template-columns: repeat(3, 30vw);
   }
-
-
-
 }
+/* end of large view */

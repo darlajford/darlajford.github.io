@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function twelveDays() {
+      let num = document.getElementById("inputBox").value;
+
+      let days = ["first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth", "ninth", "tenth",
+        "eleventh", "twelfth"
+      ];
+      let gifts = ["a partridge in a pear tree", "two turtle doves", "three Fench hens", "four calling birds",
+        "five golden rings", "six gees a laying", "seven swans a swimming", "eight maids a milking",
+        "nine ladies dancing", "ten lords a leaping", "eleven pipers piping", "twelve drummers drumming"
+      ];
+      let lyrics = "On the " + days[num - 1] + " day of Christmas, my true love gave to me: ";
+
+      for(let i = num-1; i >= 0; i--){
+        if(i == 0 && num>1) {
+          lyrics+= "and ";
+        }
+        lyrics+= gifts[i]
+        if(i != 0){
+          lyrics += ", ";
+        }
+      }
+      lyrics += ".";
+      document.getElementById("output").innerHTML = lyrics;
+    }
+  </script>
+</head>
+
+<body>
+  Please enter integer between 1 and 12:
+  <input id="inputBox" type="text" size="5">
+  <button type="button" onclick="twelveDays()">Click</button>
+  <div id="output"></div>
+
+
+</body>
+
+</html>

@@ -19,7 +19,8 @@
    document.getElementById("outputDiv").innerHTML = newList ;
 
    function rotateRight(list) {
-   return list.unshift(list.splice(index, 1)[0]);
+   list.unshift(list[list.length-1]);
+   return list.slice(0,list.length-1);
 
     //  list[list.length] = list[0];
     //  return list.slice(1);

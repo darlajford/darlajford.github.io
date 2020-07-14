@@ -1,3 +1,4 @@
+/* beginning of small view */
 body {
   padding: 0;
   margin: 0;
@@ -43,8 +44,6 @@ header {
 .weathersum h3 {
   border-bottom: 2px solid #bb0d07;
 }
-
-
 
 nav {
   background-color: #0a0a0a;
@@ -135,7 +134,6 @@ nav {
     font-weight: 600;
     font-size: 1.2rem;
     text-align: center;
-
   }
 
 footer {
@@ -170,6 +168,8 @@ footer div.address {
   padding: 5px;
  margin: 35px auto;
 }
+/* end of small view */
+/* =================================== */
 
 /* begin medium view */
 /* Media Query for medium + screens */
@@ -220,7 +220,7 @@ footer div.address {
   footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-  }  
+  } 
 
 }
 /* end medium view */
@@ -264,7 +264,6 @@ footer div.address {
   .cozTours ul {
     margin-left: 250px;
   }
-
 }
-
+/* end of large view */
 

@@ -1,3 +1,4 @@
+/* beginning of small view */
 body {
   padding: 0;
   margin: 0;
@@ -42,7 +43,6 @@ header {
 .weathersum h3 {
   border-bottom: 2px solid #bb0d07;
 }
-
 
 nav {
   background-color: #0a0a0a;
@@ -137,13 +137,12 @@ table#rentTable th {
   box-shadow: 0 0 15px rgb(73, 73, 100);
   margin-bottom: 5px;
 }
+
 .rental figcaption {
   font-family: Montserrat, sans-serif;
   text-align: center;
   font-weight: 600;
 }
-
-
 
 footer {
   display: block;
@@ -180,8 +179,8 @@ footer div.address {
   padding: 5px;
   margin: 35px auto;
 }
-
-
+/* end of small view */
+/* ================================== */
 
 
 /* begin medium view */
@@ -233,15 +232,8 @@ footer div.address {
   footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-
   }
-
-
-
 }
-
-
-
 
 /* end medium view */
 
@@ -269,10 +261,6 @@ footer div.address {
     color: #0a0a0a;
     display: block;
     margin-left: 80px;
-    /* margin: 10px auto; */
-    /* position: absolute;
-  top: 2rem;
-  left: 5rem; */
     font-family: "Montserrat", sans-serif;
     background: radial-gradient(#fddd24, #bb0d07);
     box-shadow: 0 0 30px;
@@ -289,9 +277,5 @@ footer div.address {
     display: grid;
     grid-template-columns: repeat(3, 30vw);
   }
-
-
-
-
-
 }
+/* end of large view */

@@ -23,8 +23,6 @@
 
     function myFunction() {
       let hand = [5, "King", 10, 3, 1, "Queen"];
-      let King = 10;
-      let Queen = 10;
 
       let sum = golfScore(hand);
 
@@ -34,7 +32,12 @@
     function golfScore(hand) {
       let sum = 0;
       for (let i = 0; i < hand.length; i++) {
-        sum += hand[i];
+        if(hand[i]=="King"||hand[i]=="Queen"||hand[i]=="Jack"){
+          sum+=10;
+        }
+        else {
+          sum += hand[i];
+        }
       }
       return sum;
     }

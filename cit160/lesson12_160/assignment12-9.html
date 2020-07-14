@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function chooseNoun() {
+      let list = ["cat", "sock", "ship", "hero", "monkey", "baby", "match", "dog", "table", "chair"];
+      return list[chooseInteger()];
+    }
+    function chooseVerb() {
+      let list = ["appear", "become", "feel", "grow", "look", "seem", "smell", "sound", "stay", "taste"];
+      return list[chooseInteger()];
+    }
+    function chooseAdjective() {
+      let list = ["beautiful", "sleeveless", "edible", "meaningless", "nicer", "adorable", "gorgeous", "aggressive", "brave", "calm"];
+      return list[chooseInteger()];
+    }
+    function chooseAdverb() {
+      let list = ["abnormally", "actually", "almost", "bashfully", "boldly", "carefully", "clearly", "sedately", "intently", "oddly"];
+      return list[chooseInteger()];
+    }
+    function chooseInteger() {
+      return Math.floor(Math.random()*10);
+    }
+
+    // let story = 
+
+    function crazyStory() {
+      let story = "The man comes "
+      + chooseVerb() + "ing a horse. The horse is "
+      + chooseAdverb() + " " + chooseAdjective()
+      + " and has no " + chooseNoun()
+      + ". The saddle is " + chooseAdjective()
+      + ", and the stirrups don't match. His clothing"
+      + " is strange. He wears " + chooseInteger()
+      + " hats and a " + chooseAdjective()
+      + " shirt. One " + chooseNoun()
+      + " of his pants is torn off to the knee. His sword is "
+      + chooseAdjective() + " and has a broken hilt and "
+      + chooseVerb() + "s from the botton of the "
+      + chooseNoun() + ".";
+
+      document.getElementById('output').innerHTML = story;
+    }
+
+  </script>
+</head>
+<body>
+  <button type="button" onclick="crazyStory()">Click</button>
+    <div id="output"</div>
+  
+</body>
+</html>

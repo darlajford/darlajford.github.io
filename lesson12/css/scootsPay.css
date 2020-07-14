@@ -1,3 +1,4 @@
+/* beginning of small view */
 body {
   padding: 0;
   margin: 0;
@@ -43,7 +44,6 @@ header {
   border-bottom: 2px solid #bb0d07;
 }
 
-
 nav {
   background-color: #0a0a0a;
   margin: -15px auto;
@@ -85,6 +85,7 @@ nav {
 .responsive li {
   display: block;
 }
+
 h2 {
   color: #bb0d07;
   font-family: Bangers, sans-serif;
@@ -92,7 +93,6 @@ h2 {
   font-size: 1.85rem;
   margin: 50px 0 25px 0;
   font-weight: 500;
-
 }
 
 .payFormContainer {
@@ -105,15 +105,20 @@ h2 {
   justify-content: space-evenly;
   margin: 50px auto;
 }
+
 .fname {
   font-family: Montserrat, sans-serif;
   color: #bb0d07;
   margin-left: 90px;
   font-weight: 600;
-
 }
+
 .icon-container {
-  text-align: center;
+  padding: 15px;
+}
+
+.icon-container img {
+  padding: 5px;
 }
 
 form fieldset {
@@ -157,17 +162,6 @@ form label.payForm input {
   background-color: #f7e898;
 }
 
-/* form textarea {
-  font-family: "Montserrat", sans-serif;
-  font-size: .95rem;
-  padding: 10px;
-  color: #555;
-  background-color: #f7e898;
-  border: solid 2px #0a0a0a;
-  border-radius: 6px;
-  margin-top: 35px;
-} */
-
 form input.submitBtn {
   display: block;
   margin: auto;
@@ -187,6 +181,7 @@ form label.payForm input:required {
 form label.payForm input:required:valid {
   border-left: green solid 6px;
 }
+
 footer {
   display: block;
   background-color: #17e44c;
@@ -206,21 +201,24 @@ footer p {
   margin: 0;
   padding: 10px;
 }
+
 footer div {
   line-height: 35px;
 }
+
 footer div.address {
   line-height: 20px;
   font-size: 1.3rem;
 }
+
 .socialmedia .icon {
   border: 2px solid white;
   border-radius: 50px;
   padding: 5px;
- margin: 35px auto;
+  margin: 35px auto;
 }
-
-
+/* end of small view */
+/* =============================================== */
 
 
 /* begin medium view */
@@ -257,18 +255,12 @@ footer div.address {
   .navigation li:first-child {
     display: none;
   }
+
   footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-  
   }
-  
-
 }
-
-
-
-
 /* end medium view */
 
 /* =================== */
@@ -306,10 +298,5 @@ footer div.address {
     padding: .4rem;
     opacity: .9;
   }
-
-
-
 }
-
-
-
+/* end of large view */

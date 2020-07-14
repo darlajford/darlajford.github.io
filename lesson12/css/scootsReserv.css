@@ -1,3 +1,4 @@
+/* beginning of small view */
 body {
   padding: 0;
   margin: 0;
@@ -42,7 +43,6 @@ header {
 .weathersum h3 {
   border-bottom: 2px solid #bb0d07;
 }
-
 
 nav {
   background-color: #0a0a0a;
@@ -93,14 +93,15 @@ h2 {
   font-size: 1.85rem;
   margin: 50px 0 50px 0;
   font-weight: 500;
-
 }
+
 h3.reserv {
   font-family: Montserrat, sans-serif;
   font-size: 1.6rem;
   text-align: center;
   font-weight: 700;
 }
+
 ul.reserv {
   font-family: Montserrat, sans-serif;
   font-size: 1.3rem;
@@ -118,7 +119,6 @@ ul.reserv {
   justify-content: center;
   justify-content: space-evenly;
   margin: 50px auto;
-
 }
 
 form fieldset {
@@ -211,21 +211,24 @@ footer p {
   margin: 0;
   padding: 10px;
 }
+
 footer div {
   line-height: 35px;
 }
+
 footer div.address {
   line-height: 20px;
   font-size: 1.3rem;
 }
+
 .socialmedia .icon {
   border: 2px solid white;
   border-radius: 50px;
   padding: 5px;
- margin: 35px auto;
+  margin: 35px auto;
 }
-
-
+/* end of small view */
+/* ================================= */
 
 
 /* begin medium view */
@@ -262,18 +265,16 @@ footer div.address {
   .navigation li:first-child {
     display: none;
   }
+
   ul.reserv {
     margin-left: 75px;
   }
+
   footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-  }  
-
+  }
 }
-
-
-
 
 /* end medium view */
 
@@ -301,10 +302,6 @@ footer div.address {
     color: #0a0a0a;
     display: block;
     margin-left: 80px;
-    /* margin: 10px auto; */
-    /* position: absolute;
-  top: 2rem;
-  left: 5rem; */
     font-family: "Montserrat", sans-serif;
     background: radial-gradient(#fddd24, #bb0d07);
     box-shadow: 0 0 30px;
@@ -312,11 +309,9 @@ footer div.address {
     padding: .4rem;
     opacity: .9;
   }
+
   ul.reserv {
     margin-left: 225px;
   }
-
-
-
-
 }
+/* end of large view */

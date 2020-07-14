@@ -39,7 +39,6 @@ let year = d.getFullYear();
 let fulldate = dayname + ", " + d.getDate() + " " + monthname + " " + year;
 
 document.getElementById("currentdate").textContent = fulldate;
-// console.log(fulldate);
 
 // //to control font loading
 function webfontload() {
