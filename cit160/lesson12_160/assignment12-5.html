@@ -4,18 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-
-<body>
-  <div id="outputDiv"></div>
-
+  <title>Multiply Elements in Array</title>
+  <!-- input: no user input 
+  processing: multiply each element in list by given number
+  output: new array showing the products of beginning array multiplied by given number -->
   <script>
-    let list = [17, 8, 9, 5, 20];
-    let products = multiply(list, 3);
+    function myFunction() {
+      let list = [17, 8, 9, 5, 20];
+      let products = multiply(list, 3);
 
-    document.getElementById("outputDiv").innerHTML = products;
-
+      document.getElementById("outputDiv").innerHTML = products;
+    }
 
     function multiply(list, multiplier) {
       for (let i = 0; i < list.length; i++) {
@@ -24,6 +23,13 @@
       return list;
     }
   </script>
+
+</head>
+
+<body>
+  <button type="button" onclick="myFunction()">Click</button>
+  <div id="outputDiv"></div>
+
 
 </body>
 

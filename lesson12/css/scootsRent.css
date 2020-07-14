@@ -137,6 +137,11 @@ table#rentTable th {
   box-shadow: 0 0 15px rgb(73, 73, 100);
   margin-bottom: 5px;
 }
+.rental figcaption {
+  font-family: Montserrat, sans-serif;
+  text-align: center;
+  font-weight: 600;
+}
 
 
 
