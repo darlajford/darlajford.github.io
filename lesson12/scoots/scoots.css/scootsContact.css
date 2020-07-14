@@ -1,0 +1,306 @@
+/* beginning of small view */
+body {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.headings h1 {
+  font-family: 'Oleo Script', script;
+  font-size: 4rem;
+  color: #fddd24;
+  -webkit-text-stroke: 4px #bb0d07;
+  text-shadow: 4px 0 #0a0a0a;
+  text-align: center;
+}
+
+.logo img {
+  width: 125px;
+  height: auto;
+}
+
+.weathersum {
+  text-align: center;
+  color: #0a0a0a;
+  display: block;
+  margin: 10px auto;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  background: radial-gradient(#fddd24, #bb0d07);
+  box-shadow: 0 0 30px;
+  border-radius: 10px;
+  padding: .4rem;
+  opacity: .9;
+}
+
+.weathersum h3 {
+  border-bottom: 2px solid #bb0d07;
+}
+
+
+nav {
+  background-color: #0a0a0a;
+  margin: -15px auto;
+  box-shadow: 0 2px 15px gray;
+}
+
+.navigation {
+  list-style: none;
+  padding: 0;
+}
+
+.navigation li:first-child {
+  display: block;
+}
+
+.navigation li {
+  display: none;
+}
+
+.navigation a {
+  display: block;
+  color: #fddd24;
+  padding: 0.75rem;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+}
+
+.navigation a:hover {
+  color: white;
+  background-color: #bb0d07;
+  font-weight: 700;
+}
+
+/* the onclick JS toggles the .responsive class from display none (.navigation li) to display block because the repsonsive class is added to the end of the class list like this in HTML.
+  <ul class="navigation responsive">
+  */
+.responsive li {
+  display: block;
+}
+
+h2 {
+  color: #bb0d07;
+  font-family: Bangers, sans-serif;
+  text-align: center;
+  font-size: 1.85rem;
+  margin: 50px 0 50px 0;
+  font-weight: 500;
+}
+
+
+h3.contact,
+h3.map {
+  display: block;
+  margin: 25px auto;
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.5rem;
+  padding: 35px;
+  width: 70%;
+}
+
+form fieldset {
+  margin: 2rem 3.5rem;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: .5rem 2%;
+  width: 40%;
+  display: block;
+  margin: 50px auto;
+}
+
+form legend {
+  color: #0a0a0a;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 1rem;
+  padding: 0 .5rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+form label.top {
+  display: block;
+  padding-top: 1rem;
+  color: #9c2c13;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+form label.top input,
+form label.top select {
+  display: block;
+  font-size: 1rem;
+  border: solid 2px 0a0a0a;
+  border-radius: 6px;
+  padding: .75rem;
+  color: #555;
+  width: 96%;
+  max-width: 30rem;
+  background-color: #f7e898;
+}
+
+form textarea {
+  font-family: "Montserrat", sans-serif;
+  font-size: .95rem;
+  padding: 10px;
+  color: #555;
+  background-color: #f7e898;
+  border: solid 2px #0a0a0a;
+  border-radius: 6px;
+  margin-top: 35px;
+}
+
+form input.submitBtn {
+  display: block;
+  margin: auto;
+  border: none;
+  background-color: #9c2c13;
+  color: white;
+  border-radius: 1rem;
+  padding: .75rem 1.5rem;
+  width: 50%;
+  max-width: 10rem;
+}
+
+form label.top input:required {
+  border-left: red solid 6px;
+}
+
+form label.top input:required:valid {
+  border-left: green solid 6px;
+}
+
+iframe {
+  display: block;
+  margin: 50px auto;
+  width: 90%;
+}
+
+footer {
+  display: block;
+  background-color: #17e44c;
+  justify-content: center;
+  margin: 25px auto;
+  width: 80%;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 5px;
+  border: 2px solid #0a0a0a;
+  border-radius: 15px;
+}
+
+footer p {
+  margin: 0;
+  padding: 10px;
+}
+
+footer div {
+  line-height: 35px;
+}
+
+footer div.address {
+  line-height: 20px;
+  font-size: 1.3rem;
+}
+
+.socialmedia .icon {
+  border: 2px solid white;
+  border-radius: 50px;
+  padding: 5px;
+  margin: 35px auto;
+}
+/* end of small view */
+/* ========================================= */
+
+/* begin medium view */
+/* Media Query for medium + screens */
+@media only screen and (min-width: 37.5em) {
+
+  .headings h1 {
+    margin: 25px;
+    font-size: 5rem;
+  }
+
+  .logo img {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin-left: 100px;
+  }
+
+  .navigation {
+    display: flex;
+  }
+
+  .navigation li {
+    display: block;
+    /* needed because of state in small view */
+    flex: 1 1 100%;
+  }
+
+  .navigation li a {
+    color: #fddd24;
+    text-align: center;
+  }
+
+  .navigation li:first-child {
+    display: none;
+  }
+
+  iframe {
+    width: 70%;
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+  }
+}
+
+/* end medium view */
+
+/* =================== */
+
+/* begin large view */
+@media only screen and (min-width: 64em) {
+
+  header {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-left: 200px;
+  }
+
+  .headings h1 {
+    margin: 35px;
+    font-size: 6rem;
+  }
+
+  .weathersum {
+    text-align: center;
+    color: #0a0a0a;
+    display: block;
+    margin-left: 80px;
+    font-family: "Montserrat", sans-serif;
+    background: radial-gradient(#fddd24, #bb0d07);
+    box-shadow: 0 0 30px;
+    border-radius: 10px;
+    padding: .4rem;
+    opacity: .9;
+  }
+}
+/* end of large view */

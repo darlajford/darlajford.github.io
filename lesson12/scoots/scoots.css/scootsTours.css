@@ -1,0 +1,269 @@
+/* beginning of small view */
+body {
+  padding: 0;
+  margin: 0;
+  height: 2000px;
+}
+
+header {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.headings h1 {
+  font-family: 'Oleo Script', script;
+  font-size: 4rem;
+  color: #fddd24;
+  -webkit-text-stroke: 4px #bb0d07;
+  text-shadow: 4px 0 #0a0a0a;
+  text-align: center;
+}
+
+.logo img {
+  width: 125px;
+  height: auto;
+}
+
+.weathersum {
+  text-align: center;
+  color: #0a0a0a;
+  display: block;
+  margin: 10px auto;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  background: radial-gradient(#fddd24, #bb0d07);
+  box-shadow: 0 0 30px;
+  border-radius: 10px;
+  padding: .4rem;
+  opacity: .9;
+}
+
+.weathersum h3 {
+  border-bottom: 2px solid #bb0d07;
+}
+
+nav {
+  background-color: #0a0a0a;
+  margin: -15px auto;
+  box-shadow: 0 2px 15px gray;
+}
+
+.navigation {
+  list-style: none;
+  padding: 0;
+}
+
+.navigation li:first-child {
+  display: block;
+}
+
+.navigation li {
+  display: none;
+}
+
+.navigation a {
+  display: block;
+  color: #fddd24;
+  padding: 0.75rem;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+}
+
+.navigation a:hover {
+  color: white;
+  background-color: #bb0d07;
+  font-weight: 700;
+}
+
+/* the onclick JS toggles the .responsive class from display none (.navigation li) to display block because the repsonsive class is added to the end of the class list like this in HTML.
+  <ul class="navigation responsive">
+  */
+.responsive li {
+  display: block;
+}
+.cozTours h3 {
+  font-family: Bangers, sans-serif;
+  font-size: 1.85rem;
+  font-weight: 500;
+  color: #bb0d07;
+  text-align: center;
+  margin: 70px 0 0 0;
+}
+.cozTours p{
+  display: block;
+  margin: 25px auto;
+  font-family: Monsterrat, sans-serif;
+  font-size: 1.2rem;
+  line-height: 35px;
+  width: 70%;
+  text-align: center;
+  font-weight: 600;
+}
+.cozTours ul {
+    display: block;
+    margin: 25px auto;
+    font-family: Monsterrat, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 35px;
+    width: 70%;
+    margin-left: 90px;
+    color: #bb0d07;
+  }
+.toursGalContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+}
+
+.toursGalContainer img {
+  display: block;
+  margin:  25px auto;
+  border: 5px ridge;
+  border-radius: 50px;
+  box-shadow: 0 0 15px rgb(73, 73, 100);
+  margin-bottom: 5px;
+  }
+  figcaption {
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+footer {
+  display: block;
+  background-color: #17e44c;
+  justify-content: center;
+  margin: 25px auto;
+  width: 80%;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 5px;
+  border: 2px solid #0a0a0a;
+  border-radius: 15px;
+}
+
+footer p {
+  margin: 0;
+  padding: 10px;
+}
+footer div {
+  line-height: 35px;
+}
+footer div.address {
+  line-height: 20px;
+  font-size: 1.3rem;
+}
+.socialmedia .icon {
+  border: 2px solid white;
+  border-radius: 50px;
+  padding: 5px;
+ margin: 35px auto;
+}
+/* end of small view */
+/* =================================== */
+
+/* begin medium view */
+/* Media Query for medium + screens */
+@media only screen and (min-width: 37.5em) {
+
+  .headings h1 {
+    margin: 25px;
+    font-size: 5rem;
+  }
+
+  .logo img {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin-left: 100px;
+  }
+
+  .navigation {
+    display: flex;
+  }
+
+  .navigation li {
+    display: block;
+    /* needed because of state in small view */
+    flex: 1 1 100%;
+  }
+
+  .navigation li a {
+    color: #fddd24;
+    text-align: center;
+  }
+
+  .navigation li:first-child {
+    display: none;
+  }
+  .galleryContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;;
+  }
+  .toursGalContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .cozTours ul {
+    margin-left: 170px;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  } 
+
+}
+/* end medium view */
+
+/* =================== */
+
+/* begin large view */
+@media only screen and (min-width: 64em) {
+
+  header {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-left: 200px;
+  }
+
+  .headings h1 {
+    margin: 35px;
+    font-size: 6rem;
+  }
+
+  .weathersum {
+    text-align: center;
+    color: #0a0a0a;
+    display: block;
+    margin-left: 80px;
+    font-family: "Montserrat", sans-serif;
+    background: radial-gradient(#fddd24, #bb0d07);
+    box-shadow: 0 0 30px;
+    border-radius: 10px;
+    padding: .4rem;
+    opacity: .9;
+  }
+  .toursGalContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 23vw);
+  }
+  
+  .cozTours ul {
+    margin-left: 250px;
+  }
+}
+/* end of large view */
+
