@@ -120,6 +120,7 @@ table#rentTable th {
   padding: 10px;
   font-family: Montserrat, sans-serif;
   font-size: .75rem;
+  border: 2px solid;
 }
 
 .rentContainer {

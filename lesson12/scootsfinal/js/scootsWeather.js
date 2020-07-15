@@ -27,7 +27,6 @@ fetch(forecastURL)
     let day = 0;
     fiveDayFC.forEach(forecast => {
       let d = new Date(forecast.dt_txt);
-      //document.getElementById(`forecast${day+1}`).textContent = forecast.main.temp.toFixed(0);
       document.getElementById(`weekday${day+1}`).textContent = weekdays[d.getDay()];
       day++;
     });
