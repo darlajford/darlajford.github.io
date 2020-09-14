@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee's Pay</title>
+  <script>
+    // input: employee's regular and overtime hours worked and hourly wage
+    // processing: calculate employee's regular and overtime pay then deduct taxes
+    // output: employee's net pay
+    function netPay() {
+      let regHours = document.getElementById('regHours').value;
+      let overHours = document.getElementById('overHours').value;
+      let regWage = document.getElementById('regWage').value;
+
+      let regPay = regHours * regWage;
+      let overPay = overHours * regWage * 1.5;
+      let grossPay = regPay + overPay;
+      let tax = grossPay * .15;
+      let netPay = grossPay - tax;
+
+      document.getElementById('outputDiv').innerHTML = "$" + netPay.toFixed(2);
+
+      // return netPay;
+    }
+  </script>
+</head>
+
+<body>
+  Regular hours worked: <input type="text" id="regHours">
+  Overtime hours worked: <input type="text" id="overHours">
+  Hourly wage: <input type="text" id="regWage">
+  <button type="button" onclick="netPay()">Click</button>
+  <div id="outputDiv"></div>
+
+</body>
+
+</html>

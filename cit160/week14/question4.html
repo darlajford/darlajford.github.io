@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // tests: [ -3, 0, 7.1, 5 ]	5
+// [ 17, 8, 9, 5, 20 ]	20
+// [ 5, -2.1, 6.3, 9, 5, 13 ]	13
+
+    function getLast(list) {    
+       let lastValue = list[list.length-1];
+      return lastValue;  
+     }
+     function tester(){
+     let list = [-3, 0, 7.1, 56];
+     document.getElementById("output").innerHTML = (getLast(list));
+     }
+  </script>
+</head>
+<body>
+  <button type="button" onclick="tester()">Click to see last number in array</button>
+  <div id='output'></div>
+</body>
+</html>

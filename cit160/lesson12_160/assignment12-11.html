@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sort Numbers 
+
+
+
+    
+  </title>
+  <script>
+    function sortNumbers() {      
+
+     let text =document.getElementById('unsortedList').value;
+
+     let list = text.split('\n');
+
+     for(let i = 0; i <list.length; i++){
+      list[i] = parseInt(list[i]);
+     }
+
+     list.sort(function(a,b){return a-b});
+     let output = list.join('\n');
+
+      document.getElementById("sortedList").innerHTML = output;
+    }
+  </script>
+</head>
+<body>
+  <textarea id="unsortedList"></textarea>
+  <textarea id="sortedList"></textarea>
+  <button type="button" onclick="sortNumbers()">click</button>
+</body>
+</html>

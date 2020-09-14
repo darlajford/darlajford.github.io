@@ -13,7 +13,7 @@
      * Processing: Calculate number of stacks.
      * Output: Number of stacks.
      */
-    function calculate() {
+    function doMath() {
       // Get the user's input of total number of boxes from the text field that has
       // the id of "totalBoxesInputBox" and store it in a variable named boxes.
       // Get the user's input of number of boxes in each stack from the text field that has
@@ -22,9 +22,13 @@
       let stackQty = parseInt(document.getElementById('stackQtyInputBox').value);
 
       let stacks = boxes / stackQty;
+      stacks = Math.ceil(stacks);
 
-      let digits = 0;
-      let multiplier = Math.pow(10, digits);
+      // the following code rounds to nearest integer which did not work with this solution
+      //  because it output the number 12 instead of the expected 13
+      // let digits = 0;
+      // let multiplier = Math.pow(10, digits);
+      // stacks = Math.round(stacks * multiplier) / multiplier;
 
       // Display number of stacks in the div that has the id "output".
       document.getElementById('output').innerHTML = stacks;
@@ -35,7 +39,7 @@
 <body>
   Enter total number of boxes: <input type="text" id="totalBoxesInputBox"><br>
   Enter number of boxes in each stack: <input type="text" id="stackQtyInputBox">
-  <button type="button" onclick="calculate()">Number of stacks</button>
+  <button type="button" onclick="doMath()">Number of stacks</button>
   <div id="output"></div>
 </body>
 

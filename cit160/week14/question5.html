@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Big List Average</title>
+  <script>
+    // tests:
+    // [ 70, 1010, 950, 2014, 6 ]	1512
+    // [ -72.3, 3000, 873, 2312, 68, 7501.3 ]	4271.1
+    // [ 70, 950, 671, 6 ]	0
+
+    function averageBig(list) {
+
+      let score = 0;
+      let count = 0;
+
+
+      for (let i = 0; i < list.length; i++) {
+        if (list[i] >= 1000) {
+          score += list[i];
+          count++;
+        }
+      }
+        let average = score / count;
+        return average;
+      
+    }
+    function run(){
+      let list = [70, 1010, 950, 2014, 6];
+      let value = averageBig(list);
+      document.getElementById("output").innerHTML = value;
+    }
+  </script>
+</head>
+
+<body>
+  <button onclick="run()">Click to see average</button>
+  <div id="output"></div>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sort Numbers (example from chapter10)</title>
+</head>
+<script>
+  // input: no user input
+  // processing: test the built-in javascript sort function 
+  // output: the contents of an array before it is sorted, and the contents after it is sorted
+function testSort() {
+  let numbers = [7, 10, 8, 16, 3, 35];
+  document.getElementById('output').innerHTML = numbers + '<br>';
+  numbers.sort(compareNumbers);
+  document.getElementById('output').innerHTML += numbers;
+}
+function compareNumbers(x, y) {
+  return x - y;
+}
+</script>
+
+<body>
+<button type="button" onclick="testSort()">Sort an Array</button>
+<div id="output"></div>
+</body>
+
+</html>

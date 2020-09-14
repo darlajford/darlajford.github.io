@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Depreciation</title>
+  <script>
+      function depreciation(startValue, endValue, months) {
+        s = startValue;
+        e = endValue;
+        m = months;
+        let d = (s - e) / m;
+        return d.toFixed(2);
+      }
+
+    function tester() {
+      let value = depreciation(1000.95, 950.47, 3);
+      console.log(value);
+      document.getElementById("outputDiv").innerHTML = value;
+    }
+  </script>
+</head>
+
+<body>
+  <button type="button" onclick="tester()">Depreciation</button>
+  <div id="outputDiv"></div>
+</body>
+
+</html>

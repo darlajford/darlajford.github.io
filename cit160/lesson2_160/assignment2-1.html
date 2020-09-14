@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mowing Lawn Price</title>
+  <script>
+    // input: total area of customer's lawn  from user 
+    // processing: multiply the area of the lawn by .01 and then by 15 to get season cost 
+    // output: season cost of lawn mowing for user to see
+    function mowLawns() {
+      let area = document.getElementById('area').value;
+      let cost = area * .01 * 15;
+
+      document.getElementById("output").innerHTML = cost;
+
+      return cost;
+    }
+  </script>
+</head>
+
+<body>
+  Enter square footage of lawn: <input type="text" id="area">
+  <button type="button" onclick="mowLawns()">Click</button>
+  <div id="output"></div>
+
+</body>
+
+</html>
