@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+/* small view */
+
+body {
+  max-width: 90%;
+  margin: 0 auto;
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .8em;
+  line-height: 1.50em;
+}
+
+header {
+  background-color: #6495ED;
+  padding: 5%;
+}
+
+h1 a {
+  font-family: Lora, serif;
+  color: #FAEBD7;
+  font-size: 100%;
+  float: right;
+  text-align: right;
+  padding-bottom: 2%;
+  text-decoration: none;
+  margin: 10px;
+  line-height: 1.1em;
+}
+
+hr {
+  width: 95%;
+  float: right;
+  margin-bottom: 20px;
+}
+
+nav,
+li {
+  list-style-type: none;
+  text-align: right;
+  padding-top: 6%;
+}
+
+li a,
+li a:visited {
+  color: #FAEBD7;
+  text-decoration: none;
+}
+
+li a:active {
+  color: #DEB887;
+}
+
+li a:visited {}
+
+h2 a {
+  font-family: Lora, serif;
+  color: black;
+  text-decoration: none;
+  line-height: 1.5em;
+}
+
+main {
+  display: block;
+  background: radial-gradient(white, #FAEBD7);
+  padding: 10%;
+  max-width: 100%;
+}
+
+article {
+  background-color: white;
+  border: 1px solid lightgrey;
+  box-shadow: 2px 2px lightgrey;
+  padding: 15px;
+  margin:10px;
+  max-width: 100%;
+}
+
+img {
+  max-width: 90%;
+  padding-top: 35px;
+}
+
+
+/* large view */
+@media only screen and (min-width: 40em) {
+
+  .container {
+    max-width: 80em;
+    display: flex;
+    width: 100%;
+    margin: 25px 100px;
+  }
+
+  header {
+    flex: 1;
+    padding: 5%;
+    max-width: 20em;
+  }
+
+  main {
+    flex: 3;
+    padding: 25px;
+    width: 70%;
+  }
+
+  img {
+    max-width: 70%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  article {
+    padding: 10%;
+    margin: 5%;
+  }
+
+}
