@@ -1,0 +1,4 @@
+
+main.css
+ 124:1  ×  Expected selector "li a:hover" to come before selector "li a:visited:active"   no-descending-specificity
+
