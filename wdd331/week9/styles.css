@@ -18,7 +18,7 @@
   font-weight: normal;
   font-style: normal; }
 [class^='icon-'],
-[class*=' icon-'] {
+[class*='icon-'] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: none;
@@ -779,5 +779,30 @@ img {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0; }
+
+.site-banner__left {
+  float: left;
+  background-color: black;
+  padding: 3%; }
+
+.icon-byui-logo {
+  display: block;
+  font-size: 2.3em;
+  color: white;
+  text-align: center; }
+
+a {
+  text-decoration: none; }
+
+.site-banner__right {
+  background-color: #056cb6;
+  height: 4.2em; }
+
+.icon-search, .icon-audience, .icon-menu {
+  color: white;
+  display: inline;
+  font-size: 2.8em;
+  padding: 2%;
+  float: right; }
 
 /*# sourceMappingURL=styles.css.map */
