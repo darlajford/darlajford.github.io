@@ -1,5 +1,9 @@
 @import 'typography';
 @import 'icons';
+@import 'header';
+@import 'media';
+@import 'links';
+@import 'newsroom';
 
 $sm-break: 48em;
 // colors
@@ -18,9 +22,14 @@ $byui-blue: #056cb6;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-img {
-  max-width: 100%;
+body {
+  background-color: #fff;
+  font-family: "Byui Open Sans", "Open Sans", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Verdana, sans-serif;
 }
+body, p {
+  font-size: 15px;
+  font-style: normal;
+  text-transform: inherit;}
 .sr-only {
   position: absolute;
   width: 1px;
@@ -31,51 +40,14 @@ img {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-.site-banner__left {
-  float: left;
-  background-color: black;
-  padding: 3%;
-}
-.icon-byui-logo {
-  display: block;
-  font-size: 2.3em;
-  color: white;
-  text-align: center;
-}
-a {
-  text-decoration: none;
-}
-.site-banner__right {
-  background-color: $byui-blue;
-  // display: inline-block;
-  // float: right;
-  // width: 100%;
-  height: 4.2em;
-}
-.icon-search, .icon-audience, .icon-menu {
-  color: white;
-  display: inline;
-  // text-align: center;
 
-  font-size: 2.2em;
-  padding: 3%;
-  float: right;
-}
-.site-title {
-  background-color: $light-gray;
-  color: $med-gray;
-  font-family: sans-serif;
-  text-align: center;
-  padding: .75%;
-}
 .university-info-banner {
   background-color: black;
   color: white;
   text-align: center;
-  padding: 1%;
-  width: 80%;
+  padding: 2px;
+  width: 100%;
   margin: 5% auto;
-  font-family: sans-serif;
   font-size: larger;
 }
 .university-info-banner h4 {
@@ -85,160 +57,22 @@ a {
   text-align: center;
   border-radius: 5px;
   margin: 0 auto 10px;
-  font-family: sans-serif;
   font-size: .75em;
 }
-.byui-learning-image {
-  margin: 0 auto;
-}
-.byui-campus-videos  {
-  display: block;
-  border: 1px solid $dark-gray;
-  width: 70%;
-  margin: 50px auto;
-}
-.byui-campus-videos img {
-  width: 100%;
-}
-.byui-campus-videos p {
-  font-family: sans-serif;
-  padding: 0 10px;
-  color: $byui-blue;
-}
-.byui-photo-gallery  {
-  display: block;
-  border: 1px solid $dark-gray;
-  width: 70%;
-  margin: 50px auto;
-}
-.byui-photo-gallery img {
-  width: 100%;
-}
-.byui-photo-gallery p {
-  font-family: sans-serif;
-  padding: 0 10px;
-  color: $byui-blue;
-}
 
-.byui-explore-campus  {
-  display: block;
-  border: 1px solid $dark-gray;
-  width: 70%;
-  margin: 50px auto;
-}
-.byui-explore-campus img {
-  width: 100%;
-}
-.byui-explore-campus p {
-  font-family: sans-serif;
-  padding: 0 10px;
-  color: $byui-blue;
-}
-.get-information button {
-  width: 100%;
-  font-size: 1em;
-  text-align: left;
-  padding: 10px 15px; 
-  font-weight: bold;
-  margin-bottom: 25px;
-}
-.icon-triangle-down {
-  float: right;
-}
-
-.resources {
-  background-color: $light-gray;
-  width: 100%;
-  border: 1px solid $dark-gray;
-}
-.resources-heading {
-  margin: 0 auto;
-  display: grid;
-  background-color: $dark-gray;
-  color: white;
-  font-size: 1.5em;
-  font-family: sans-serif;
-  padding: 10px 20px;
-}
-.resources-link {
-  display: grid;
-  padding: 15px 10px;
-  color: $link-blue;
-  font-family: sans-serif;
-  border-bottom: 1px solid $dark-gray;
-  padding: 20px 0 0 25px;
-}
-.icon-angle-right {
- text-align: right; 
-}
-
-.important-dates-heading {
-  margin: 25px auto;
-  // display: flex;
-  background-color: $byui-blue;
-  color: white;
-  font-size: 1.5em;
-  font-family: sans-serif;
-  padding: 10px 25px; 
-}
-.important-dates-link{
-  display: flex;
-  justify-content: space-between;
-  // width: 60%;
-  padding: 15px 25px;
-  color: $link-blue;
-  font-family: sans-serif;
-  font-weight: bold;
-  border-bottom: 1px solid $dark-gray; 
-}
-.col-8 {
-  font-weight: lighter;
-  margin-right: 20%;
-}
-
-.article {
-  border-top: 1px solid $dark-gray;
-  margin-top: 25px;
-  padding: 35px 0 0 25px;
-  font-family: sans-serif;
-}
- .article a {
-   color: $byui-blue;
-   font-size: 1.2em;
-}
- .article-date{
-   font-weight: bold;
-   font-size: .85em;
-   margin-bottom: -10px;
-}
- .article-abstract {
-  font-size: 1.3em;
-  font-family: serif;
-  margin-top: -15px;
-  color: $dark-gray
-   }
-   .byui-giveaway  {
-    display: block;
-    border: 1px solid $dark-gray;
-    border-radius: 10px;
-    width: 90%;
-    margin: 50px auto;
-  }
   .byui-giveaway img {
     width: 100%;
     border-radius: 10px 10px 0 0;
   }
   .byui-giveaway h4 {
-    font-family: sans-serif;
     color: $byui-blue;
     font-size: 1.1em;
     padding: 10px 0 0 25px;
   }
   .byui-giveaway p {
-    font-family: sans-serif;
+    // font-family: sans-serif;
     padding: 0 10px;
     color: $dark-gray;
-    font-size: .85em;
     line-height: 1.5em;
     padding: 0 0 25px 25px;
   }
@@ -260,4 +94,25 @@ a {
     height: 50px;
     margin-top: -5px;;
     background-color: $light-gray;
+  }
+  @media only screen and (min-width: 48em) {
+    main{
+       display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 10px;
+    }
+
+    .university-info-banner {
+      display: none;
+    }
+    .taylor-bldg-image  {
+      display: grid;
+      grid-area: 6 / 3;
+    }
+    .bottom-banner {
+      display: grid;
+      grid-area: 7 / 1 / 8 / 6;
+      margin-top: -10px;;
+    }
+
   }

@@ -1,0 +1,97 @@
+
+
+.get-information button {
+  display: block;
+  margin: 0 auto;
+  background-color: $light-gray;
+  border: 1px solid $dark-gray;
+  color: $body-font;
+  width: 100%;
+  font-size: 1em;
+  text-align: left;
+  padding: 10px 0 10px 20px; 
+  font-weight: bold;
+  margin-bottom: 25px;
+  border-radius: 5px;
+}
+.icon-triangle-down {
+  float: right;
+  margin-right: 25px;
+}
+
+.resources {
+  background-color: $light-gray;
+  width: 100%;
+  border: 1px solid $dark-gray;
+  border-bottom: 0;
+}
+.resources-heading {
+  margin: 0 auto;
+  display: grid;
+  background-color: $dark-gray;
+  color: white;
+  font-size: 1.3em;
+  padding: 8px 20px;
+}
+.resources-link {
+  display: grid;
+  color: $link-blue;
+  font-size: .85em;
+  border-bottom: 1px solid $dark-gray;
+  padding: 0 0 0 25px;
+  margin: 15px 0 0;
+  line-height: 5px;
+}
+.icon-angle-right {
+  display: block;
+  text-align: right;
+  margin: 1px 25px 25px;
+  line-height: 1px;
+}
+.important-dates-heading {
+  background-color: $byui-blue;
+  color: white;
+  font-size: 1.2em;
+  padding: 10px 25px; 
+}
+.important-dates-link{
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 25px;
+  color: $body-font;
+  font-size: .75em;
+  font-weight: bold;
+  border-bottom: 1px solid $dark-gray; 
+}
+.col-8 {
+  font-weight: lighter;
+  margin-right: 5%;
+}
+@media only screen and (min-width: 48em) {
+
+  .links-container {
+    display: grid;
+    grid-area: 1 / 4 / 2 / 6;
+  }  
+    .important-dates {
+      display: grid;
+      grid-area: 2 / 4 / 4 / 6;
+      width: 100%;
+    }
+    .important-dates-heading {
+      margin: auto;
+      font-size: 1em;
+      padding: 10px 20px;
+      width: 100%; 
+    }
+    .important-dates-link{
+      padding: 10px;
+      font-size: .75em;
+    }    
+    
+    
+   
+  }
+  
+
+

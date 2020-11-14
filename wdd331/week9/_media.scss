@@ -1,0 +1,101 @@
+$dark-gray: #727272;
+$med-gray: #b4b3b5;
+$light-gray: #eaeaea;
+$body-font: #020202;
+$link-blue: #0076b6; //why do we have both of these blues?
+$byui-blue: #056cb6;
+
+.byui-learning-image {
+  margin: 0 auto;
+}
+img {
+  max-width: 100%;
+}
+
+.byui-campus-videos  {
+  display: block;
+  border: 1px solid $dark-gray;
+  width: 65%;
+  margin: 50px auto;
+}
+.byui-campus-videos img {
+  width: 100%;
+}
+.byui-campus-videos p {
+  padding: 0 10px;
+  color: $byui-blue;
+}
+.byui-photo-gallery  {
+  display: block;
+  border: 1px solid $dark-gray;
+  width: 65%;
+  margin: 50px auto;
+}
+.byui-photo-gallery img {
+  width: 100%;
+}
+.byui-photo-gallery p {
+  padding: 0 10px;
+  color: $byui-blue;
+}
+
+.byui-explore-campus  {
+  display: block;
+  border: 1px solid $dark-gray;
+  width: 65%;
+  margin: 50px auto;
+}
+.byui-explore-campus img {
+  width: 100%;
+}
+.byui-explore-campus p {
+  padding: 0 10px;
+  color: $byui-blue;
+}
+@media only screen and (min-width: 48em) {
+
+  .byui-learning-image {
+  display: grid;
+  grid-area: 1 / 1 / 2 / 4;
+  
+
+  }
+  .byui-campus-videos  {
+    grid-area: 2 / 1;
+    width: 100%;
+    margin: auto;
+  }
+  .byui-campus-videos p {
+    padding: 0;
+    font-size: .75em;
+    color: $byui-blue;
+    text-align: center;
+  }
+  .byui-photo-gallery  {
+    // grid-column: 2;
+    grid-area: 2 / 2;
+    width: 100%;
+    margin: auto;
+  }
+  .byui-photo-gallery p {
+    padding: 0;
+    font-size: .75em;
+    color: $byui-blue;
+    text-align: center;
+  }
+  .byui-explore-campus  {
+    grid-area: 2 / 3;
+    width: 100%;
+    margin: auto;
+  }
+  .byui-explore-campus p {
+    padding: 0;
+    font-size: .75em;
+    color: $byui-blue;
+    text-align: center;
+  }
+
+
+  
+
+}

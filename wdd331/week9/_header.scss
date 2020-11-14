@@ -1,0 +1,61 @@
+$byui-blue: #056cb6;
+$dark-gray: #727272;
+$med-gray: #b4b3b5;
+$light-gray: #eaeaea;
+
+
+header {
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+  display: block;
+}
+.container {
+  width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 100%;
+    padding: 0;
+}
+
+
+.site-banner__left {
+  position: absolute;
+  background-color: black;
+  padding: 3%;
+  height: 60px;
+}
+.icon-byui-logo {
+  display: flex;
+  font-size: 2em;
+  color: white;
+  text-align: center;
+}
+a {
+  text-decoration: none;
+}
+.site-banner__right {
+  display: block;
+  background-color: $byui-blue;
+  height: 60px;
+}
+.icon-search, .icon-audience, .icon-menu {
+  color: white;
+  display: inline;
+  font-size: 2em;
+  padding: 3%;
+  float: right;
+}
+.site-title {
+  background-color: $light-gray;
+  color: $med-gray;
+  padding: 5px 0 5px 100px;
+  border-bottom: 1px solid $dark-gray;
+  font-size: .75em;
+  font-weight: lighter;
+}
+
+
+

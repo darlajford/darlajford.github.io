@@ -760,6 +760,276 @@
 .icon-youtube:before {
   content: '\e9f2'; }
 
+header {
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+  display: block; }
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100%;
+  padding: 0; }
+
+.site-banner__left {
+  position: absolute;
+  background-color: black;
+  padding: 3%;
+  height: 60px; }
+
+.icon-byui-logo {
+  display: flex;
+  font-size: 2em;
+  color: white;
+  text-align: center; }
+
+a {
+  text-decoration: none; }
+
+.site-banner__right {
+  display: block;
+  background-color: #056cb6;
+  height: 60px; }
+
+.icon-search, .icon-audience, .icon-menu {
+  color: white;
+  display: inline;
+  font-size: 2em;
+  padding: 3%;
+  float: right; }
+
+.site-title {
+  background-color: #eaeaea;
+  color: #b4b3b5;
+  padding: 5px 0 5px 100px;
+  border-bottom: 1px solid #727272;
+  font-size: .75em;
+  font-weight: lighter; }
+
+.byui-learning-image {
+  margin: 0 auto; }
+
+img {
+  max-width: 100%; }
+
+.byui-campus-videos {
+  display: block;
+  border: 1px solid #727272;
+  width: 65%;
+  margin: 50px auto; }
+
+.byui-campus-videos img {
+  width: 100%; }
+
+.byui-campus-videos p {
+  padding: 0 10px;
+  color: #056cb6; }
+
+.byui-photo-gallery {
+  display: block;
+  border: 1px solid #727272;
+  width: 65%;
+  margin: 50px auto; }
+
+.byui-photo-gallery img {
+  width: 100%; }
+
+.byui-photo-gallery p {
+  padding: 0 10px;
+  color: #056cb6; }
+
+.byui-explore-campus {
+  display: block;
+  border: 1px solid #727272;
+  width: 65%;
+  margin: 50px auto; }
+
+.byui-explore-campus img {
+  width: 100%; }
+
+.byui-explore-campus p {
+  padding: 0 10px;
+  color: #056cb6; }
+
+@media only screen and (min-width: 48em) {
+  .byui-learning-image {
+    display: grid;
+    grid-area: 1 / 1 / 2 / 4; }
+
+  .byui-campus-videos {
+    grid-area: 2 / 1;
+    width: 100%;
+    margin: auto; }
+
+  .byui-campus-videos p {
+    padding: 0;
+    font-size: .75em;
+    color: #056cb6;
+    text-align: center; }
+
+  .byui-photo-gallery {
+    grid-area: 2 / 2;
+    width: 100%;
+    margin: auto; }
+
+  .byui-photo-gallery p {
+    padding: 0;
+    font-size: .75em;
+    color: #056cb6;
+    text-align: center; }
+
+  .byui-explore-campus {
+    grid-area: 2 / 3;
+    width: 100%;
+    margin: auto; }
+
+  .byui-explore-campus p {
+    padding: 0;
+    font-size: .75em;
+    color: #056cb6;
+    text-align: center; } }
+.get-information button {
+  display: block;
+  margin: 0 auto;
+  background-color: #eaeaea;
+  border: 1px solid #727272;
+  color: #020202;
+  width: 100%;
+  font-size: 1em;
+  text-align: left;
+  padding: 10px 0 10px 20px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  border-radius: 5px; }
+
+.icon-triangle-down {
+  float: right;
+  margin-right: 25px; }
+
+.resources {
+  background-color: #eaeaea;
+  width: 100%;
+  border: 1px solid #727272;
+  border-bottom: 0; }
+
+.resources-heading {
+  margin: 0 auto;
+  display: grid;
+  background-color: #727272;
+  color: white;
+  font-size: 1.3em;
+  padding: 8px 20px; }
+
+.resources-link {
+  display: grid;
+  color: #0076b6;
+  font-size: .85em;
+  border-bottom: 1px solid #727272;
+  padding: 0 0 0 25px;
+  margin: 15px 0 0;
+  line-height: 5px; }
+
+.icon-angle-right {
+  display: block;
+  text-align: right;
+  margin: 1px 25px 25px;
+  line-height: 1px; }
+
+.important-dates-heading {
+  background-color: #056cb6;
+  color: white;
+  font-size: 1.2em;
+  padding: 10px 25px; }
+
+.important-dates-link {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 25px;
+  color: #020202;
+  font-size: .75em;
+  font-weight: bold;
+  border-bottom: 1px solid #727272; }
+
+.col-8 {
+  font-weight: lighter;
+  margin-right: 5%; }
+
+@media only screen and (min-width: 48em) {
+  .links-container {
+    display: grid;
+    grid-area: 1 / 4 / 2 / 6; }
+
+  .important-dates {
+    display: grid;
+    grid-area: 2 / 4 / 4 / 6;
+    width: 100%; }
+
+  .important-dates-heading {
+    margin: auto;
+    font-size: 1em;
+    padding: 10px 20px;
+    width: 100%; }
+
+  .important-dates-link {
+    padding: 10px;
+    font-size: .75em; } }
+.article {
+  border-top: 1px solid #727272;
+  margin-top: 25px;
+  width: 100%;
+  padding-top: 15px; }
+
+.article a {
+  color: #056cb6;
+  font-size: .85em;
+  margin-left: 25px; }
+
+.article-date {
+  font-weight: bold;
+  font-size: .65em;
+  margin-bottom: -10px;
+  margin-left: 25px; }
+
+.article-abstract {
+  font-size: 1em;
+  font-family: serif;
+  margin-top: -15px;
+  color: #727272;
+  margin-left: 25px; }
+
+.byui-giveaway {
+  display: block;
+  border: 1px solid #727272;
+  border-radius: 10px;
+  width: 90%;
+  margin: 50px auto; }
+
+@media only screen and (min-width: 48em) {
+  .newsroom-container {
+    display: grid;
+    grid-area: 3/ 1 / 7 / 4; }
+
+  .article {
+    margin-top: 0;
+    padding: 15px 0;
+    width: 100%; }
+
+  .article a {
+    font-size: 1em;
+    display: grid;
+    grid-column: 1/4; }
+
+  .article-abstract {
+    font-size: 1.2em; }
+
+  .byui-giveaway {
+    display: grid;
+    grid-area: 3 /4 / 6 / 6;
+    margin: 50px auto; } }
 *,
 *:before,
 *:after {
@@ -767,8 +1037,14 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-img {
-  max-width: 100%; }
+body {
+  background-color: #fff;
+  font-family: "Byui Open Sans", "Open Sans", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Verdana, sans-serif; }
+
+body, p {
+  font-size: 15px;
+  font-style: normal;
+  text-transform: inherit; }
 
 .sr-only {
   position: absolute;
@@ -780,46 +1056,13 @@ img {
   clip: rect(0, 0, 0, 0);
   border: 0; }
 
-.site-banner__left {
-  float: left;
-  background-color: black;
-  padding: 3%; }
-
-.icon-byui-logo {
-  display: block;
-  font-size: 2.3em;
-  color: white;
-  text-align: center; }
-
-a {
-  text-decoration: none; }
-
-.site-banner__right {
-  background-color: #056cb6;
-  height: 4.2em; }
-
-.icon-search, .icon-audience, .icon-menu {
-  color: white;
-  display: inline;
-  font-size: 2.2em;
-  padding: 3%;
-  float: right; }
-
-.site-title {
-  background-color: #eaeaea;
-  color: #b4b3b5;
-  font-family: sans-serif;
-  text-align: center;
-  padding: .75%; }
-
 .university-info-banner {
   background-color: black;
   color: white;
   text-align: center;
-  padding: 1%;
-  width: 80%;
+  padding: 2px;
+  width: 100%;
   margin: 5% auto;
-  font-family: sans-serif;
   font-size: larger; }
 
 .university-info-banner h4 {
@@ -829,154 +1072,20 @@ a {
   text-align: center;
   border-radius: 5px;
   margin: 0 auto 10px;
-  font-family: sans-serif;
   font-size: .75em; }
-
-.byui-learning-image {
-  margin: 0 auto; }
-
-.byui-campus-videos {
-  display: block;
-  border: 1px solid #727272;
-  width: 70%;
-  margin: 50px auto; }
-
-.byui-campus-videos img {
-  width: 100%; }
-
-.byui-campus-videos p {
-  font-family: sans-serif;
-  padding: 0 10px;
-  color: #056cb6; }
-
-.byui-photo-gallery {
-  display: block;
-  border: 1px solid #727272;
-  width: 70%;
-  margin: 50px auto; }
-
-.byui-photo-gallery img {
-  width: 100%; }
-
-.byui-photo-gallery p {
-  font-family: sans-serif;
-  padding: 0 10px;
-  color: #056cb6; }
-
-.byui-explore-campus {
-  display: block;
-  border: 1px solid #727272;
-  width: 70%;
-  margin: 50px auto; }
-
-.byui-explore-campus img {
-  width: 100%; }
-
-.byui-explore-campus p {
-  font-family: sans-serif;
-  padding: 0 10px;
-  color: #056cb6; }
-
-.get-information button {
-  width: 100%;
-  font-size: 1em;
-  text-align: left;
-  padding: 10px 15px;
-  font-weight: bold;
-  margin-bottom: 25px; }
-
-.icon-triangle-down {
-  float: right; }
-
-.resources {
-  background-color: #eaeaea;
-  width: 100%;
-  border: 1px solid #727272; }
-
-.resources-heading {
-  margin: 0 auto;
-  display: grid;
-  background-color: #727272;
-  color: white;
-  font-size: 1.5em;
-  font-family: sans-serif;
-  padding: 10px 20px; }
-
-.resources-link {
-  display: grid;
-  padding: 15px 10px;
-  color: #0076b6;
-  font-family: sans-serif;
-  border-bottom: 1px solid #727272;
-  padding: 20px 0 0 25px; }
-
-.icon-angle-right {
-  text-align: right; }
-
-.important-dates-heading {
-  margin: 25px auto;
-  background-color: #056cb6;
-  color: white;
-  font-size: 1.5em;
-  font-family: sans-serif;
-  padding: 10px 25px; }
-
-.important-dates-link {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 25px;
-  color: #0076b6;
-  font-family: sans-serif;
-  font-weight: bold;
-  border-bottom: 1px solid #727272; }
-
-.col-8 {
-  font-weight: lighter;
-  margin-right: 20%; }
-
-.article {
-  border-top: 1px solid #727272;
-  margin-top: 25px;
-  padding: 35px 0 0 25px;
-  font-family: sans-serif; }
-
-.article a {
-  color: #056cb6;
-  font-size: 1.2em; }
-
-.article-date {
-  font-weight: bold;
-  font-size: .85em;
-  margin-bottom: -10px; }
-
-.article-abstract {
-  font-size: 1.3em;
-  font-family: serif;
-  margin-top: -15px;
-  color: #727272; }
-
-.byui-giveaway {
-  display: block;
-  border: 1px solid #727272;
-  border-radius: 10px;
-  width: 90%;
-  margin: 50px auto; }
 
 .byui-giveaway img {
   width: 100%;
   border-radius: 10px 10px 0 0; }
 
 .byui-giveaway h4 {
-  font-family: sans-serif;
   color: #056cb6;
   font-size: 1.1em;
   padding: 10px 0 0 25px; }
 
 .byui-giveaway p {
-  font-family: sans-serif;
   padding: 0 10px;
   color: #727272;
-  font-size: .85em;
   line-height: 1.5em;
   padding: 0 0 25px 25px; }
 
@@ -998,5 +1107,23 @@ a {
   height: 50px;
   margin-top: -5px;
   background-color: #eaeaea; }
+
+@media only screen and (min-width: 48em) {
+  main {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 10px; }
+
+  .university-info-banner {
+    display: none; }
+
+  .taylor-bldg-image {
+    display: grid;
+    grid-area: 6 / 3; }
+
+  .bottom-banner {
+    display: grid;
+    grid-area: 7 / 1 / 8 / 6;
+    margin-top: -10px; } }
 
 /*# sourceMappingURL=styles.css.map */
