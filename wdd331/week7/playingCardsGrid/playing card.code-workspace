@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\.."
+		},
+		{
+			"path": "..\\..\\..\\..\\byui\\wdd331\\playingCards"
+		}
+	],
+  "settings": {
+    "liveServer.settings.useLocalIp": true,
+    "liveServer.settings.multiRootWorkspaceName": "darlajford.github.io"
+  }
+}

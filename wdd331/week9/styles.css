@@ -861,7 +861,7 @@ img {
     grid-area: 1 / 1 / 2 / 4; }
 
   .byui-campus-videos {
-    grid-area: 2 / 1;
+    grid-area: 2 / 1 / 3 /2;
     width: 100%;
     margin: auto; }
 
@@ -872,7 +872,7 @@ img {
     text-align: center; }
 
   .byui-photo-gallery {
-    grid-area: 2 / 2;
+    grid-area: 2 / 2 / 3 / 3;
     width: 100%;
     margin: auto; }
 
@@ -883,7 +883,7 @@ img {
     text-align: center; }
 
   .byui-explore-campus {
-    grid-area: 2 / 3;
+    grid-area: 2 / 3 / 3 / 4;
     width: 100%;
     margin: auto; }
 
@@ -977,7 +977,7 @@ img {
   .important-dates-link {
     padding: 10px;
     font-size: .75em; } }
-.article {
+.article, .article3 {
   border-top: 1px solid #727272;
   margin-top: 25px;
   width: 100%;
@@ -1001,6 +1001,9 @@ img {
   color: #727272;
   margin-left: 25px; }
 
+.article img {
+  display: none; }
+
 .byui-giveaway {
   display: block;
   border: 1px solid #727272;
@@ -1011,7 +1014,7 @@ img {
 @media only screen and (min-width: 48em) {
   .newsroom-container {
     display: grid;
-    grid-area: 3/ 1 / 7 / 4; }
+    grid-area: 3/ 1 / 5 / 4; }
 
   .article {
     margin-top: 0;
@@ -1019,17 +1022,22 @@ img {
     width: 100%; }
 
   .article a {
-    font-size: 1em;
+    font-size: .85em;
     display: grid;
     grid-column: 1/4; }
 
   .article-abstract {
-    font-size: 1.2em; }
+    font-size: 1em; }
+
+  .article3 {
+    display: none; }
+
+  .article img {
+    display: grid; }
 
   .byui-giveaway {
     display: grid;
-    grid-area: 3 /4 / 6 / 6;
-    margin: 50px auto; } }
+    grid-area: 3 /4 / 5 / 6; } }
 *,
 *:before,
 *:after {
@@ -1041,7 +1049,8 @@ body {
   background-color: #fff;
   font-family: "Byui Open Sans", "Open Sans", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Verdana, sans-serif; }
 
-body, p {
+body,
+p {
   font-size: 15px;
   font-style: normal;
   text-transform: inherit; }
@@ -1119,11 +1128,11 @@ body, p {
 
   .taylor-bldg-image {
     display: grid;
-    grid-area: 6 / 3; }
+    grid-area: 5 / 3; }
 
   .bottom-banner {
     display: grid;
-    grid-area: 7 / 1 / 8 / 6;
+    grid-area: 6 / 1 / 7 / 6;
     margin-top: -10px; } }
 
 /*# sourceMappingURL=styles.css.map */

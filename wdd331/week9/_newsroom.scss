@@ -1,5 +1,5 @@
 
-.article {
+.article, .article3 {
   border-top: 1px solid $dark-gray;
   margin-top: 25px;
   width: 100%;
@@ -26,6 +26,9 @@
   margin-left: 25px;
 
    }
+   .article img {
+     display: none;
+   }
    .byui-giveaway  {
     display: block;
     border: 1px solid $dark-gray;
@@ -37,7 +40,7 @@
 
     .newsroom-container {
       display: grid;
-      grid-area: 3/ 1 / 7 / 4;
+      grid-area: 3/ 1 / 5 / 4;
 
     }
     .article {
@@ -46,17 +49,22 @@
       width: 100%;
     }
      .article a {
-       font-size: 1em;
+       font-size: .85em;
        display: grid;
       grid-column: 1/4;
     }
      .article-abstract {
-      font-size: 1.2em;
+      font-size: 1em;
+       }
+       .article3 {
+         display:none;
+       }
+       .article img {
+         display: grid;
        }
        .byui-giveaway  {
         display: grid;
-        grid-area: 3 /4 / 6 / 6;
-        margin: 50px auto;
+        grid-area: 3 /4 / 5 / 6;
       }
     
     

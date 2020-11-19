@@ -61,7 +61,7 @@ img {
 
   }
   .byui-campus-videos  {
-    grid-area: 2 / 1;
+    grid-area: 2 / 1 / 3 /2;
     width: 100%;
     margin: auto;
   }
@@ -72,8 +72,7 @@ img {
     text-align: center;
   }
   .byui-photo-gallery  {
-    // grid-column: 2;
-    grid-area: 2 / 2;
+    grid-area: 2 / 2 / 3 / 3;
     width: 100%;
     margin: auto;
   }
@@ -84,7 +83,7 @@ img {
     text-align: center;
   }
   .byui-explore-campus  {
-    grid-area: 2 / 3;
+    grid-area: 2 / 3 / 3 / 4;
     width: 100%;
     margin: auto;
   }

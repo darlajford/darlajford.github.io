@@ -1,0 +1,11 @@
+
+@import "partials/colors";
+@import "partials/fonts";
+
+.page-wrapper {
+  background-color: $color-7;
+}
+
+h1 {
+font-family: $primary-font;
+}
