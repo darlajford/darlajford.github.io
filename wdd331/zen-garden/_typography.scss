@@ -1,0 +1,26 @@
+div.summary p {
+  margin: 0 auto;
+  width: 75%;
+  font-style: italic;
+  text-align: center;
+  font-size: .95em;
+}
+
+h3 {
+  font-family: $secondary-font;
+  font-size: 1.5em;
+  margin-bottom: 2%;
+  color: $color-4;
+}
+
+div p {
+  font-size: 1em;
+  color: $color-1;
+}
+
+aside.sidebar h3 {
+  font-size: 1.2em;
+  color: $color-1;
+  margin-bottom: -1em;
+  margin-top: -.5em;
+}
