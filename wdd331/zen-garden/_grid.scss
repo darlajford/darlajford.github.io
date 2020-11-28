@@ -1,0 +1,32 @@
+.main.supporting {
+  display: grid;
+  grid-template-columns: 32.5% 32.5% 32.5%;
+  gap: 2%;
+  grid-template-areas:
+    "a a a"
+    "b b e"
+    "c c e"
+    "d d d"
+    "f f f";
+}
+
+div {
+.explanation {
+  grid-area: a;
+}
+.participation {
+  grid-area: b;
+}
+.benefits {
+  grid-area: c;
+}
+.requirements {
+  grid-area: d;
+  margin-bottom: 100px;
+}
+.requirements p:last-child {
+  border-top: 2px solid $color-4;
+  margin-top: 1em;
+  padding-top: 1em;
+}
+}
