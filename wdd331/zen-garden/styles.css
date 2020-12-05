@@ -43,31 +43,26 @@ aside.sidebar h3 {
   margin-top: 1em; }
 
 .main.supporting {
-  display: grid;
-  grid-template-columns: 32.5% 32.5% 32.5%;
-  gap: 2%;
-  grid-template-areas: "a a a" "b b e" "c c e" "d d d" "f f f"; }
+  display: block; }
 
 div .explanation {
-  grid-area: a; }
+  max-width: 100%; }
 div .participation {
-  grid-area: b; }
+  max-width: 100%; }
 div .benefits {
-  grid-area: c; }
+  max-width: 100%; }
 div .requirements {
-  grid-area: d;
   margin-bottom: 100px; }
 div .requirements p:last-child {
   border-top: 2px solid #E1726A;
-  margin-top: 1em;
+  margin-top: 1.5em;
   padding-top: 1em; }
 
 footer {
   background-color: #F1C151;
-  grid-area: f;
   height: 50px;
   text-align: center;
-  margin-top: -100px;
+  margin-top: -70px;
   padding-top: 20px; }
 
 footer a {
@@ -86,57 +81,36 @@ aside ul {
   list-style: none; }
 
 aside.sidebar {
-  position: absolute;
-  right: 1%;
-  top: 175%;
-  max-width: 32%;
-  text-align: right;
-  padding: .5em;
-  font-size: .65em;
-  line-height: 2; }
+  display: block;
+  font-size: 1em;
+  line-height: 1.6em; }
 
 .wrapper.design-selection,
 .wrapper.design-archives,
 .wrapper.zen-resources {
   padding: 1em; }
 
-@media (min-width: 29em) {
-  .intro h1 {
-    font-size: 1.2em; }
-
-  .intro h2 {
-    font-size: 2.5em; }
-
-  div.summary p {
-    font-size: 1em; }
-
-  aside.sidebar {
-    font-size: .75em;
-    right: 1%;
-    top: 140%;
-    max-width: 32%; }
-
-  h3 {
-    font-size: 1.75em;
-    color: red; }
-
-  div p {
-    font-size: 1.1em; } }
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .intro h1 {
     font-size: 1.3em; }
 
   .intro h2 {
     font-size: 3em; }
 
+  div.participation, div.benefits {
+    max-width: 65%; }
+
   div.summary p {
     font-size: 1.1em; }
 
   aside.sidebar {
-    font-size: .80em;
+    position: absolute;
+    font-size: .95em;
+    line-height: 1.75em;
     right: 2%;
-    top: 140%;
-    max-width: 32%; }
+    top: 125%;
+    bottom: 120%;
+    max-width: 30%; }
 
   h3 {
     font-size: 2em;
@@ -155,10 +129,12 @@ aside.sidebar {
     font-size: 1.2em; }
 
   aside.sidebar {
-    font-size: .90em;
+    font-size: 1em;
+    line-height: 2em;
     right: 3%;
     top: 135%;
-    max-width: 32%; }
+    bottom: 150%;
+    max-width: 30%; }
 
   h3 {
     font-size: 2.5em;
