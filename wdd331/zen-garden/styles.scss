@@ -2,10 +2,9 @@
  @import "fonts";
  @import "header";
  @import "typography";
- @import "grid";
+ @import "layout";
  @import "footer";
 
-//  $phonePlus: "(min-width: 29em)";
  $tablet: "(min-width: 48em)";
  $desktop: "(min-width: 60em)";
 
@@ -18,24 +17,16 @@
    margin: 1%;
    padding: 3%;
    height: 100%;
- } 
+ }
 
  aside ul {
-  list-style: none;
-}
+   list-style: none;
+ }
 
  aside.sidebar {
    display: block;
    font-size: 1em;
-   line-height: 1.6em;
-  //  position: absolute;
-  //  right: 1%;
-  //  top: 175%;
-  //  max-width: 32%;
-  //  text-align: right;
-  //  padding: .5em;
-  //  font-size: .65em;
-  //  line-height: 2;
+   line-height: 2em;
  }
 
  .wrapper.design-selection,
@@ -44,88 +35,80 @@
    padding: 1em;
  }
 
-
-//  @media #{$phonePlus} {
-
-  // .intro h1 {
-  //   font-size: 1.2em;
-  // }
-  // .intro h2 {
-  //   font-size: 2.5em;
-  // }
-  // div.summary p {
-  //   font-size: 1em;
-  // }
-  //  aside.sidebar {
-  //   font-size: 1em;
-  //   line-height: 1.6em;
-  //    right: 1%;
-    //  top: 140%;
-    //  max-width: 32%;
-  //  }
-  //  h3 {
-  //   font-size: 1.75em;
-  //   color: red;
-  // }
-//   div p {
-//     font-size: 1.1em;
-//   }
-//  }
- 
  @media #{$tablet} {
-  .intro h1 {
-    font-size: 1.3em;
-  }
-  .intro h2 {
-    font-size: 3em;
-  }
-  div.participation, div.benefits {
-    max-width: 65%;
-  }
-  div.summary p {
-    font-size: 1.1em;
-  }
-  aside.sidebar {
-    position: absolute;
-    font-size: .95em;
-    line-height: 1.75em;
-    right: 2%;
-    top: 125%;
-    bottom: 120%;
-    max-width: 30%;
-  }
-  h3 {
-    font-size: 2em;
-    color: blue;
-  }
-  div p {
-    font-size: 1.2em;
-  }
-}
-@media #{$desktop} {
+   .intro h1 {
+     font-size: 1.3em;
+   }
 
-  .intro h1 {
-    font-size: 1.4em;
+   .intro h2 {
+     font-size: 3em;
+   }
+
+   div.preamble,
+   div.explanation {
+     max-width: 65%;
+     line-height: 1.7em;
+   }
+
+   div.summary p {
+     font-size: 1.1em;
+   }
+
+   div {
+    .participation,
+    .benefits,
+    .requirements {
+      line-height: 1.8em;
+    }  
   }
-  .intro h2 {
-    font-size: 3.5em;
-  }
-  div.summary p {
-    font-size: 1.2em;
-  }
-  aside.sidebar {
-    font-size: 1em;
-    line-height: 2em;
-    right: 3%;
-    top: 135%;
-    bottom: 150%;
-    max-width: 30%;
-  }
-  h3 {
-    font-size: 2.5em;
-    color: green;
-  }
-  div p {
-    font-size: 1.3em;
-  }
-}
+
+   aside.sidebar {
+     position: absolute;
+     font-size: .95em;
+     line-height: 1.75em;
+     right: 2%;
+     top: 45%;
+     max-width: 30%;
+   }
+
+   h3 {
+     font-size: 2em;
+    //  margin-bottom: 1em;
+     margin-top: 1.5em;
+   }
+
+   div p {
+     font-size: 1.2em;
+   }
+ }
+
+ @media #{$desktop} {
+
+   .intro h1 {
+     font-size: 1.4em;
+   }
+
+   .intro h2 {
+     font-size: 3.5em;
+   }
+
+   div.summary p {
+     font-size: 1.2em;
+   }
+
+   aside.sidebar {
+     font-size: 1em;
+     line-height: 2em;
+     right: 3%;
+     top: 50%;
+     max-width: 30%;
+   }
+
+   h3 {
+     font-size: 2.5em;
+   }
+
+   div p {
+     font-size: 1.3em;
+   }
+ }

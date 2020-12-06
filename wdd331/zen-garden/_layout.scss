@@ -1,0 +1,24 @@
+.main.supporting {
+  display: block;
+}
+
+div {
+  .preamble,
+  .explanation,
+  .participation,
+  .benefits,
+  .requirements {
+    max-width: 100%;
+    line-height: 1.7em;
+  }  
+
+  .requirements {
+    margin-bottom: 100px;
+  }
+
+  .requirements p:last-child {
+    border-top: 2px solid $color-4;
+    margin-top: 1.5em;
+    padding-top: 1em;
+  }
+}

@@ -15,9 +15,11 @@ header {
 .intro h2 {
   font-family: "Berkshire Swash", serif;
   font-size: 2.5em;
+  line-height: 1.2em;
+  letter-spacing: 2px;
   color: #0B0900;
   text-align: center;
-  padding-bottom: 2%; }
+  padding-bottom: 4%; }
 
 div.summary p {
   margin: 0 auto;
@@ -29,7 +31,8 @@ div.summary p {
 h3 {
   font-family: "Berkshire Swash", serif;
   font-size: 1.5em;
-  margin-bottom: 2%;
+  margin-bottom: 1.7%;
+  margin-top: 2em;
   color: #E1726A; }
 
 div p {
@@ -45,12 +48,13 @@ aside.sidebar h3 {
 .main.supporting {
   display: block; }
 
-div .explanation {
-  max-width: 100%; }
-div .participation {
-  max-width: 100%; }
-div .benefits {
-  max-width: 100%; }
+div .preamble,
+div .explanation,
+div .participation,
+div .benefits,
+div .requirements {
+  max-width: 100%;
+  line-height: 1.7em; }
 div .requirements {
   margin-bottom: 100px; }
 div .requirements p:last-child {
@@ -64,9 +68,8 @@ footer {
   text-align: center;
   margin-top: -70px;
   padding-top: 20px; }
-
-footer a {
-  padding: 15px; }
+  footer a {
+    padding: 15px; }
 
 body {
   background-color: #CCDCDF; }
@@ -83,7 +86,7 @@ aside ul {
 aside.sidebar {
   display: block;
   font-size: 1em;
-  line-height: 1.6em; }
+  line-height: 2em; }
 
 .wrapper.design-selection,
 .wrapper.design-archives,
@@ -97,24 +100,30 @@ aside.sidebar {
   .intro h2 {
     font-size: 3em; }
 
-  div.participation, div.benefits {
-    max-width: 65%; }
+  div.preamble,
+  div.explanation {
+    max-width: 65%;
+    line-height: 1.7em; }
 
   div.summary p {
     font-size: 1.1em; }
+
+  div .participation,
+  div .benefits,
+  div .requirements {
+    line-height: 1.8em; }
 
   aside.sidebar {
     position: absolute;
     font-size: .95em;
     line-height: 1.75em;
     right: 2%;
-    top: 125%;
-    bottom: 120%;
+    top: 45%;
     max-width: 30%; }
 
   h3 {
     font-size: 2em;
-    color: blue; }
+    margin-top: 1.5em; }
 
   div p {
     font-size: 1.2em; } }
@@ -132,13 +141,11 @@ aside.sidebar {
     font-size: 1em;
     line-height: 2em;
     right: 3%;
-    top: 135%;
-    bottom: 150%;
+    top: 50%;
     max-width: 30%; }
 
   h3 {
-    font-size: 2.5em;
-    color: green; }
+    font-size: 2.5em; }
 
   div p {
     font-size: 1.3em; } }
