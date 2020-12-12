@@ -4,37 +4,28 @@
  @import "typography";
  @import "layout";
  @import "footer";
+ @import "sidebar";
+ @import "icons";
+ @import "keyframes";
+
+
+
+ 
 
  $tablet: "(min-width: 48em)";
  $desktop: "(min-width: 60em)";
 
  body {
-   background-color: $color-7;
+   background-image: url(BackgroundRoad1.svg);
+   z-index: 0;
+   animation: movingRoad 8s linear infinite;
  }
 
- div.page-wrapper {
-   font-family: $primary-font;
-   margin: 1%;
-   padding: 3%;
-   height: 100%;
- }
 
- aside ul {
-   list-style: none;
- }
+ //  small view coding is in partials
 
- aside.sidebar {
-   display: block;
-   font-size: 1em;
-   line-height: 2em;
- }
 
- .wrapper.design-selection,
- .wrapper.design-archives,
- .wrapper.zen-resources {
-   padding: 1em;
- }
-
+ //  medium view
  @media #{$tablet} {
    .intro h1 {
      font-size: 1.3em;
@@ -47,20 +38,17 @@
    div.preamble,
    div.explanation {
      max-width: 65%;
-     line-height: 1.7em;
-   }
-
-   div.summary p {
-     font-size: 1.1em;
+     line-height: 1.8em;
    }
 
    div {
-    .participation,
-    .benefits,
-    .requirements {
-      line-height: 1.8em;
-    }  
-  }
+
+     .participation,
+     .benefits,
+     .requirements {
+       line-height: 1.8em;
+     }
+   }
 
    aside.sidebar {
      position: absolute;
@@ -73,14 +61,15 @@
 
    h3 {
      font-size: 2em;
-    //  margin-bottom: 1em;
-     margin-top: 1.5em;
+     margin-top: 1%;
    }
 
    div p {
      font-size: 1.2em;
    }
  }
+
+ //  large view
 
  @media #{$desktop} {
 

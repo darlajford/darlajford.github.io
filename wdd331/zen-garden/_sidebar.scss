@@ -1,0 +1,32 @@
+aside ul {
+  list-style: none;
+}
+
+aside.sidebar {
+  font-size: 1em;
+  line-height: 2em;
+  background-color: $color-2;
+  padding: 1em;
+}
+
+aside.sidebar a {
+  color: $color-7;
+}
+
+aside.sidebar a.design-name li.next li.viewall div.zen-resources {
+  font-size: 1.2em;
+  font-weight: bolder;
+}
+
+aside.sidebar a.designer-name {
+  color: $color-1;
+  display: block;
+  text-decoration: none;
+  line-height: 1em;
+}
+
+.wrapper.design-selection,
+.wrapper.design-archives,
+.wrapper.zen-resources {
+  padding: 1em;
+}

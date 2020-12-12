@@ -1,0 +1,25 @@
+#zen-preamble::before,
+#zen-requirements::before {
+  display: block;
+  content: url(WayPointIcons_color3.svg);
+  height: 70px;
+  width: 70px;
+  animation: bounce .5s linear alternate infinite;
+}
+
+#zen-explanation::before,
+#zen-benefits::before {
+  display: block;
+  content: url(WayPointIcons_color5.svg);
+  height: 70px;
+  width: 70px;
+  animation: bounce .5s linear alternate infinite;
+}
+
+#zen-participation::before {
+  display: block;
+  content: url(WayPointIcons_color2.svg);
+  height: 70px;
+  width: 70px;
+  animation: bounce .5s linear alternate infinite;
+}

@@ -6,17 +6,46 @@ div.summary p {
   font-size: .95em;
 }
 
+.summary a {
+  text-decoration: underline;
+  color: $color-1;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+abbr[title] {
+  text-decoration: underline;
+  color: $color-4;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+
 h3 {
   font-family: $secondary-font;
   font-size: 1.5em;
   margin-bottom: 1.7%;
-  margin-top: 2em;
+  margin-top: 1%;
   color: $color-4;
+  text-decoration: underline;
 }
 
 div p {
   font-size: 1em;
   color: $color-1;
+}
+
+.requirements p a,
+.participation p a {
+  color: $color-4;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+a:hover,
+.participation a:hover,
+.requirements a:hover {
+  color: $color-2;
 }
 
 aside.sidebar h3 {

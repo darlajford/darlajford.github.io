@@ -21,6 +21,10 @@ header {
   text-align: center;
   padding-bottom: 4%; }
 
+.intro h2 abbr[title] {
+  color: #0B0900;
+  text-decoration: none; }
+
 div.summary p {
   margin: 0 auto;
   width: 75%;
@@ -28,16 +32,40 @@ div.summary p {
   text-align: center;
   font-size: .95em; }
 
+.summary a {
+  text-decoration: underline;
+  color: #0B0900;
+  font-style: italic;
+  font-weight: bolder; }
+
+abbr[title] {
+  text-decoration: underline;
+  color: #E1726A;
+  font-style: italic;
+  font-weight: bolder; }
+
 h3 {
   font-family: "Berkshire Swash", serif;
   font-size: 1.5em;
   margin-bottom: 1.7%;
-  margin-top: 2em;
-  color: #E1726A; }
+  margin-top: 1%;
+  color: #E1726A;
+  text-decoration: underline; }
 
 div p {
   font-size: 1em;
   color: #0B0900; }
+
+.requirements p a,
+.participation p a {
+  color: #E1726A;
+  font-style: italic;
+  font-weight: bolder; }
+
+a:hover,
+.participation a:hover,
+.requirements a:hover {
+  color: #629CA4; }
 
 aside.sidebar h3 {
   font-size: 1.2em;
@@ -48,6 +76,24 @@ aside.sidebar h3 {
 .main.supporting {
   display: block; }
 
+div.page-wrapper {
+  font-family: "Monserrat", sans-serif;
+  margin: 1%;
+  padding: 3%;
+  height: 100%;
+  z-index: 1;
+  margin-block-end: 1.2em; }
+
+.summary {
+  background: rgba(204, 220, 223, 0.8); }
+
+div.summary p {
+  font-size: .8em;
+  color: #0B0900;
+  padding: .5em;
+  width: 60%;
+  margin-block-end: 1.2em; }
+
 div .preamble,
 div .explanation,
 div .participation,
@@ -55,6 +101,19 @@ div .benefits,
 div .requirements {
   max-width: 100%;
   line-height: 1.7em; }
+div .preamble,
+div .participation,
+div .requirements {
+  background-color: #FFFFFF;
+  padding: 1em;
+  background: rgba(255, 255, 255, 0.8);
+  margin-block-end: 1.2em; }
+div .explanation,
+div .benefits {
+  background-color: #CCDCDF;
+  padding: 1em;
+  background: rgba(204, 220, 223, 0.8);
+  margin-block-end: 1.2em; }
 div .requirements {
   margin-bottom: 100px; }
 div .requirements p:last-child {
@@ -67,31 +126,82 @@ footer {
   height: 50px;
   text-align: center;
   margin-top: -70px;
-  padding-top: 20px; }
+  padding-top: 20px;
+  text-decoration: none;
+  margin-block-start: 1.2em; }
   footer a {
-    padding: 15px; }
-
-body {
-  background-color: #CCDCDF; }
-
-div.page-wrapper {
-  font-family: "Monserrat", sans-serif;
-  margin: 1%;
-  padding: 3%;
-  height: 100%; }
+    padding: 15px;
+    color: #0B0900;
+    text-decoration: none;
+    font-weight: bolder; }
 
 aside ul {
   list-style: none; }
 
 aside.sidebar {
-  display: block;
   font-size: 1em;
-  line-height: 2em; }
+  line-height: 2em;
+  background-color: #629CA4;
+  padding: 1em; }
+
+aside.sidebar a {
+  color: #CCDCDF; }
+
+aside.sidebar a.design-name li.next li.viewall div.zen-resources {
+  font-size: 1.2em;
+  font-weight: bolder; }
+
+aside.sidebar a.designer-name {
+  color: #0B0900;
+  display: block;
+  text-decoration: none;
+  line-height: 1em; }
 
 .wrapper.design-selection,
 .wrapper.design-archives,
 .wrapper.zen-resources {
   padding: 1em; }
+
+#zen-preamble::before,
+#zen-requirements::before {
+  display: block;
+  content: url(WayPointIcons_color3.svg);
+  height: 70px;
+  width: 70px;
+  animation: bounce .5s linear alternate infinite; }
+
+#zen-explanation::before,
+#zen-benefits::before {
+  display: block;
+  content: url(WayPointIcons_color5.svg);
+  height: 70px;
+  width: 70px;
+  animation: bounce .5s linear alternate infinite; }
+
+#zen-participation::before {
+  display: block;
+  content: url(WayPointIcons_color2.svg);
+  height: 70px;
+  width: 70px;
+  animation: bounce .5s linear alternate infinite; }
+
+@keyframes bounce {
+  0% {
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1); }
+  40% {
+    transform: translate3d(0, 30%, 0) scale3d(1, 1, 1); }
+  100% {
+    transform: translate3d(0, 30%, 0) scale3d(1, 1, 1); } }
+/*Moving road animation*/
+@keyframes movingRoad {
+  0% {
+    background-position: 0 -100%; }
+  100% {
+    background-position: 0 100%; } }
+body {
+  background-image: url(BackgroundRoad1.svg);
+  z-index: 0;
+  animation: movingRoad 8s linear infinite; }
 
 @media (min-width: 48em) {
   .intro h1 {
@@ -103,10 +213,7 @@ aside.sidebar {
   div.preamble,
   div.explanation {
     max-width: 65%;
-    line-height: 1.7em; }
-
-  div.summary p {
-    font-size: 1.1em; }
+    line-height: 1.8em; }
 
   div .participation,
   div .benefits,
@@ -123,7 +230,7 @@ aside.sidebar {
 
   h3 {
     font-size: 2em;
-    margin-top: 1.5em; }
+    margin-top: 1%; }
 
   div p {
     font-size: 1.2em; } }
